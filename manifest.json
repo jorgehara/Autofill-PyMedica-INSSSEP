@@ -20,7 +20,7 @@
     },
     "content_scripts": [
         {
-            "matches": ["https://online.insssep.gob.ar/INSSSEP/init.do"],
+            "matches": ["https://online.insssep.gob.ar/INSSSEP/*"],
             "js": ["content.js"],
             "run_at": "document_idle"
         }

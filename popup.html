@@ -6,11 +6,23 @@
     <title>INSSSEP AutoFill PyMedica</title>
     <!-- ...existing code... -->
 </head>
-<body>
-    <div style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; background: #1976d2; border-radius: 50%; margin: 16px auto;">
-        <span style="color: white; font-size: 40px; font-family: Arial, sans-serif; font-weight: bold;">I</span>
+<body
+      style="font-family: Arial, sans-serif; padding: 16px; background: #f5f5f5; border-radius: 8px; width: 450px; box-sizing: border-box;">
+    <div style="width: 450px; height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem;">
+       
+    <textarea id="datos" name="datos" rows="12" placeholder="Ingrese los datos a autocompletar..." style="width: 400px; height: 120px;"></textarea>
     </div>
-    <!-- ...existing code... -->
+    <form id="datosForm" style="display: flex; flex-direction: column; gap: 10px; max-width: 350px; margin: 0 auto;">
+        <label for="codigo">Código:</label>
+        <input type="text" id="codigo" name="codigo" required>
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni" required>
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="afiliado">N° Afiliado:</label>
+        <input type="text" id="afiliado" name="afiliado" required>
+        <button type="submit" style="background:#1976d2;color:white;border:none;padding:8px 0;border-radius:4px;font-weight:bold;">Rellenar</button>
+    </form>
     <script src="popup.js"></script>
 </body>
 </html>

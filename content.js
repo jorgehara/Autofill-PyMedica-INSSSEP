@@ -31,26 +31,35 @@ function continuarFlujoAutofill() {
 			console.log('[AutoFill] Flujo post-recarga: usando datos guardados:', data);
 			// Usar MutationObserver para detectar el select
 			const observerSelect = new MutationObserver((mutations, obs) => {
-				const selectIdent = document.getElementById('tipoIdentificacionSelected');
+				// Depuración: mostrar todos los selects presentes
+				const allSelects = Array.from(document.querySelectorAll('select'));
+				console.log('[AutoFill][Depuración] Selects encontrados:', allSelects.map(s => s.id || s.name || s.className));
+				const selectIdent = document.getElementById('tipoIdentificacionSelected') || document.querySelector('select[name="tipoIdentificacionSelected"]') || document.querySelector('select.comboStyle2');
 				if (selectIdent) {
 					selectIdent.value = '3';
 					selectIdent.dispatchEvent(new Event('change', { bubbles: true }));
-					console.log('[AutoFill] Paso post-recarga: Opción "DNI" seleccionada en el select.');
+					console.log('[AutoFill] Paso post-recarga: Opción "DNI" seleccionada en el select.', selectIdent);
 					obs.disconnect();
 					// Usar otro observer para el input
 					const observerInput = new MutationObserver((mutations, obs2) => {
-						const inputDni = document.getElementById('numeroIdentificacion');
+						// Depuración: mostrar todos los inputs presentes
+						const allInputs = Array.from(document.querySelectorAll('input'));
+						console.log('[AutoFill][Depuración] Inputs encontrados:', allInputs.map(i => i.id || i.name || i.className));
+						const inputDni = document.getElementById('numeroIdentificacion') || document.querySelector('input[name="numeroIdentificacion"]') || document.querySelector('input.inputEditStyle');
 						if (inputDni) {
 							inputDni.value = data.afiliado;
 							inputDni.dispatchEvent(new Event('input', { bubbles: true }));
-							console.log('[AutoFill] Paso post-recarga: N° Afiliado rellenado en input #numeroIdentificacion con valor:', data.afiliado);
+							console.log('[AutoFill] Paso post-recarga: N° Afiliado rellenado en input #numeroIdentificacion con valor:', data.afiliado, inputDni);
 							obs2.disconnect();
 							// Observer para el botón
 							const observerBtn = new MutationObserver((mutations, obs3) => {
-								const btnContinuar = document.querySelector("input[name='Continuar']");
+								// Depuración: mostrar todos los botones presentes
+								const allBtns = Array.from(document.querySelectorAll('input[type="submit"], input[type="button"], input'));
+								console.log('[AutoFill][Depuración] Botones encontrados:', allBtns.map(b => b.id || b.name || b.className));
+								const btnContinuar = document.querySelector("input[name='Continuar']") || document.querySelector('input[type="submit"]');
 								if (btnContinuar) {
 									btnContinuar.click();
-									console.log('[AutoFill] Paso post-recarga: Se hizo clic en el botón Continuar.');
+									console.log('[AutoFill] Paso post-recarga: Se hizo clic en el botón Continuar.', btnContinuar);
 									obs3.disconnect();
 								}
 							});
@@ -60,6 +69,11 @@ function continuarFlujoAutofill() {
 					observerInput.observe(document.body, { childList: true, subtree: true });
 				}
 			});
+			// Aumentar el tiempo de espera del observer a 60 segundos
+			setTimeout(() => {
+				observerSelect.disconnect();
+				console.log('[AutoFill][Depuración] Timeout: No se encontró el select de tipo de identificación tras 60 segundos.');
+			}, 60000);
 			observerSelect.observe(document.body, { childList: true, subtree: true });
 		}
 	});

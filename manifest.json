@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "AutoFill PyMedica INSSSEP",
+    "name": "INSSSEP AutoFill PyMedica",
     "version": "1.0",
     "description": "Extensión para autocompletar formularios de INSSSEP",
     "permissions": [

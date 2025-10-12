@@ -11,8 +11,9 @@
     <div style="width: 450px; height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem;">
        
     <textarea id="datos" name="datos" rows="12" placeholder="Ingrese los datos a autocompletar..." style="width: 400px; height: 120px;"></textarea>
-    </div>
-    <form id="datosForm" style="display: flex; flex-direction: column; gap: 10px; max-width: 350px; margin: 0 auto;">
+</div>
+<form id="datosForm" style="display: flex; flex-direction: column; gap: 10px; max-width: 350px; margin: 0 auto;">
+        <button type="button" id="cargarCampos" style="background:#43a047;color:white;border:none;padding:8px 0;border-radius:4px;font-weight:bold;margin-top:8px;">Cargar campos</button>
         <label for="codigo">Código:</label>
         <input type="text" id="codigo" name="codigo" required>
         <label for="dni">DNI:</label>
@@ -21,7 +22,7 @@
         <input type="text" id="nombre" name="nombre" required>
         <label for="afiliado">N° Afiliado:</label>
         <input type="text" id="afiliado" name="afiliado" required>
-        <button type="submit" style="background:#1976d2;color:white;border:none;padding:8px 0;border-radius:4px;font-weight:bold;">Rellenar</button>
+    <button type="submit" style="background:#1976d2;color:white;border:none;padding:8px 0;border-radius:4px;font-weight:bold;">Rellenar</button>
     </form>
     <script src="popup.js"></script>
 </body>

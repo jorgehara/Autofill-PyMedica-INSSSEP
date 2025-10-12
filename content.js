@@ -12,39 +12,70 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 		} else {
 			console.log('[AutoFill] Paso 2: No se encontró el enlace "Consulta Médica".');
 		}
-
+		// Guardar los datos recibidos en chrome.storage.local para usarlos tras la recarga
+		chrome.storage.local.set({ autofillData: request }, function() {
+			console.log('[AutoFill] Datos guardados en memoria desde content script:', request);
+		});
+		// Esperar 2 segundos antes de continuar con el select
 		setTimeout(() => {
-			console.log('[AutoFill] Paso 3: Buscando y seleccionando "DNI" en el select...');
-			const selectIdent = document.getElementById('tipoIdentificacionSelected');
-			if (selectIdent) {
-				selectIdent.value = '3';
-				selectIdent.dispatchEvent(new Event('change', { bubbles: true }));
-				console.log('[AutoFill] Paso 3.1: Opción "DNI" seleccionada en el select.');
-			} else {
-				console.log('[AutoFill] Paso 3.1: No se encontró el select de tipo de identificación.');
-			}
-			// Esperar 2 segundos más para que el input se habilite si depende del select
-			setTimeout(() => {
-				console.log('[AutoFill] Paso 4: Buscando input correcto para N° Afiliado...');
-				const inputDni = document.getElementById('numeroIdentificacion');
-				if (inputDni) {
-					inputDni.value = request.afiliado;
-					inputDni.dispatchEvent(new Event('input', { bubbles: true }));
-					console.log('[AutoFill] Paso 5: N° Afiliado rellenado en input #numeroIdentificacion con valor:', request.afiliado);
-					// Esperar 1 segundo antes de hacer clic en el botón 'Continuar'
-					setTimeout(() => {
-						const btnContinuar = document.querySelector("input[name='Continuar']");
-						if (btnContinuar) {
-							btnContinuar.click();
-							console.log('[AutoFill] Paso 6: Se hizo clic en el botón Continuar.');
-						} else {
-							console.log('[AutoFill] Paso 6: No se encontró el botón Continuar.');
-						}
-					}, 1000);
-				} else {
-					console.log('[AutoFill] Paso 5: No se encontró el input #numeroIdentificacion.');
-				}
-			}, 2000);
+			continuarFlujoAutofill();
 		}, 2000);
 	}
+});
+
+// Función para continuar el flujo después de la recarga si hay datos guardados
+function continuarFlujoAutofill() {
+	chrome.storage.local.get('autofillData', function(result) {
+		const data = result.autofillData;
+		if (data && data.afiliado) {
+			console.log('[AutoFill] Flujo post-recarga: usando datos guardados:', data);
+			// Usar MutationObserver para detectar el select
+			const observerSelect = new MutationObserver((mutations, obs) => {
+				const selectIdent = document.getElementById('tipoIdentificacionSelected');
+				if (selectIdent) {
+					selectIdent.value = '3';
+					selectIdent.dispatchEvent(new Event('change', { bubbles: true }));
+					console.log('[AutoFill] Paso post-recarga: Opción "DNI" seleccionada en el select.');
+					obs.disconnect();
+					// Usar otro observer para el input
+					const observerInput = new MutationObserver((mutations, obs2) => {
+						const inputDni = document.getElementById('numeroIdentificacion');
+						if (inputDni) {
+							inputDni.value = data.afiliado;
+							inputDni.dispatchEvent(new Event('input', { bubbles: true }));
+							console.log('[AutoFill] Paso post-recarga: N° Afiliado rellenado en input #numeroIdentificacion con valor:', data.afiliado);
+							obs2.disconnect();
+							// Observer para el botón
+							const observerBtn = new MutationObserver((mutations, obs3) => {
+								const btnContinuar = document.querySelector("input[name='Continuar']");
+								if (btnContinuar) {
+									btnContinuar.click();
+									console.log('[AutoFill] Paso post-recarga: Se hizo clic en el botón Continuar.');
+									obs3.disconnect();
+								}
+							});
+							observerBtn.observe(document.body, { childList: true, subtree: true });
+						}
+					});
+					observerInput.observe(document.body, { childList: true, subtree: true });
+				}
+			});
+			observerSelect.observe(document.body, { childList: true, subtree: true });
+		}
+	});
+}
+
+// Ejecutar el flujo automáticamente si hay datos guardados al cargar la página
+document.addEventListener('DOMContentLoaded', function() {
+	setTimeout(() => {
+		chrome.storage.local.get('autofillData', function(result) {
+			const data = result.autofillData;
+			if (data && data.afiliado) {
+				console.log('[AutoFill] Iniciando autofill directamente desde el selector...');
+				continuarFlujoAutofill();
+			} else {
+				console.log('[AutoFill] No hay datos guardados para autofill.');
+			}
+		});
+	}, 1500);
 });

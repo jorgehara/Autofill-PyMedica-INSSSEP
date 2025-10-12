@@ -1,4 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Restaurar el contenido del textarea al cargar el popup
+    const textarea = document.getElementById('datos');
+    if (textarea) {
+        chrome.storage.local.get('autofillTextarea', function(result) {
+            if (result.autofillTextarea) {
+                textarea.value = result.autofillTextarea;
+            }
+        });
+        // Guardar el contenido cada vez que se modifica
+        textarea.addEventListener('input', function() {
+            chrome.storage.local.set({ autofillTextarea: textarea.value });
+        });
+    }
     // Responder al content script con el DNI
     window.addEventListener('message', function(event) {
         if (event.data && event.data.tipo === 'solicitar-dni') {

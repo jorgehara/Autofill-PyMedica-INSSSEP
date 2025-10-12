@@ -1,15 +1,15 @@
 {
     "manifest_version": 3,
-    "name": "AutoFill PyMedica COPIA",
+    "name": "AutoFill PyMedica INSSSEP",
     "version": "1.0",
-    "description": "Extensión para autocompletar formularios de PAMI (copia)",
+    "description": "Extensión para autocompletar formularios de INSSSEP",
     "permissions": [
         "activeTab",
         "storage"
     ],
     "host_permissions": [
         "http://localhost:5000/*",
-        "https://pe.pami.org.ar/*"
+        "https://online.insssep.gob.ar/INSSSEP/init.do"
     ],
     "action": {
         "default_popup": "popup.html"
@@ -20,7 +20,7 @@
     },
     "content_scripts": [
         {
-            "matches": ["https://pe.pami.org.ar/*", "http://pe.pami.org.ar/*"],
+            "matches": ["https://online.insssep.gob.ar/INSSSEP/init.do"],
             "js": ["content.js"],
             "run_at": "document_idle"
         }

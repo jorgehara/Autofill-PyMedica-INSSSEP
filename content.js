@@ -3,65 +3,27 @@ console.log('Content script cargado');
 function continuarFlujoAutofill() {
     chrome.storage.local.get('autofillData', function(result) {
         const data = result.autofillData;
-        if (data && data.afiliado) {
-            console.log('[AutoFill] Usando datos guardados:', data);
-
-            // 1. Seleccionar "DNI" en el selector
-            const selectIdent = document.getElementById('tipoIdentificacionSelected');
-            if (selectIdent) {
-                selectIdent.value = '3';
-                selectIdent.dispatchEvent(new Event('change', { bubbles: true }));
-                console.log('[AutoFill] Seleccionado DNI en el selector.');
-            } else {
-                console.log('[AutoFill] No se encontró el selector tipoIdentificacionSelected.');
-                return;
-            }
-
-            // 2. Esperar 2 segundos y rellenar el input
+        if (!data) {
+            console.log('[AutoFill] No hay datos guardados para autofill.');
+            return;
+        }
+        // Paso 1: Si existe el selector de DNI, estamos en la primera pantalla
+        const selectIdent = document.getElementById('tipoIdentificacionSelected');
+        if (selectIdent) {
+            selectIdent.value = '3';
+            selectIdent.dispatchEvent(new Event('change', { bubbles: true }));
+            console.log('[AutoFill] Seleccionado DNI en el selector.');
             setTimeout(() => {
                 const inputDni = document.getElementById('numeroIdentificacion');
                 if (inputDni) {
                     inputDni.value = data.afiliado;
                     inputDni.dispatchEvent(new Event('input', { bubbles: true }));
                     console.log('[AutoFill] Rellenado N° Afiliado en input numeroIdentificacion:', data.afiliado);
-
-                    // 3. Esperar 1 segundo y hacer clic en el botón Continuar
                     setTimeout(() => {
                         const btnContinuar = document.querySelector("input[name='Continuar']");
                         if (btnContinuar) {
                             btnContinuar.click();
-                            console.log('[AutoFill] Se hizo clic en el botón Continuar.');
-                            // 4. Esperar 2 segundos y seleccionar 'Definitivo' en tipoDiagnosticoSelected
-                            setTimeout(() => {
-                                const selectDiagnostico = document.getElementById('tipoDiagnosticoSelected');
-                                if (selectDiagnostico) {
-                                    selectDiagnostico.value = '2';
-                                    selectDiagnostico.dispatchEvent(new Event('change', { bubbles: true }));
-                                    console.log('[AutoFill] Seleccionado "Definitivo" en el selector tipoDiagnosticoSelected.');
-                                    // Esperar 1 segundo y rellenar el input de código de diagnóstico
-                                    setTimeout(() => {
-                                        const inputCodigo = document.getElementById('codigoDiagnostico');
-                                        if (inputCodigo) {
-                                            inputCodigo.value = data.codigo;
-                                            inputCodigo.dispatchEvent(new Event('input', { bubbles: true }));
-                                            console.log('[AutoFill] Rellenado Código de Diagnóstico en input codigoDiagnostico:', data.codigo);
-                                            // Si el código es 'DEF', seleccionar automáticamente 'Definitivo'
-                                            if (data.codigo && data.codigo.toUpperCase() === 'DEF') {
-                                                const selectDiagnostico = document.getElementById('tipoDiagnosticoSelected');
-                                                if (selectDiagnostico) {
-                                                    selectDiagnostico.value = '2';
-                                                    selectDiagnostico.dispatchEvent(new Event('change', { bubbles: true }));
-                                                    console.log('[AutoFill] Seleccionado "Definitivo" en el selector tipoDiagnosticoSelected por código DEF.');
-                                                }
-                                            }
-                                        } else {
-                                            console.log('[AutoFill] No se encontró el input codigoDiagnostico.');
-                                        }
-                                    }, 1000);
-                                } else {
-                                    console.log('[AutoFill] No se encontró el selector tipoDiagnosticoSelected.');
-                                }
-                            }, 2000);
+                            console.log('[AutoFill] Click en botón Continuar.');
                         } else {
                             console.log('[AutoFill] No se encontró el botón Continuar.');
                         }
@@ -70,9 +32,41 @@ function continuarFlujoAutofill() {
                     console.log('[AutoFill] No se encontró el input numeroIdentificacion.');
                 }
             }, 2000);
-        } else {
-            console.log('[AutoFill] No hay datos guardados para autofill.');
+            return;
         }
+        // Paso 2: Espera activa para el selector de diagnóstico
+        let intentos = 0;
+        const maxIntentos = 10; // 10 intentos x 500ms = 5 segundos
+        function intentarDiagnostico() {
+            const selectorTipo = document.getElementById('tipoDiagnosticoSelected');
+            const inputCodigo = document.getElementById('codigoDiagnostico');
+            if (selectorTipo && inputCodigo) {
+                selectorTipo.value = "2"; // "2" es Definitivo
+                selectorTipo.dispatchEvent(new Event('change', { bubbles: true }));
+                console.log("[AutoFill] Selector de tipo diagnóstico colocado en 'Definitivo'");
+                inputCodigo.value = data.codigo || "";
+                inputCodigo.dispatchEvent(new Event('input', { bubbles: true }));
+                console.log("[AutoFill] Input de código diagnóstico rellenado:", inputCodigo.value);
+                // Clic automático en el radio
+                setTimeout(() => {
+                    const radioConsulta = document.getElementById('radioConsultaID_0');
+                    if (radioConsulta) {
+                        radioConsulta.click();
+                        console.log('[AutoFill] Radio radioConsultaID_0 clickeado automáticamente.');
+                    } else {
+                        console.log('[AutoFill] No se encontró el radio radioConsultaID_0.');
+                    }
+                }, 500);
+                return;
+            }
+            intentos++;
+            if (intentos < maxIntentos) {
+                setTimeout(intentarDiagnostico, 500);
+            } else {
+                console.log('[AutoFill] No se encontraron los elementos de diagnóstico tras esperar.');
+            }
+        }
+        intentarDiagnostico();
     });
 }
 
@@ -82,7 +76,22 @@ document.addEventListener('DOMContentLoaded', function() {
         if (window.location.href.includes('identificacion.do')) {
             console.log('[AutoFill] Ejecutando autofill en la página de identificación:', window.location.href);
         }
-        continuarFlujoAutofill();
+            chrome.storage.local.get('autofillData', function(result) {
+                const data = result.autofillData;
+                if (data) {
+                    continuarFlujoAutofill();
+                    // Simular clic en el botón 'Rellenar' si existe en la segunda página
+                    setTimeout(() => {
+                        const btnRellenar = document.querySelector('button, input[type="button"], input[type="submit"]');
+                        if (btnRellenar && (btnRellenar.textContent.trim().toLowerCase() === 'rellenar' || btnRellenar.value?.trim().toLowerCase() === 'rellenar')) {
+                            btnRellenar.click();
+                            console.log('[AutoFill] Botón Rellenar clickeado automáticamente.');
+                        }
+                    }, 3000);
+                } else {
+                    console.log('[AutoFill] No hay datos guardados para autofill en esta recarga.');
+                }
+            });
     }, 1500);
 });
 
@@ -92,9 +101,8 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         console.log('[AutoFill] Recibido mensaje para autofill desde popup.');
         chrome.storage.local.set({ autofillData: request }, function() {
             console.log('[AutoFill] Datos guardados en memoria desde content script:', request);
-            setTimeout(() => {
-                continuarFlujoAutofill();
-            }, 2000);
+            // Ejecutar autofill inmediatamente, sin esperar el botón
+            continuarFlujoAutofill();
         });
     }
         // NUEVO: Solo seleccionar 'Definitivo' y colocar el código

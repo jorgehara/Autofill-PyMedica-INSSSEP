@@ -7,11 +7,22 @@
     <!-- ...existing code... -->
 </head>
 <body
-      style="font-family: Arial, sans-serif; padding: 16px; background: #f5f5f5; border-radius: 8px; width: 450px; box-sizing: border-box;">
+    style="font-family: Arial, sans-serif; padding: 16px; background: #f5f5f5; border-radius: 8px; width: 450px; box-sizing: border-box;">
     <div style="width: 450px; height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem;">
-       
-    <textarea id="datos" name="datos" rows="12" placeholder="Ingrese los datos a autocompletar..." style="width: 400px; height: 120px;"></textarea>
-</div>
+        <textarea id="datos" name="datos" rows="12" placeholder="Pegue el listado tabulado aquí..." style="width: 400px; height: 120px;"></textarea>
+    </div>
+    <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 1rem;">
+        <button type="button" id="formatearLista" style="background:#009688;color:white;border:none;padding:6px 16px;border-radius:4px;font-weight:bold;">Formatear lista</button>
+        <button type="button" id="guardarListado" style="background:#ffa000;color:white;border:none;padding:6px 16px;border-radius:4px;font-weight:bold;">Guardar listado en memoria</button>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 1rem;">
+        <button type="button" id="anteriorPaciente" style="background:#888;color:white;border:none;padding:6px 16px;border-radius:4px;font-weight:bold;">Anterior</button>
+        <span id="pacienteActual" style="font-weight:bold; color:#1976d2;">Paciente 1 de 1</span>
+        <button type="button" id="siguientePaciente" style="background:#888;color:white;border:none;padding:6px 16px;border-radius:4px;font-weight:bold;">Siguiente</button>
+        <input type="number" id="irPaciente" min="1" value="1" style="width: 60px; text-align: center; border-radius: 4px; border: 1px solid #ccc; font-weight: bold;" title="Ir al paciente">
+        <button type="button" id="btnIrPaciente" style="background:#1976d2;color:white;border:none;padding:6px 10px;border-radius:4px;font-weight:bold;">Ir</button>
+        <span id="totalPacientes" style="margin-left:10px; color:#555; font-size: 14px;"></span>
+    </div>
 <form id="datosForm" style="display: flex; flex-direction: column; gap: 10px; max-width: 350px; margin: 0 auto;">
         <button type="button" id="cargarCampos" style="background:#43a047;color:white;border:none;padding:8px 0;border-radius:4px;font-weight:bold;margin-top:8px;">Cargar campos</button>
         <label for="codigo">Código:</label>

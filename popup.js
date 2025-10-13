@@ -71,4 +71,33 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
+    function mostrarPacienteActual() {
+        const anteriorBtn = document.getElementById('anteriorPaciente');
+        const siguienteBtn = document.getElementById('siguientePaciente');
+        const irPaciente = document.getElementById('irPaciente');
+        const totalPacientes = document.getElementById('totalPacientes');
+        const pacienteActual = document.getElementById('pacienteActual');
+        if (pacientes.length === 0) {
+            pacienteActual.textContent = 'Sin pacientes';
+            totalPacientes.textContent = 'Total: 0';
+            anteriorBtn.disabled = true;
+            siguienteBtn.disabled = true;
+            irPaciente.value = 1;
+            irPaciente.disabled = true;
+            return;
+        }
+        const p = pacientes[pacienteIndex];
+        document.getElementById('codigo').value = p.codigo;
+        document.getElementById('dni').value = p.afiliado;
+        document.getElementById('nombre').value = p.nombre;
+        document.getElementById('afiliado').value = p.afiliado;
+        pacienteActual.textContent = `Paciente ${pacienteIndex + 1} de ${pacientes.length}`;
+        irPaciente.max = pacientes.length;
+        irPaciente.value = pacienteIndex + 1;
+        irPaciente.disabled = false;
+        totalPacientes.textContent = `Total: ${pacientes.length}`;
+        anteriorBtn.disabled = pacienteIndex === 0;
+        siguienteBtn.disabled = pacienteIndex === pacientes.length - 1;
+    }
 });

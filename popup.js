@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Botón para guardar el listado en memoria como array de pacientes
+    // Botón para guardar el listado en memoria como array de pacientes (formato CSV)
     const guardarBtn = document.getElementById('guardarListado');
     if (guardarBtn) {
         guardarBtn.addEventListener('click', function() {
@@ -107,12 +107,12 @@ document.addEventListener('DOMContentLoaded', function() {
             pacientes = datosRaw.split('\n').map(linea => {
                 const partes = linea.split(',');
                 return {
-                    codigo: partes[0] || '',
-                    dni: partes[1] || '',
-                    nombre: partes[2] || '',
-                    afiliado: partes[3] || ''
+                    codigo: partes[0] ? partes[0].trim() : '',
+                    dni: partes[1] ? partes[1].trim() : '',
+                    nombre: partes[2] ? partes[2].trim() : '',
+                    afiliado: partes[3] ? partes[3].trim() : ''
                 };
-            }).filter(p => p.codigo && p.dni);
+            }).filter(p => p.codigo && p.dni && p.nombre && p.afiliado);
             pacienteIndex = 0;
             chrome.storage.local.set({
                 autofillListadoPacientes: pacientes,

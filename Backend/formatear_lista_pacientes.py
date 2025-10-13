@@ -10,13 +10,13 @@ def format_patient_list(input_file, output_file):
 
         formatted_lines = []
         for line in lines:
-            fields = line.strip().split('\t')
+            fields = line.strip().split()
             if len(fields) >= 6:
                 codigo = fields[0].strip()
                 afiliado = fields[1].strip()
-                nombre = fields[2].strip()
-                # El campo afiliado se repite en la posición 4
-                afiliado2 = fields[4].strip()
+                # El nombre puede tener espacios, lo reconstruimos
+                nombre = ' '.join(fields[2:-3]).strip()
+                afiliado2 = fields[-2].strip()
                 formatted_line = f"{codigo},{afiliado},{nombre},{afiliado2}"
                 formatted_lines.append(formatted_line)
 

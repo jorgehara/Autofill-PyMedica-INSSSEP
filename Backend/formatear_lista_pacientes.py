@@ -9,15 +9,27 @@ def format_patient_list(input_file, output_file):
             lines = f.readlines()
 
         formatted_lines = []
+        import re
         for line in lines:
-            fields = line.strip().split()
-            if len(fields) >= 6:
-                codigo = fields[0].strip()
-                afiliado = fields[1].strip()
-                # El nombre puede tener espacios, lo reconstruimos
-                nombre = ' '.join(fields[2:-3]).strip()
-                afiliado2 = fields[-2].strip()
-                formatted_line = f"{codigo},{afiliado},{nombre},{afiliado2}"
+            # Separar por tabulaciones primero
+            fields = [f.strip() for f in re.split(r'\t+', line.strip()) if f.strip()]
+            if len(fields) >= 4:
+                codigo = fields[0]
+                afiliado = fields[1]
+                # Buscar el índice de 'Titular' y reconstruir el nombre
+                try:
+                    idx_titular = fields.index('Titular')
+                except ValueError:
+                    continue
+                nombre = ' '.join(fields[2:idx_titular]).strip()
+                afiliado2 = fields[idx_titular+1] if len(fields) > idx_titular+1 else afiliado
+                # Siempre poner la coma después del código
+                if nombre:
+                    formatted_line = f"{codigo},{afiliado},{nombre},{afiliado2}"
+                else:
+                    formatted_line = f"{codigo},{afiliado},{afiliado2}"
+                # Si por error el código y el afiliado están juntos con espacio, reemplazar el primer espacio por coma
+                formatted_line = re.sub(r"^([A-Z0-9]+) ([0-9]+)", r"\1,\2", formatted_line)
                 formatted_lines.append(formatted_line)
 
         with open(output_file, 'w', encoding='utf-8') as f:

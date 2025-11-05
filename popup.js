@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Escuchar mensaje para cerrar el popup
+    chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+        if (request.accion === 'cerrar-popup') {
+            window.close();
+        }
+    });
     // Restaurar el contenido del textarea al cargar el popup
     const textarea = document.getElementById('datos');
     if (textarea) {

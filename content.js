@@ -31,7 +31,7 @@ function continuarFlujoAutofill() {
                 } else {
                     console.log('[AutoFill] No se encontró el input numeroIdentificacion.');
                 }
-            }, 2000);
+            }, 500);
             return;
         }
         // Paso 2: Espera activa para el selector de diagnóstico
@@ -56,6 +56,18 @@ function continuarFlujoAutofill() {
                     } else {
                         console.log('[AutoFill] No se encontró el radio radioConsultaID_0.');
                     }
+                        // Nuevo: Clic automático en el botón Validar
+                        setTimeout(() => {
+                            const btnValidar = document.querySelector("input[name='Consumir']");
+                            if (btnValidar) {
+                                btnValidar.click();
+                                console.log('[AutoFill] Botón Validar clickeado automáticamente.');
+                                // Enviar mensaje para cerrar el popup
+                                chrome.runtime.sendMessage({ accion: 'cerrar-popup' });
+                            } else {
+                                console.log('[AutoFill] No se encontró el botón Validar (Consumir).');
+                            }
+                        }, 1000);
                 }, 500);
                 return;
             }

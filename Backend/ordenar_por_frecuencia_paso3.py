@@ -4,7 +4,7 @@
 from collections import Counter, defaultdict
 
 input_file = 'Filtrados de menor a mayor.txt'
-output_file = 'Filtrados de mayor a menor.txt'
+output_file = 'Filtrados de mayor a menorOK.txt'
 
 # Leer todas las líneas
 with open(input_file, encoding='utf-8') as f:

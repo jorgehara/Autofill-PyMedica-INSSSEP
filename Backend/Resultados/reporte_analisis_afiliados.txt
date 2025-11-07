@@ -1,0 +1,1255 @@
+=== REPORTE DE ANÁLISIS DE AFILIADOS ===
+
+ESTADÍSTICAS GENERALES:
+Total de registros procesados: 415
+Total de afiliados únicos: 175
+
+DIAGNÓSTICOS MÁS FRECUENTES:
+B349: 146 veces
+Z000: 79 veces
+I119: 52 veces
+A099: 39 veces
+J009: 34 veces
+N300: 17 veces
+M255: 8 veces
+T784: 6 veces
+J040: 6 veces
+M624: 4 veces
+T384: 4 veces
+K299: 3 veces
+M542: 3 veces
+M549: 3 veces
+F412: 2 veces
+E119: 2 veces
+M321: 1 veces
+J029: 1 veces
+Listado: 1 veces
+
+AFILIADOS CON MÁS APARICIONES:
+
+Afiliado: ALCARAZ VEGA WILLIAMS RO 53228523
+DNI: 31079334
+Cantidad de apariciones: 8
+Diagnósticos diferentes: B349
+Tipo: No especificado
+--------------------------------------------------
+
+Afiliado: PEREZ MIRTA GLADIS 28002737 27280027370
+DNI: 32935277
+Cantidad de apariciones: 7
+Diagnósticos diferentes: Z000, A099
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: MUÑOZ AVRIL ARELYS 59311404 27593114046
+DNI: 32511449
+Cantidad de apariciones: 7
+Diagnósticos diferentes: B349, A099
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: PILIPZUK AILYN GIANEL 55054261 27550542612
+DNI: 33615019
+Cantidad de apariciones: 7
+Diagnósticos diferentes: B349, A099
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: DEL CAMPO GABRIEL AARON 48729743 20487297438
+DNI: 32061712
+Cantidad de apariciones: 7
+Diagnósticos diferentes: A099, B349, I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: LOPEZ RAMON JAVIER
+DNI: 29057853
+Cantidad de apariciones: 7
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: CORDOBA LORENZO VALENTI 47994230 20479942308 hijo krawiec
+DNI: 25854742
+Cantidad de apariciones: 7
+Diagnósticos diferentes: M255, B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: ASSL GLADYS BEATRIZ
+DNI: 29057937
+Cantidad de apariciones: 6
+Diagnósticos diferentes: T784, Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: QUIROZ LOURDES GABRI 50921181
+DNI: 25813464
+Cantidad de apariciones: 6
+Diagnósticos diferentes: N300, B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: BILAN DE PELLERANO EMIL
+DNI: 39268
+Cantidad de apariciones: 6
+Diagnósticos diferentes: I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: GARCIA EVA JAZMIN 53104839 27531048394
+DNI: 36326921
+Cantidad de apariciones: 6
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: PASICH PECOVICH ANGEL A 48729749
+DNI: 23981010
+Cantidad de apariciones: 5
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: SOTELO CAMILA YAZMIN 54431215 23544312154
+DNI: 26307366
+Cantidad de apariciones: 5
+Diagnósticos diferentes: N300, Z000, B349, A099
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: PILIPCZUK ANA ISABELLA 59732892 27597328929
+DNI: 32061881
+Cantidad de apariciones: 5
+Diagnósticos diferentes: J009, B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: ZUBCO KUVASZUK MIRTA LI
+DNI: 22933327
+Cantidad de apariciones: 5
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: BUSTAMANTE MARISA ISABE
+DNI: 20276614
+Cantidad de apariciones: 5
+Diagnósticos diferentes: A099, I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: SLAVIK SUSANA AURORA
+DNI: 17398641
+Cantidad de apariciones: 5
+Diagnósticos diferentes: T784, J009, N300, B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: PROKOPIUK NELSON EXEQUI
+DNI: 37454529
+Cantidad de apariciones: 4
+Diagnósticos diferentes: J009
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: MONTES NOELIA ALEJANDRA
+DNI: 33651545
+Cantidad de apariciones: 4
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: MUÑOZ OMAR ARIEL
+DNI: 34040769
+Cantidad de apariciones: 4
+Diagnósticos diferentes: N300
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: BERTINO DANIEL ALCIDES
+DNI: 27706549
+Cantidad de apariciones: 4
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: GAN MELANI DESIREE
+DNI: 38503705
+Cantidad de apariciones: 4
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: RADLOVACKI ESTELA ALICI
+DNI: 22343363
+Cantidad de apariciones: 4
+Diagnósticos diferentes: J040
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: SORIA XIMENA AYELEN
+DNI: 39552579
+Cantidad de apariciones: 4
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: AGUILAR FIAMA ANTONELLA
+DNI: 37762102
+Cantidad de apariciones: 4
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: ALTAMIRANO PAULA IVANA
+DNI: 29057852
+Cantidad de apariciones: 4
+Diagnósticos diferentes: A099, B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: DICKAU ERIC DAVID
+DNI: 36976073
+Cantidad de apariciones: 4
+Diagnósticos diferentes: Z000, B349, M255
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: TISERA ALMA SAMIRA AYLE 44946152 27449461520
+DNI: 26826677
+Cantidad de apariciones: 4
+Diagnósticos diferentes: J009, A099
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: KORCIK BENICIO AGUSTIN 59903831 20599038315
+DNI: 33615155
+Cantidad de apariciones: 4
+Diagnósticos diferentes: N300, A099, B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: ZANCOFF ALEJANDRA EMILS
+DNI: 29220179
+Cantidad de apariciones: 4
+Diagnósticos diferentes: A099
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: MENDOZA HECTOR RAUL 16945545 20169455458
+DNI: 20091007
+Cantidad de apariciones: 4
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: ALMIRON OSCAR ALBERTO 13576173 20135761738
+DNI: 13725316
+Cantidad de apariciones: 4
+Diagnósticos diferentes: A099, B349, I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: KOBLUK SAMUEL EMILIO
+DNI: 17037705
+Cantidad de apariciones: 3
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: PINTO RAMONA MIRTHA
+DNI: 11655997
+Cantidad de apariciones: 3
+Diagnósticos diferentes: B349, I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: ERCEG HUGO JORGE
+DNI: 32266271
+Cantidad de apariciones: 3
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: IVANFF STOINOVSKY JUAN
+DNI: 39180234
+Cantidad de apariciones: 3
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: MUÑOZ BENICCIO MATTEO
+DNI: 56327714
+Cantidad de apariciones: 3
+Diagnósticos diferentes: J009
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: NOVIK NILDA
+DNI: 4941385
+Cantidad de apariciones: 3
+Diagnósticos diferentes: Z000, F412
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: ALVAREZ ANDREA ALEJANDR
+DNI: 31149580
+Cantidad de apariciones: 3
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: BERTINO DIDIER FACUNDO 53022036
+DNI: 53022036
+Cantidad de apariciones: 3
+Diagnósticos diferentes: B349
+Tipo: No especificado
+--------------------------------------------------
+
+Afiliado: BARBOZA SANDRA CAROLINA
+DNI: 24597031
+Cantidad de apariciones: 3
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: KURKAZ OLGA ELVIRA
+DNI: 10569041
+Cantidad de apariciones: 3
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: CUR LUCILA MARISA
+DNI: 22749988
+Cantidad de apariciones: 3
+Diagnósticos diferentes: I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: VERON CARINA
+DNI: 30580893
+Cantidad de apariciones: 3
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: BALUK PABLO
+DNI: 57256
+Cantidad de apariciones: 3
+Diagnósticos diferentes: I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: PACHECO PRISCILA ANTO
+DNI: 47618292
+Cantidad de apariciones: 3
+Diagnósticos diferentes: N300, Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: ALMIRON HECTOR ANIBAL
+DNI: 20093337
+Cantidad de apariciones: 3
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: KOBLUK CLAUDIO MARCEL
+DNI: 30266450
+Cantidad de apariciones: 3
+Diagnósticos diferentes: K299
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: SILVA CLARISA RAQUEL IT
+DNI: 28666041
+Cantidad de apariciones: 3
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: KARACSANY CLAUDIA LOREN
+DNI: 30580858
+Cantidad de apariciones: 3
+Diagnósticos diferentes: Z000, J009
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: ESCOBAR SILVIA ELISABE
+DNI: 29826933
+Cantidad de apariciones: 3
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: CORDOBA JORGE MARCELO
+DNI: 24762852
+Cantidad de apariciones: 3
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: VEGA PABLO MARIANO 48453796 20484537969
+DNI: 33651622
+Cantidad de apariciones: 3
+Diagnósticos diferentes: J009
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: RAMIREZ CAROLINA ELIZAB
+DNI: 27025637
+Cantidad de apariciones: 3
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: DEL CAMPO KIARA APHRIL
+DNI: 47618282
+Cantidad de apariciones: 3
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: FUS RICARDO MARCELO JOS
+DNI: 23218576
+Cantidad de apariciones: 3
+Diagnósticos diferentes: A099, I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: ROMERO DARIO EZEQUIEL M
+DNI: 32698560
+Cantidad de apariciones: 3
+Diagnósticos diferentes: Z000, J009
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: GARCIA NOELI SOLEDAD 36245523 27362455230
+DNI: 34966368
+Cantidad de apariciones: 3
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: VICENTIN MONICA BIBIANA
+DNI: 21859364
+Cantidad de apariciones: 3
+Diagnósticos diferentes: M542, B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: GERGOFF PECHERINCOFF NO
+DNI: 26826669
+Cantidad de apariciones: 3
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: SOSA MARIA VICTORIA
+DNI: 37938125
+Cantidad de apariciones: 3
+Diagnósticos diferentes: A099
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: SOSA NORMA NOEMI
+DNI: 28340577
+Cantidad de apariciones: 3
+Diagnósticos diferentes: J009, B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: LUGO NOELIA EMILCE 34566827 27345668271
+DNI: 34901889
+Cantidad de apariciones: 3
+Diagnósticos diferentes: B349
+Tipo: No especificado
+--------------------------------------------------
+
+Afiliado: MOSQUEDA DANIELA AGOST 44385488 27443854880
+DNI: 23334116
+Cantidad de apariciones: 3
+Diagnósticos diferentes: J009, M321
+Tipo: No especificado
+--------------------------------------------------
+
+Afiliado: VALDEZ FABIAN
+DNI: 36671387
+Cantidad de apariciones: 3
+Diagnósticos diferentes: J009, B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: CARRUEGA ELISA GRISELDA
+DNI: 24242468
+Cantidad de apariciones: 3
+Diagnósticos diferentes: N300
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: MANSILLA ANIBAL NESTO
+DNI: 29220122
+Cantidad de apariciones: 3
+Diagnósticos diferentes: I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: VULGAN JOSE ALBERTO
+DNI: 7902776
+Cantidad de apariciones: 3
+Diagnósticos diferentes: J009, B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: SANDOVAL PEDRO ANTONIO 10980494 20109804941
+DNI: 33620
+Cantidad de apariciones: 3
+Diagnósticos diferentes: I119
+Tipo: No especificado
+--------------------------------------------------
+
+Afiliado: NAZAR MIRTA ROSA
+DNI: 18291499
+Cantidad de apariciones: 2
+Diagnósticos diferentes: A099
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: FERNANDEZ DE BENITEZ P
+DNI: 5405750
+Cantidad de apariciones: 2
+Diagnósticos diferentes: N300
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: FERNANDEZ DE BENITEZ P
+DNI: 00952515
+Cantidad de apariciones: 2
+Diagnósticos diferentes: I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: BALUK ERIKA LUCIANA
+DNI: 38383763
+Cantidad de apariciones: 2
+Diagnósticos diferentes: J009
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: VACA PATRICIA VIVIANA 28194895 23281948954
+DNI: 21546254
+Cantidad de apariciones: 2
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: MASALYKA LILIANA ELIZAB
+DNI: 63599
+Cantidad de apariciones: 2
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: ANDRES TERESA BETI
+DNI: 16516412
+Cantidad de apariciones: 2
+Diagnósticos diferentes: I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: BOHN JOHANNA GISELLE
+DNI: 36484582
+Cantidad de apariciones: 2
+Diagnósticos diferentes: B349, J040
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: GRISMADO NORBERTO JAVIE
+DNI: 32266230
+Cantidad de apariciones: 2
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: PEREZ CORINA MERCEDES
+DNI: 37169646
+Cantidad de apariciones: 2
+Diagnósticos diferentes: A099
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: MONTES LUCIANA MARISEL
+DNI: 36671286
+Cantidad de apariciones: 2
+Diagnósticos diferentes: I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: MARTIN MORO MARIA ALEJA
+DNI: 34458439
+Cantidad de apariciones: 2
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: ALEGRE JOSE LUIS
+DNI: 17322587
+Cantidad de apariciones: 2
+Diagnósticos diferentes: E119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: CONTRERAS MALENA AYELEN
+DNI: 38123338
+Cantidad de apariciones: 2
+Diagnósticos diferentes: A099
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: MREÑICA ALEJANDRA VANES
+DNI: 34040841
+Cantidad de apariciones: 2
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: SOSA CRISTINA CEFERINA
+DNI: 22236114
+Cantidad de apariciones: 2
+Diagnósticos diferentes: M624
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: BERTINO RICARDO OSVALDO
+DNI: 00022302
+Cantidad de apariciones: 2
+Diagnósticos diferentes: I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: SOTELO SUSANA AIDE
+DNI: 17919349
+Cantidad de apariciones: 2
+Diagnósticos diferentes: J009, I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: AYALA TAMARA ELIZABETH
+DNI: 35686560
+Cantidad de apariciones: 2
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: HORKI VALERIA MARIEL
+DNI: 37762110
+Cantidad de apariciones: 2
+Diagnósticos diferentes: A099, B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: PACHECO CELESTINA ROSAL
+DNI: 22251
+Cantidad de apariciones: 2
+Diagnósticos diferentes: M624
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: SAWCZUK PAULINA
+DNI: 32343
+Cantidad de apariciones: 2
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: HOLUBEK LORENA BELEN
+DNI: 33580899
+Cantidad de apariciones: 2
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: TRACHOVSKY PAULON JOAQU 52748882 20527488827
+DNI: 32935258
+Cantidad de apariciones: 2
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: SZKAMARDA DANIELA ELI
+DNI: 38383722
+Cantidad de apariciones: 2
+Diagnósticos diferentes: J009
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: KARDASZ ORNELLA LILIA
+DNI: 36976060
+Cantidad de apariciones: 2
+Diagnósticos diferentes: J009, B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: FERNANDEZ CARLA ABRIL 49841489 27498414891
+DNI: 32061831
+Cantidad de apariciones: 2
+Diagnósticos diferentes: T384
+Tipo: No especificado
+--------------------------------------------------
+
+Afiliado: GALIANO VANESA DEL CARM
+DNI: 30580937
+Cantidad de apariciones: 2
+Diagnósticos diferentes: B349, I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: ESPARZA LUIS MARIA
+DNI: 10174882
+Cantidad de apariciones: 2
+Diagnósticos diferentes: I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: TORRES NAVARRO MARIELA
+DNI: 25992946
+Cantidad de apariciones: 2
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: MANSILLA ARGENTINO EUGE
+DNI: 20276555
+Cantidad de apariciones: 1
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: TORRES LILIANA BEATRIZ
+DNI: 18408832
+Cantidad de apariciones: 1
+Diagnósticos diferentes: I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: HERCOVICH LEILA MICAEL
+DNI: 33452755
+Cantidad de apariciones: 1
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: TESTATONDA ETHEL NOEMI
+DNI: 26117544
+Cantidad de apariciones: 1
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: RAMOS MEZA DAVID MISAEL 56585160 20565851609
+DNI: 29748802
+Cantidad de apariciones: 1
+Diagnósticos diferentes: B349
+Tipo: No especificado
+--------------------------------------------------
+
+Afiliado: ROI GISELA MARILIN
+DNI: 35688600
+Cantidad de apariciones: 1
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: NIKITIUK NATALIA
+DNI: 14137494
+Cantidad de apariciones: 1
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: HOLUBEK EVELIN JANET
+DNI: 37938107
+Cantidad de apariciones: 1
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: POLEI MIRTHA ESTHER
+DNI: 26188682
+Cantidad de apariciones: 1
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: KOLAKOVICH EMMA ISABELLA 56224386 27562243866
+DNI: 22966176
+Cantidad de apariciones: 1
+Diagnósticos diferentes: B349
+Tipo: No especificado
+--------------------------------------------------
+
+Afiliado: ROBELLO MARINA ALEJANDR
+DNI: 31496252
+Cantidad de apariciones: 1
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: SAUCEDO YESICA ANABEL
+DNI: 37938205
+Cantidad de apariciones: 1
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: AGUIRRE ALEJANDRA RAMON 20603203 27206032036
+DNI: 61562
+Cantidad de apariciones: 1
+Diagnósticos diferentes: I119
+Tipo: No especificado
+--------------------------------------------------
+
+Afiliado: WALTER RUBEN HORACIO
+DNI: 34966333
+Cantidad de apariciones: 1
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: ESPARZA KRAWIEC IVO GAST 43616070 20436160705
+DNI: 27963494
+Cantidad de apariciones: 1
+Diagnósticos diferentes: B349
+Tipo: No especificado
+--------------------------------------------------
+
+Afiliado: CHICO GRISELDA MONICA
+DNI: 32712459
+Cantidad de apariciones: 1
+Diagnósticos diferentes: J040
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: MITROVIC FIORELLA ABIGA
+DNI: 54178162
+Cantidad de apariciones: 1
+Diagnósticos diferentes: T784
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: QUINTANA GUZMAN MORENA 50186872 27501868723
+DNI: 38765285
+Cantidad de apariciones: 1
+Diagnósticos diferentes: B349
+Tipo: No especificado
+--------------------------------------------------
+
+Afiliado: FRUTOS VICENTIN THOMAS 21859364
+DNI: 45250738
+Cantidad de apariciones: 1
+Diagnósticos diferentes: B349
+Tipo: No especificado
+--------------------------------------------------
+
+Afiliado: FANDRICH CARMEN CECILIA
+DNI: 34966525
+Cantidad de apariciones: 1
+Diagnósticos diferentes: B349
+Tipo: No especificado
+--------------------------------------------------
+
+Afiliado: SPIEGL MIGUEL ANGEL 16945564
+DNI: 14451935
+Cantidad de apariciones: 1
+Diagnósticos diferentes: Z000
+Tipo: No especificado
+--------------------------------------------------
+
+Afiliado: ACOSTA MARTA ANDREA
+DNI: 28340431
+Cantidad de apariciones: 1
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: KRAWIEC YANINA EVELIN
+DNI: 28340627
+Cantidad de apariciones: 1
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: GUTIERREZ ARMANDO ERNES
+DNI: 36671579
+Cantidad de apariciones: 1
+Diagnósticos diferentes: J009
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: SOLOSA MARCELA VIVIANA
+DNI: 29020857
+Cantidad de apariciones: 1
+Diagnósticos diferentes: I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: SCHAFFINO PRISCILA ARAC
+DNI: 34614629
+Cantidad de apariciones: 1
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: DECCA LORENA PATRICIA
+DNI: 26929906
+Cantidad de apariciones: 1
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: ACOSTA SYLVIA ESTHER
+DNI: 21349000
+Cantidad de apariciones: 1
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: PIÑEYRO ADRIAN MAURICIO
+DNI: 35422071
+Cantidad de apariciones: 1
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: PINATTI MARIANELA DE LO
+DNI: 25820300
+Cantidad de apariciones: 1
+Diagnósticos diferentes: J009
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: ALVAREZ MAXIMILIANO MAR
+DNI: 39750586
+Cantidad de apariciones: 1
+Diagnósticos diferentes: M549
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: RAMIREZ CARLA DANIELA
+DNI: 31514979
+Cantidad de apariciones: 1
+Diagnósticos diferentes: T784
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: ROMERO NILDA MARCELA
+DNI: 25379924
+Cantidad de apariciones: 1
+Diagnósticos diferentes: I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: GERGOFF MILOFF ROSA ALE
+DNI: 30188845
+Cantidad de apariciones: 1
+Diagnósticos diferentes: J009
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: ALMADA MARIA INES
+DNI: 34040940
+Cantidad de apariciones: 1
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: GIMENEZ MARTIN GUILLERM 58534206 27585342063
+DNI: 36368356
+Cantidad de apariciones: 1
+Diagnósticos diferentes: Z000
+Tipo: No especificado
+--------------------------------------------------
+
+Afiliado: KONOWALCZUK BEATRIZ NOE
+DNI: 20394102
+Cantidad de apariciones: 1
+Diagnósticos diferentes: F412
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: LANDRIEL RAUL OSCAR
+DNI: 14274679
+Cantidad de apariciones: 1
+Diagnósticos diferentes: I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: ESPINOZA MERCEDES ALICI
+DNI: 28340376
+Cantidad de apariciones: 1
+Diagnósticos diferentes: J009
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: BLANCO ANDREA CRISTINA 28396191 27283961914
+DNI: 26307203
+Cantidad de apariciones: 1
+Diagnósticos diferentes: M542
+Tipo: No especificado
+--------------------------------------------------
+
+Afiliado: KAVGIC CLARA INES 42276509 27422765099
+DNI: 22236146
+Cantidad de apariciones: 1
+Diagnósticos diferentes: Z000
+Tipo: No especificado
+--------------------------------------------------
+
+Afiliado: BARNASTHPOL SONIA MIRTH 22236185 27222361856
+DNI: 00060658
+Cantidad de apariciones: 1
+Diagnósticos diferentes: T784
+Tipo: No especificado
+--------------------------------------------------
+
+Afiliado: MANSILLA TICIANA PAZ 49199966
+DNI: 22857890
+Cantidad de apariciones: 1
+Diagnósticos diferentes: B349
+Tipo: No especificado
+--------------------------------------------------
+
+Afiliado: ROJAS MARISA RAQUEL
+DNI: 31887089
+Cantidad de apariciones: 1
+Diagnósticos diferentes: M549
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: GAWRYLUK PAOLA INES
+DNI: 28340620
+Cantidad de apariciones: 1
+Diagnósticos diferentes: J009
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: HOFLER ROCIO AMELIA I
+DNI: 36449527
+Cantidad de apariciones: 1
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: GEORGEF WALTER DANIEL
+DNI: 28340422
+Cantidad de apariciones: 1
+Diagnósticos diferentes: I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: PAWLUK PABLO
+DNI: 66619
+Cantidad de apariciones: 1
+Diagnósticos diferentes: I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: ALMIRON MILENA 47618206 27476182064
+DNI: 28489664
+Cantidad de apariciones: 1
+Diagnósticos diferentes: T384
+Tipo: No especificado
+--------------------------------------------------
+
+Afiliado: GARCIA DE SCHAFFINO REI
+DNI: 20290
+Cantidad de apariciones: 1
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: IVANOFF STOINOVSKY PEDR
+DNI: 60658
+Cantidad de apariciones: 1
+Diagnósticos diferentes: M255
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: WOLOSZYN PATRICIA NOEMI
+DNI: 27435264
+Cantidad de apariciones: 1
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: KURKASZ SUSANA ELENA
+DNI: 37639
+Cantidad de apariciones: 1
+Diagnósticos diferentes: I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: IVIN ABIGAIL ANAHI
+DNI: 36671554
+Cantidad de apariciones: 1
+Diagnósticos diferentes: T384
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: GEORGEFF JORGE SIMON 12246895 20122468950
+DNI: 68702
+Cantidad de apariciones: 1
+Diagnósticos diferentes: I119
+Tipo: No especificado
+--------------------------------------------------
+
+Afiliado: LEGUIZAMON RENE ENRIQUE
+DNI: 30580968
+Cantidad de apariciones: 1
+Diagnósticos diferentes: M549
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: GARCIA EMILIA ELISA
+DNI: 6402986
+Cantidad de apariciones: 1
+Diagnósticos diferentes: I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: VALEFF JUAN
+DNI: 14274639
+Cantidad de apariciones: 1
+Diagnósticos diferentes: I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: ALVAREZ RAMON OMAR
+DNI: 24465808
+Cantidad de apariciones: 1
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: DULLKA GUILLERMO ABEL
+DNI: 40035635
+Cantidad de apariciones: 1
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: JUNCO CATALINA
+DNI: 26826534
+Cantidad de apariciones: 1
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: VODOPIVEC AMALIA BEATRI
+DNI: 61230
+Cantidad de apariciones: 1
+Diagnósticos diferentes: M255
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: PIEDRABUENA MARTINA
+DNI: 4262920
+Cantidad de apariciones: 1
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: KAVGIC ALDANA BELEN
+DNI: 39180340
+Cantidad de apariciones: 1
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: GONZALEZ CASTELLANO JUA
+DNI: 24570841
+Cantidad de apariciones: 1
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: GAWRYLUK TERESA MABEL
+DNI: 16945564
+Cantidad de apariciones: 1
+Diagnósticos diferentes: I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: RACHMANKO NORMA GLADIS
+DNI: 20276647
+Cantidad de apariciones: 1
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: BILAN ELENA TERESA
+DNI: 13576177
+Cantidad de apariciones: 1
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: BILAN MARIA
+DNI: 5451499
+Cantidad de apariciones: 1
+Diagnósticos diferentes: I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: BALUK FRANCIS GERMAN
+DNI: 36326928
+Cantidad de apariciones: 1
+Diagnósticos diferentes: Z000
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: GODOY KARIN VANESA
+DNI: 26526250
+Cantidad de apariciones: 1
+Diagnósticos diferentes: B349
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: BORSUK LAURA LEONELA
+DNI: 34966484
+Cantidad de apariciones: 1
+Diagnósticos diferentes: I119
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: SIRICH JULIO OSCAR
+DNI: 14220012
+Cantidad de apariciones: 1
+Diagnósticos diferentes: M255
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: MAIDANA EMILCE NOELIA
+DNI: 34901739
+Cantidad de apariciones: 1
+Diagnósticos diferentes: J029
+Tipo: titular
+--------------------------------------------------
+
+Afiliado: KOTARIK MARIA LAURA 30581028 27305810288
+DNI: 32982582
+Cantidad de apariciones: 1
+Diagnósticos diferentes: M255
+Tipo: No especificado
+--------------------------------------------------
+
+Afiliado: el otro mes
+DNI: NUEVOPara
+Cantidad de apariciones: 1
+Diagnósticos diferentes: Listado
+Tipo: No especificado
+--------------------------------------------------
+
+POSIBLES INCONSISTENCIAS:

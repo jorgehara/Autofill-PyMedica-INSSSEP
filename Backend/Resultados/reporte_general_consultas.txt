@@ -1,0 +1,28 @@
+=== REPORTE GENERAL DE CONSULTAS ===
+
+
+PRIMERAS CONSULTAS:
+Rango de consultas: (0, 199)
+Total consultas: 200
+Afiliados únicos: 61
+----------------------------------------
+
+SEGUNDAS CONSULTAS:
+Rango de consultas: (200, 299)
+Total consultas: 100
+Afiliados únicos: 54
+----------------------------------------
+
+TERCERAS CONSULTAS:
+Rango de consultas: (300, 359)
+Total consultas: 60
+Afiliados únicos: 56
+----------------------------------------
+
+ULTIMAS CONSULTAS:
+Rango de consultas: (360, 400)
+Total consultas: 53
+Afiliados únicos: 51
+----------------------------------------
+
+Total general de consultas procesadas: 413

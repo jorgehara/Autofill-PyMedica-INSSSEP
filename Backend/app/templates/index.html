@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSSSEP - Procesador de Datos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📋 Sistema de Procesamiento INSSSEP</h1>
+            <p class="subtitle">Procesador Unificado de Datos de Afiliados</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Panel de entrada -->
+            <div class="panel">
+                <h2>1. Cargar Datos</h2>
+
+                <!-- Tabs para seleccionar método de entrada -->
+                <div class="tabs">
+                    <button class="tab-button active" data-tab="archivo">📁 Subir Archivo</button>
+                    <button class="tab-button" data-tab="texto">📝 Pegar Texto</button>
+                </div>
+
+                <!-- Tab: Subir archivo -->
+                <div class="tab-content active" id="tab-archivo">
+                    <div class="upload-mode">
+                        <label>
+                            <input type="radio" name="uploadMode" value="single" checked>
+                            📄 Archivo único (auto-detectar)
+                        </label>
+                        <label>
+                            <input type="radio" name="uploadMode" value="dual">
+                            📄📄 Dos archivos (Afiliados + Recetas)
+                        </label>
+                    </div>
+
+                    <!-- Modo: Un archivo -->
+                    <div id="singleUploadArea" class="upload-section">
+                        <div class="upload-area" id="dropZone">
+                            <div class="upload-icon">📤</div>
+                            <p>Arrastra un archivo aquí o haz clic para seleccionar</p>
+                            <p class="upload-hint">Formatos: TXT, CSV (máx 16MB)</p>
+                            <input type="file" id="fileInput" accept=".txt,.csv" hidden>
+                        </div>
+                        <div id="fileInfo" class="file-info hidden"></div>
+                    </div>
+
+                    <!-- Modo: Dos archivos -->
+                    <div id="dualUploadArea" class="upload-section hidden">
+                        <div class="dual-upload">
+                            <div class="upload-group">
+                                <label>📋 Archivo de Afiliados (Lista Formateada)</label>
+                                <div class="upload-area-small" id="dropZoneAfiliados">
+                                    <p>Arrastra o selecciona archivo</p>
+                                    <input type="file" id="fileInputAfiliados" accept=".txt,.csv" hidden>
+                                </div>
+                                <div id="fileInfoAfiliados" class="file-info-small hidden"></div>
+                            </div>
+                            <div class="upload-group">
+                                <label>💊 Archivo de Recetas INSSSEP</label>
+                                <div class="upload-area-small" id="dropZoneRecetas">
+                                    <p>Arrastra o selecciona archivo</p>
+                                    <input type="file" id="fileInputRecetas" accept=".txt,.csv" hidden>
+                                </div>
+                                <div id="fileInfoRecetas" class="file-info-small hidden"></div>
+                            </div>
+                        </div>
+                        <button id="btnProcesarDual" class="btn btn-primary" disabled>
+                            <span class="btn-icon">⚡</span> Procesar Ambos Archivos
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tab: Pegar texto -->
+                <div class="tab-content" id="tab-texto">
+                    <div class="text-mode">
+                        <label>
+                            <input type="radio" name="textMode" value="single" checked>
+                            📝 Texto único (auto-detectar)
+                        </label>
+                        <label>
+                            <input type="radio" name="textMode" value="dual">
+                            📝📝 Dos textos (Afiliados + Recetas)
+                        </label>
+                    </div>
+
+                    <!-- Modo: Un texto -->
+                    <div id="singleTextArea" class="text-section">
+                        <textarea id="textoInput"
+                                  placeholder="Pega aquí el contenido de las recetas INSSSEP o la lista formateada..."
+                                  rows="10"></textarea>
+                        <button id="btnProcesarTexto" class="btn btn-primary">
+                            <span class="btn-icon">⚡</span> Procesar Texto
+                        </button>
+                    </div>
+
+                    <!-- Modo: Dos textos -->
+                    <div id="dualTextArea" class="text-section hidden">
+                        <div class="dual-text">
+                            <div class="text-group">
+                                <label>📋 Texto de Afiliados (Lista Formateada)</label>
+                                <textarea id="textoAfiliados"
+                                          placeholder="Pega la lista de afiliados formateada..."
+                                          rows="8"></textarea>
+                            </div>
+                            <div class="text-group">
+                                <label>💊 Texto de Recetas INSSSEP</label>
+                                <textarea id="textoRecetas"
+                                          placeholder="Pega el contenido de las recetas INSSSEP..."
+                                          rows="8"></textarea>
+                            </div>
+                        </div>
+                        <button id="btnProcesarDualTexto" class="btn btn-primary">
+                            <span class="btn-icon">⚡</span> Procesar Ambos Textos
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Configuración -->
+                <div class="config-section">
+                    <h3>⚙️ Configuración</h3>
+                    <div class="form-group">
+                        <label for="codigoDiagnostico">Código Diagnóstico:</label>
+                        <input type="text"
+                               id="codigoDiagnostico"
+                               value="B349"
+                               placeholder="Ej: B349, J029"
+                               pattern="[A-Z]\d{2,3}">
+                        <small>Formato CIE-10 (Letra + 2-3 dígitos)</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="formatoInput">Formato de Entrada:</label>
+                        <select id="formatoInput">
+                            <option value="">Detectar automáticamente</option>
+                            <option value="recetas_insssep">Recetas INSSSEP</option>
+                            <option value="lista_formateada">Lista Formateada</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel de resultados -->
+            <div class="panel">
+                <h2>2. Resultados</h2>
+
+                <!-- Estadísticas -->
+                <div id="estadisticas" class="estadisticas hidden">
+                    <div class="stat-card">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="statAfiliados">0</div>
+                            <div class="stat-label">Afiliados</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📋</div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="statConsultas">0</div>
+                            <div class="stat-label">Consultas</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💊</div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="statRecetas">0</div>
+                            <div class="stat-label">Recetas</div>
+                        </div>
+                    </div>
+                    <div class="stat-card success">
+                        <div class="stat-icon">✓</div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="statValidos">0</div>
+                            <div class="stat-label">Válidos</div>
+                        </div>
+                    </div>
+                    <div class="stat-card warning">
+                        <div class="stat-icon">⚠️</div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="statAdvertencias">0</div>
+                            <div class="stat-label">Advertencias</div>
+                        </div>
+                    </div>
+                    <div class="stat-card error">
+                        <div class="stat-icon">✗</div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="statErrores">0</div>
+                            <div class="stat-label">Errores</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filtros -->
+                <div id="filtros" class="filtros hidden">
+                    <label>Filtrar por estado:</label>
+                    <button class="filter-btn active" data-filter="todos">Todos</button>
+                    <button class="filter-btn" data-filter="valido">✓ Válidos</button>
+                    <button class="filter-btn" data-filter="advertencia">⚠️ Advertencias</button>
+                    <button class="filter-btn" data-filter="excepcion">🔔 Excepciones</button>
+                    <button class="filter-btn" data-filter="error">✗ Errores</button>
+                </div>
+
+                <!-- Tabla de resultados -->
+                <div id="tablaContainer" class="tabla-container hidden">
+                    <div class="tabla-header">
+                        <h3 id="tablaTitle">Lista de Afiliados</h3>
+                        <div class="tabla-actions">
+                            <button id="btnExportarFinal" class="btn btn-sm btn-success">
+                                ⭐ Exportar Formato Final
+                            </button>
+                            <button id="btnExportarExtension" class="btn btn-sm btn-primary">
+                                📱 Exportar para Extensión
+                            </button>
+                            <button id="btnExportarCSV" class="btn btn-sm btn-secondary">
+                                📊 Exportar CSV
+                            </button>
+                            <button id="btnExportarDetallado" class="btn btn-sm btn-secondary">
+                                📄 Reporte Detallado
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table id="tablaAfiliados">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>DNI</th>
+                                    <th>Nombre</th>
+                                    <th>Código</th>
+                                    <th>Tipo</th>
+                                    <th>Consultas</th>
+                                    <th>Recetas</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Mensaje de estado -->
+                <div id="mensaje" class="mensaje hidden"></div>
+
+                <!-- Loading -->
+                <div id="loading" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>Procesando datos...</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Sistema de Procesamiento INSSSEP - Versión 2.0</p>
+            <p class="footer-info">
+                Detecta automáticamente el formato |
+                Valida consultas (máx 3, hasta 4 por excepción) |
+                Múltiples formatos de exportación
+            </p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

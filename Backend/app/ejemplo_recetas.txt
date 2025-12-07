@@ -1,0 +1,145 @@
+INSSSEP AMB
+Dispensada
+
+Afiliado: KOBLUK SAMUEL EMILIO
+
+D.N.I.: 17037705 Credencial: 8000576655
+
+Recetario: 2528947335282
+
+Fecha Receta: 16/10/2025
+
+Emitida: 16/10/2025 18:49
+
+Plan: Cardio
+
+INSSSEP AMB
+
+Afiliado: KOBLUK SAMUEL EMILIO
+
+D.N.I.: 17037705 Credencial: 8000576655
+
+Recetario: 2528947335283
+
+Fecha Receta: 17/10/2025
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: MARTINEZ LAURA BEATRIZ
+
+D.N.I.: 23456789 Credencial: 8000123456
+
+Recetario: 2528947335284
+
+Fecha Receta: 16/10/2025
+
+INSSSEP AMB
+
+Afiliado: MARTINEZ LAURA BEATRIZ
+
+D.N.I.: 23456789 Credencial: 8000123456
+
+Recetario: 2528947335285
+
+Fecha Receta: 17/10/2025
+
+INSSSEP AMB
+
+Afiliado: MARTINEZ LAURA BEATRIZ
+
+D.N.I.: 23456789 Credencial: 8000123456
+
+Recetario: 2528947335286
+
+Fecha Receta: 18/10/2025
+
+INSSSEP AMB
+
+Afiliado: GOMEZ CARLOS ALBERTO
+
+D.N.I.: 34567890 Credencial: 8000234567
+
+Recetario: 2528947335287
+
+Fecha Receta: 16/10/2025
+
+INSSSEP AMB
+
+Afiliado: GOMEZ CARLOS ALBERTO
+
+D.N.I.: 34567890 Credencial: 8000234567
+
+Recetario: 2528947335288
+
+Fecha Receta: 17/10/2025
+
+INSSSEP AMB
+
+Afiliado: GOMEZ CARLOS ALBERTO
+
+D.N.I.: 34567890 Credencial: 8000234567
+
+Recetario: 2528947335289
+
+Fecha Receta: 18/10/2025
+
+INSSSEP AMB
+
+Afiliado: GOMEZ CARLOS ALBERTO
+
+D.N.I.: 34567890 Credencial: 8000234567
+
+Recetario: 2528947335290
+
+Fecha Receta: 19/10/2025
+
+INSSSEP AMB
+
+Afiliado: RODRIGUEZ MARIA JOSE
+
+D.N.I.: 45678901 Credencial: 8000345678
+
+Recetario: 2528947335291
+
+Fecha Receta: 16/10/2025
+
+INSSSEP AMB
+
+Afiliado: RODRIGUEZ MARIA JOSE
+
+D.N.I.: 45678901 Credencial: 8000345678
+
+Recetario: 2528947335292
+
+Fecha Receta: 17/10/2025
+
+INSSSEP AMB
+
+Afiliado: RODRIGUEZ MARIA JOSE
+
+D.N.I.: 45678901 Credencial: 8000345678
+
+Recetario: 2528947335293
+
+Fecha Receta: 18/10/2025
+
+INSSSEP AMB
+
+Afiliado: RODRIGUEZ MARIA JOSE
+
+D.N.I.: 45678901 Credencial: 8000345678
+
+Recetario: 2528947335294
+
+Fecha Receta: 19/10/2025
+
+INSSSEP AMB
+
+Afiliado: RODRIGUEZ MARIA JOSE
+
+D.N.I.: 45678901 Credencial: 8000345678
+
+Recetario: 2528947335295
+
+Fecha Receta: 20/10/2025

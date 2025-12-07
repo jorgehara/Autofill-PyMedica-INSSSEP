@@ -347,25 +347,14 @@ def exportar(formato):
             mimetype = 'text/plain'
 
         elif formato == 'final':
-            # Nuevo formato específico: CODIGO DNI NOMBRE TIPO DNI CUIL
+            # Formato CSV: CODIGO,DNI,NOMBRE,TIPO,DNI (duplica líneas por recetas)
             contenido = procesador_actual.exportar_formato_final()
-            filename = f"lista_final_{timestamp}.txt"
-            mimetype = 'text/plain'
+            filename = f"formato_final_{timestamp}.csv"
+            mimetype = 'text/csv'
 
         elif formato == 'csv':
-            # Exportar como CSV con todas las columnas
-            lineas = ["Codigo,DNI,Nombre,Tipo,Credencial,CUIL,Consultas,Recetas,Estado,Mensaje"]
-            for afiliado in procesador_actual.ordenar_por_frecuencia():
-                estado, mensaje = afiliado.validar_consultas()
-                cuil = afiliado.cuil or ''
-                lineas.append(
-                    f"{afiliado.codigo},{afiliado.dni},"
-                    f"\"{afiliado.nombre}\",{afiliado.tipo},"
-                    f"{afiliado.credencial},{cuil},"
-                    f"{afiliado.consultas},{afiliado.recetas},"
-                    f"{estado.value},\"{mensaje}\""
-                )
-            contenido = '\n'.join(lineas)
+            # Exportar CSV duplicando líneas según consultas totales
+            contenido = procesador_actual.exportar_formato_final()
             filename = f"datos_completos_{timestamp}.csv"
             mimetype = 'text/csv'
 

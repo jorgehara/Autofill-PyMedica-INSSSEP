@@ -1,0 +1,74 @@
+INSSSEP AMB
+Dispensada
+
+Afiliado: MASALYKA LILIANA ELIZABETH
+
+D.N.I.: 14703662 Credencial: 8000061059
+
+Recetario: 2528947336220
+
+Fecha Receta: 16/10/2025
+
+Emitida: 16/10/2025 18:55
+
+Plan: Cardio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: KOBLUK SAMUEL EMILIO
+
+D.N.I.: 17037705 Credencial: 8000576655
+
+Recetario: 2528947335992
+
+Fecha Receta: 16/10/2025
+
+Emitida: 16/10/2025 18:53
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: KOBLUK SAMUEL EMILIO
+
+D.N.I.: 17037705 Credencial: 8000576655
+
+Recetario: 2528947335662
+
+Fecha Receta: 16/10/2025
+
+Emitida: 16/10/2025 18:51
+
+Plan: Cardio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: KOBLUK SAMUEL EMILIO
+
+D.N.I.: 17037705 Credencial: 8000576655
+
+Recetario: 2528947335488
+
+Fecha Receta: 16/10/2025
+
+Emitida: 16/10/2025 18:50
+
+Plan: Cardio    
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: KOBLUK SAMUEL EMILIO
+
+D.N.I.: 17037705 Credencial: 8000576655
+
+Recetario: 2528947335282
+
+Fecha Receta: 16/10/2025
+
+Emitida: 16/10/2025 18:49
+
+Plan: Cardio

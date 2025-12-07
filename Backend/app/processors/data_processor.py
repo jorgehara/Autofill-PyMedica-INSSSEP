@@ -153,6 +153,7 @@ class ProcesadorRecetasINSSSEP:
 class ProcesadorListaFormateada:
     """Procesa listas ya formateadas."""
 
+    # Patrón para Titular/Beneficiario estándar
     PATRON_LINEA = re.compile(
         r"^([A-Z]\d{2,3})\s+"           # Código
         r"(\d{7,8})\s+"                  # DNI
@@ -163,10 +164,22 @@ class ProcesadorListaFormateada:
         re.IGNORECASE
     )
 
+    # Patrón para Familiar (formato: CODIGO DNI_TITULAR NOMBRE_FAMILIAR [vacío] DNI_FAMILIAR CUIL)
+    PATRON_FAMILIAR = re.compile(
+        r"^([A-Z]\d{2,3})\s+"           # Código
+        r"(\d{7,8})\s+"                  # DNI del titular
+        r"([A-ZÁÉÍÓÚÑ\s,.-]+?)\s+"      # Nombre del familiar
+        r"\s+"                           # Espacios (campo tipo vacío)
+        r"(\d{7,8})"                     # DNI del familiar (credencial)
+        r"(?:\s+(\d+))?",                # CUIL del familiar (opcional)
+        re.IGNORECASE
+    )
+
     @staticmethod
     def procesar(texto: str) -> Dict[str, Afiliado]:
         """
         Procesa texto con formato de lista formateada.
+        Soporta tanto titulares/beneficiarios como familiares.
 
         Args:
             texto: Texto de entrada
@@ -178,29 +191,55 @@ class ProcesadorListaFormateada:
         lineas = texto.strip().split('\n')
 
         for linea in lineas:
-            match = ProcesadorListaFormateada.PATRON_LINEA.match(linea.strip())
-            if not match:
+            linea_limpia = linea.strip()
+            if not linea_limpia:
                 continue
 
-            codigo, dni, nombre, tipo, credencial, cuil = match.groups()
+            # Intentar primero con el patrón estándar (Titular/Beneficiario)
+            match = ProcesadorListaFormateada.PATRON_LINEA.match(linea_limpia)
 
-            nombre = nombre.strip().upper()
-            dni = dni.strip()
-            credencial = credencial.strip()
-            cuil = cuil.strip() if cuil else None
+            if match:
+                codigo, dni, nombre, tipo, credencial, cuil = match.groups()
+                nombre = nombre.strip().upper()
+                dni = dni.strip()
+                credencial = credencial.strip()
+                cuil = cuil.strip() if cuil else None
 
-            if dni in afiliados:
-                afiliados[dni].consultas += 1
+                if dni in afiliados:
+                    afiliados[dni].consultas += 1
+                else:
+                    afiliados[dni] = Afiliado(
+                        codigo=codigo,
+                        dni=dni,
+                        nombre=nombre,
+                        tipo=tipo,
+                        credencial=credencial,
+                        cuil=cuil,
+                        consultas=1
+                    )
             else:
-                afiliados[dni] = Afiliado(
-                    codigo=codigo,
-                    dni=dni,
-                    nombre=nombre,
-                    tipo=tipo,
-                    credencial=credencial,
-                    cuil=cuil,
-                    consultas=1
-                )
+                # Intentar con el patrón de familiar
+                match_familiar = ProcesadorListaFormateada.PATRON_FAMILIAR.match(linea_limpia)
+
+                if match_familiar:
+                    codigo, dni_titular, nombre, dni_familiar, cuil = match_familiar.groups()
+                    nombre = nombre.strip().upper()
+                    dni_familiar = dni_familiar.strip()
+                    cuil = cuil.strip() if cuil else None
+
+                    # El DNI clave es el del familiar
+                    if dni_familiar in afiliados:
+                        afiliados[dni_familiar].consultas += 1
+                    else:
+                        afiliados[dni_familiar] = Afiliado(
+                            codigo=codigo,
+                            dni=dni_familiar,
+                            nombre=nombre,
+                            tipo="Familiar",
+                            credencial=dni_familiar,  # Para familiares, credencial = su propio DNI
+                            cuil=cuil,
+                            consultas=1
+                        )
 
         return afiliados
 
@@ -297,37 +336,36 @@ class ProcesadorUnificado:
                 'error': 'No se pudieron procesar las recetas INSSSEP'
             }
 
-        # CRUCE: Partir de afiliados_base y agregar info de recetas
+        # CRUCE: Combinar consultas de la lista base con recetas del archivo INSSSEP
         self.afiliados = {}
         
-        # 1. Agregar todos los afiliados de la lista base
-        for dni, afiliado in afiliados_base.items():
+        # 1. Partir de todos los afiliados de la lista base
+        for dni, afiliado_base in afiliados_base.items():
             self.afiliados[dni] = Afiliado(
-                codigo=afiliado.codigo,
-                dni=afiliado.dni,
-                nombre=afiliado.nombre,
-                tipo=afiliado.tipo,
-                credencial=afiliado.credencial,
-                cuil=afiliado.cuil,
-                consultas=afiliado.consultas,  # De la lista formateada
+                codigo=afiliado_base.codigo,
+                dni=afiliado_base.dni,
+                nombre=afiliado_base.nombre,
+                tipo=afiliado_base.tipo,
+                credencial=afiliado_base.credencial,
+                cuil=afiliado_base.cuil,
+                consultas=afiliado_base.consultas,  # Consultas de la lista
                 recetas=0  # Se llenará si hay recetas
             )
             
-            # Si este afiliado aparece en las recetas, agregar contador
+            # Si este afiliado también tiene recetas, agregarlas
             if dni in afiliados_recetas:
                 self.afiliados[dni].recetas = afiliados_recetas[dni].recetas
         
-        # 2. Agregar afiliados que SOLO están en recetas (no en lista base)
+        # 2. Agregar afiliados que SOLO están en recetas (ej: familiares)
         for dni, afiliado_receta in afiliados_recetas.items():
             if dni not in self.afiliados:
-                # Este afiliado solo está en recetas, agregarlo
                 self.afiliados[dni] = Afiliado(
-                    codigo=codigo_diagnostico,  # Usar código por defecto
+                    codigo=codigo_diagnostico,
                     dni=afiliado_receta.dni,
                     nombre=afiliado_receta.nombre,
                     tipo=afiliado_receta.tipo,
                     credencial=afiliado_receta.credencial,
-                    cuil=None,  # Se generará después
+                    cuil=None,
                     consultas=0,
                     recetas=afiliado_receta.recetas
                 )
@@ -435,33 +473,55 @@ class ProcesadorUnificado:
 
     def exportar_formato_final(self) -> str:
         """
-        Exporta en el formato final específico para el sistema.
-        Formato: CODIGO   DNI   NOMBRE   TIPO   DNI   CUIL
+        Exporta en formato CSV duplicando líneas según total de consultas.
+        Formato: CODIGO,DNI,NOMBRE,CREDENCIAL
+
+        Conversión de recetas a consultas:
+        - Cada 3 recetas = 1 consulta
+        - Fórmula: (recetas + 2) // 3 para redondear hacia arriba
+
+        Ejemplos:
+        - 1-3 recetas = 1 consulta
+        - 4-6 recetas = 2 consultas
+        - 7-9 recetas = 3 consultas
+
+        Total de líneas = consultas directas + consultas convertidas de recetas
+
+        Si un afiliado tiene:
+        - 3 consultas + 0 recetas = 3 líneas
+        - 0 consultas + 4 recetas = 2 líneas (4 recetas = 2 consultas)
+        - 2 consultas + 3 recetas = 3 líneas (2 + 1)
+        - Si no tiene ninguna, genera 1 línea por defecto
 
         Returns:
-            String con formato específico
+            String en formato CSV con líneas duplicadas por total de consultas
         """
         lineas = []
-        
+
         for afiliado in self.ordenar_por_frecuencia():
-            # Formatear nombre (máximo 25 caracteres, rellenado con espacios)
-            nombre_formateado = afiliado.nombre[:25].ljust(25)
-            
-            # Tipo formateado
-            tipo_formateado = afiliado.tipo.ljust(8)
-            
-            # CUIL: usar el existente o generar uno automático
-            if afiliado.cuil:
-                cuil = afiliado.cuil
-            else:
-                # Generar CUIL automáticamente: 27 + DNI + dígito verificador (simplificado a 9)
-                cuil = f"27{afiliado.dni}9"
-            
-            # Formato: CODIGO   DNI   NOMBRE   TIPO   DNI   CUIL
-            # Espaciado exacto con columnas alineadas
-            linea = f"{afiliado.codigo}   {afiliado.dni}   {nombre_formateado}   {tipo_formateado}   {afiliado.dni}      {cuil}"
-            lineas.append(linea)
-        
+            codigo = afiliado.codigo
+            dni = afiliado.dni
+            nombre = afiliado.nombre
+            credencial = afiliado.credencial
+
+            # Formato CSV: CODIGO,DNI,NOMBRE,CREDENCIAL
+            linea = f"{codigo},{dni},{nombre},{credencial}"
+
+            # Convertir recetas a consultas: cada 3 recetas = 1 consulta
+            # Fórmula: (recetas + 2) // 3 → redondea hacia arriba
+            consultas_de_recetas = (afiliado.recetas + 2) // 3 if afiliado.recetas > 0 else 0
+
+            # Total de consultas = consultas directas + consultas convertidas de recetas
+            total_consultas = afiliado.consultas + consultas_de_recetas
+
+            # Si no tiene consultas, generar al menos 1 línea
+            if total_consultas == 0:
+                total_consultas = 1
+
+            # Duplicar la línea según el total de consultas
+            for _ in range(total_consultas):
+                lineas.append(linea)
+
         return '\n'.join(lineas)
 
 

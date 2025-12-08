@@ -1,3 +1,45 @@
+RECETARIO SOLIDARIO
+
+Afiliado: FLEITAS OSCAR ORLANDO
+
+D.N.I.: 16339556 Credencial: 16339556
+
+Recetario: 2534252358009
+
+Fecha Receta: 08/12/2025
+
+Emitida: 08/12/2025 10:43
+
+Plan: PLAN 1
+
+INSSSEP AMB
+
+Afiliado: QUINTANA GUZMAN MORENA MAGALI
+
+D.N.I.: 50186872 Credencial: 8000616774
+
+Recetario: 2534252356100
+
+Fecha Receta: 08/12/2025
+
+Emitida: 08/12/2025 9:28
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+
+Afiliado: TORRES LILIANA BEATRIZ
+
+D.N.I.: 18408832 Credencial: 8000645950
+
+Recetario: 2534252355824
+
+Fecha Receta: 08/12/2025
+
+Emitida: 08/12/2025 9:13
+
+Plan: Cardio
+
 INSSSEP AMB
 Dispensada
 
@@ -12,21 +54,6 @@ Fecha Receta: 05/12/2025
 Emitida: 05/12/2025 20:23
 
 Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: KARDASZ IVANA NOELIA
-
-D.N.I.: 32664697 Credencial: 8000553453
-
-Recetario: 2533952301331
-
-Fecha Receta: 05/12/2025
-
-Emitida: 05/12/2025 19:52
-
-Plan: Plan Mujer
 
 OSPESCHA
 Dispensada
@@ -1241,21 +1268,6 @@ Plan: PLAN 1
 INSSSEP AMB
 Dispensada
 
-Afiliado: JARA KARDASZ MICAL
-
-D.N.I.: 59848842 Credencial: 8000620048
-
-Recetario: 2533251498779
-
-Fecha Receta: 28/11/2025
-
-Emitida: 28/11/2025 20:20
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
 Afiliado: KURKAZ OLGA ELVIRA
 
 D.N.I.: 10569041 Credencial: 8000039789
@@ -1282,21 +1294,6 @@ Fecha Receta: 28/11/2025
 Emitida: 28/11/2025 19:40
 
 Plan: Ambulatorio
-
-RECETARIO SOLIDARIO
-Dispensada
-
-Afiliado: JARA JORGE
-
-D.N.I.: 33824963 Credencial: 33824963
-
-Recetario: 2533251484852
-
-Fecha Receta: 28/11/2025
-
-Emitida: 28/11/2025 18:23
-
-Plan: PLAN 1
 
 INSSSEP AMB
 Dispensada
@@ -3499,21 +3496,6 @@ Plan: Cardio
 INSSSEP AMB
 Dispensada
 
-Afiliado: KARDASZ IVANA NOELIA
-
-D.N.I.: 32664697 Credencial: 8000553453
-
-Recetario: 2531650003537
-
-Fecha Receta: 12/11/2025
-
-Emitida: 12/11/2025 19:41
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
 Afiliado: MOREIRA EVA MARIA
 
 D.N.I.: 59147744 Credencial: 8000597556
@@ -3783,21 +3765,6 @@ Plan: Ambulatorio
 INSSSEP AMB
 Dispensada
 
-Afiliado: ABDULA KARDASZ MISAEL
-
-D.N.I.: 70395629 Credencial: 8000636962
-
-Recetario: 2531449711684
-
-Fecha Receta: 10/11/2025
-
-Emitida: 10/11/2025 18:45
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
 Afiliado: LEGUIZA FRIDA AMALIA
 
 D.N.I.: 27435225 Credencial: 8000635735
@@ -3969,36 +3936,6 @@ Recetario: 2531449598295
 Fecha Receta: 10/11/2025
 
 Emitida: 10/11/2025 8:55
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: KARDASZ IVANA NOELIA
-
-D.N.I.: 32664697 Credencial: 8000553453
-
-Recetario: 2531349581832
-
-Fecha Receta: 09/11/2025
-
-Emitida: 09/11/2025 11:53
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: KARDASZ IVANA NOELIA
-
-D.N.I.: 32664697 Credencial: 8000553453
-
-Recetario: 2531149537254
-
-Fecha Receta: 07/11/2025
-
-Emitida: 07/11/2025 19:01
 
 Plan: Ambulatorio
 

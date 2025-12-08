@@ -1,158 +1,487 @@
 INSSSEP AMB
+Dispensada
 
-Afiliado: CUR LUCILA MARISA
+Afiliado: NAMTZ NOEMI GLADYS
 
-D.N.I.: 22749988 Credencial: 8000425140
+D.N.I.: 14220001 Credencial: 8000081954
 
-Recetario: 2530949254183
+Recetario: 2533952303799
 
-Fecha Receta: 05/11/2025
+Fecha Receta: 05/12/2025
 
-Emitida: 05/11/2025 17:04
-
-Plan: Cardio
-
-INSSSEP AMB
-
-Afiliado: MANSILLA ARGENTINO EUGENIO
-
-D.N.I.: 20276555 Credencial: 8000585031
-
-Recetario: 2530949253236
-
-Fecha Receta: 05/11/2025
-
-Emitida: 05/11/2025 16:59
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-
-Afiliado: MANSILLA ARGENTINO EUGENIO
-
-D.N.I.: 20276555 Credencial: 8000585031
-
-Recetario: 2530949252305
-
-Fecha Receta: 05/11/2025
-
-Emitida: 05/11/2025 16:54
+Emitida: 05/12/2025 20:23
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: BILAN DE PELLERANO EMILIA
+Afiliado: KARDASZ IVANA NOELIA
 
-D.N.I.: 5962459 Credencial: 8000016602
+D.N.I.: 32664697 Credencial: 8000553453
 
-Recetario: 2530949249588
+Recetario: 2533952301331
 
-Fecha Receta: 05/11/2025
+Fecha Receta: 05/12/2025
 
-Emitida: 05/11/2025 16:39
+Emitida: 05/12/2025 19:52
+
+Plan: Plan Mujer
+
+OSPESCHA
+Dispensada
+
+Afiliado: ARENILLA AUIL MARIA EUGENIA
+
+D.N.I.: 36671350 Credencial: 36671350/00
+
+Recetario: 2533952291799
+
+Fecha Receta: 05/12/2025
+
+Emitida: 05/12/2025 18:38
+
+Plan: 3: Monotributistas
+
+OSPESCHA
+Dispensada
+
+Afiliado: ARENILLA ROMO AMBAR
+
+D.N.I.: 59147748 Credencial: 36671350/02
+
+Recetario: 2533952291462
+
+Fecha Receta: 05/12/2025
+
+Emitida: 05/12/2025 18:36
+
+Plan: 3: Monotributistas
+
+OSPESCHA
+Dispensada
+
+Afiliado: ARENILLA ROMO AMBAR
+
+D.N.I.: 59147748 Credencial: 36671350/02
+
+Recetario: 2533952291363
+
+Fecha Receta: 05/12/2025
+
+Emitida: 05/12/2025 18:36
+
+Plan: 3: Monotributistas
+
+OSPESCHA
+Dispensada
+
+Afiliado: ARENILLA ROMO MAIA
+
+D.N.I.: 59147749 Credencial: 36671350/03
+
+Recetario: 2533952291067
+
+Fecha Receta: 05/12/2025
+
+Emitida: 05/12/2025 18:33
+
+Plan: 3: Monotributistas
+
+OSPESCHA
+Dispensada
+
+Afiliado: ARENILLA AUIL MARIA EUGENIA
+
+D.N.I.: 36671350 Credencial: 36671350/00
+
+Recetario: 2533952289718
+
+Fecha Receta: 05/12/2025
+
+Emitida: 05/12/2025 18:25
+
+Plan: 3: Monotributistas
+
+RECETARIO SOLIDARIO
+
+Afiliado: SILVA FLAVIA VIRGINIA
+
+D.N.I.: 45250761 Credencial: 45250761
+
+Recetario: 2533952252740
+
+Fecha Receta: 05/12/2025
+
+Emitida: 05/12/2025 13:40
+
+Plan: PLAN 1
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: BILAN ELENA TERESA
+
+D.N.I.: 13576177 Credencial: 8000337072
+
+Recetario: 2533952232877
+
+Fecha Receta: 05/12/2025
+
+Emitida: 05/12/2025 11:42
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: DICKAU ERIC DAVID
+Afiliado: BILAN ELENA TERESA
 
-D.N.I.: 36976073 Credencial: 8000563290
+D.N.I.: 13576177 Credencial: 8000337072
 
-Recetario: 2530949204454
+Recetario: 2533952232658
 
-Fecha Receta: 05/11/2025
+Fecha Receta: 05/12/2025
 
-Emitida: 05/11/2025 11:44
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-
-Afiliado: BORSUK LAURA LEONELA
-
-D.N.I.: 34966484 Credencial: 8000603872
-
-Recetario: 2530949200283
-
-Fecha Receta: 05/11/2025
-
-Emitida: 05/11/2025 11:28
+Emitida: 05/12/2025 11:41
 
 Plan: Ambulatorio
 
 INSSSEP AMB
+Dispensada
 
-Afiliado: BORSUK LAURA LEONELA
+Afiliado: BILAN ELENA TERESA
 
-D.N.I.: 34966484 Credencial: 8000603872
+D.N.I.: 13576177 Credencial: 8000337072
 
-Recetario: 2530949199750
+Recetario: 2533952232237
 
-Fecha Receta: 05/11/2025
+Fecha Receta: 05/12/2025
 
-Emitida: 05/11/2025 11:25
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-
-Afiliado: BORSUK LAURA LEONELA
-
-D.N.I.: 34966484 Credencial: 8000603872
-
-Recetario: 2530949199160
-
-Fecha Receta: 05/11/2025
-
-Emitida: 05/11/2025 11:23
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-
-Afiliado: ROMERO NILDA MARCELA
-
-D.N.I.: 25379924 Credencial: 8000342950
-
-Recetario: 2530949195322
-
-Fecha Receta: 05/11/2025
-
-Emitida: 05/11/2025 11:08
+Emitida: 05/12/2025 11:40
 
 Plan: Cardio
 
+RECETARIO SOLIDARIO
+
+Afiliado: CABAÑA SOSA BAUTISTA BENJAMIN
+
+D.N.I.: 70798617 Credencial: 70798617
+
+Recetario: 2533952225885
+
+Fecha Receta: 05/12/2025
+
+Emitida: 05/12/2025 11:13
+
+Plan: PLAN 1
+
+RECETARIO SOLIDARIO
+Dispensada
+
+Afiliado: SOSA ROSA ELISABET
+
+D.N.I.: 28318598 Credencial: 28318598
+
+Recetario: 2533952222457
+
+Fecha Receta: 05/12/2025
+
+Emitida: 05/12/2025 10:59
+
+Plan: PLAN 1
+
 INSSSEP AMB
+Dispensada
 
-Afiliado: FUS RICARDO MARCELO JOSE
+Afiliado: CATALAN EMILI AYLEN
 
-D.N.I.: 23218576 Credencial: 8000439990
+D.N.I.: 49199906 Credencial: 8000535751
 
-Recetario: 2530949194939
+Recetario: 2533952211845
 
-Fecha Receta: 05/11/2025
+Fecha Receta: 05/12/2025
 
-Emitida: 05/11/2025 11:06
+Emitida: 05/12/2025 10:16
 
-Plan: Cardio
+Plan: Plan Mujer
 
 INSSSEP AMB
+Dispensada
 
-Afiliado: LOPEZ RAMON JAVIER
+Afiliado: RACHMANKO NORMA GLADIS
 
-D.N.I.: 29057853 Credencial: 8000365758
+D.N.I.: 20276647 Credencial: 8000084807
 
-Recetario: 2530949166147
+Recetario: 2533952207392
 
-Fecha Receta: 05/11/2025
+Fecha Receta: 05/12/2025
 
-Emitida: 05/11/2025 8:58
+Emitida: 05/12/2025 9:57
 
 Plan: Ambulatorio
+
+INSSSEP AMB
+
+Afiliado: CATALAN WILSON EXEQUIEL
+
+D.N.I.: 34966368 Credencial: 8000527033
+
+Recetario: 2533952206477
+
+Fecha Receta: 05/12/2025
+
+Emitida: 05/12/2025 9:53
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: GARCIA NOELI SOLEDAD
+
+D.N.I.: 36245523 Credencial: 8000542962
+
+Recetario: 2533952206063
+
+Fecha Receta: 05/12/2025
+
+Emitida: 05/12/2025 9:51
+
+Plan: Plan Mujer
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: GARCIA NOELI SOLEDAD
+
+D.N.I.: 36245523 Credencial: 8000542962
+
+Recetario: 2533952205825
+
+Fecha Receta: 05/12/2025
+
+Emitida: 05/12/2025 9:50
+
+Plan: Ambulatorio
+
+RECETARIO SOLIDARIO
+
+Afiliado: SILVA FLAVIA VIRGINIA
+
+D.N.I.: 45250761 Credencial: 45250761
+
+Recetario: 2533952204648
+
+Fecha Receta: 05/12/2025
+
+Emitida: 05/12/2025 9:45
+
+Plan: PLAN 1
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: VODOPIVEC AMALIA BEATRI
+
+D.N.I.: 16428747 Credencial: 8000064949
+
+Recetario: 2533952200247
+
+Fecha Receta: 05/12/2025
+
+Emitida: 05/12/2025 9:24
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: VODOPIVEC AMALIA BEATRI
+
+D.N.I.: 16428747 Credencial: 8000064949
+
+Recetario: 2533952200101
+
+Fecha Receta: 05/12/2025
+
+Emitida: 05/12/2025 9:23
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: VODOPIVEC AMALIA BEATRI
+
+D.N.I.: 16428747 Credencial: 8000064949
+
+Recetario: 2533952199702
+
+Fecha Receta: 05/12/2025
+
+Emitida: 05/12/2025 9:21
+
+Plan: Ambulatorio
+
+RECETARIO SOLIDARIO
+Dispensada
+
+Afiliado: BUSTAMANTE NELIDA HAIDEE
+
+D.N.I.: 22760775 Credencial: 22760775
+
+Recetario: 2533952198783
+
+Fecha Receta: 05/12/2025
+
+Emitida: 05/12/2025 9:16
+
+Plan: PLAN 1
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: KORCIK GONZALO GASTON
+
+D.N.I.: 30580959 Credencial: 8000598573
+
+Recetario: 2533852089654
+
+Fecha Receta: 04/12/2025
+
+Emitida: 04/12/2025 11:57
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: ZUBCO KUVASZUK MIRTA LILIANA
+
+D.N.I.: 22933327 Credencial: 8000079505
+
+Recetario: 2533852079031
+
+Fecha Receta: 04/12/2025
+
+Emitida: 04/12/2025 11:15
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: ZUBCO KUVASZUK MIRTA LILIANA
+
+D.N.I.: 22933327 Credencial: 8000079505
+
+Recetario: 2533852078866
+
+Fecha Receta: 04/12/2025
+
+Emitida: 04/12/2025 11:14
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: LOPEZ RAMONA MERCEDES
+
+D.N.I.: 16428744 Credencial: 8000064771
+
+Recetario: 2533852055364
+
+Fecha Receta: 04/12/2025
+
+Emitida: 04/12/2025 9:42
+
+Plan: Ambulatorio
+
+Union Personal/Accord Salud
+
+Afiliado: VIDELA PERALTA DANIELA ALEJANDRA
+
+D.N.I.: 33615127 Credencial: 00848599011
+
+Recetario: 785925120317827
+
+Fecha Receta: 03/12/2025
+
+Emitida: 03/12/2025 19:51
+
+Plan: MONOTRIBUTISTAS
+
+Union Personal/Accord Salud
+
+Afiliado: VIDELA PERALTA DANIELA ALEJANDRA
+
+D.N.I.: 33615127 Credencial: 00848599011
+
+Recetario: 785925120317644
+
+Fecha Receta: 03/12/2025
+
+Emitida: 03/12/2025 19:50
+
+Plan: MONOTRIBUTISTAS
+
+Union Personal/Accord Salud
+
+Afiliado: VIDELA PERALTA DANIELA ALEJANDRA
+
+D.N.I.: 33615127 Credencial: 00848599011
+
+Recetario: 785925120317482
+
+Fecha Receta: 03/12/2025
+
+Emitida: 03/12/2025 19:49
+
+Plan: MONOTRIBUTISTAS
+
+Union Personal/Accord Salud
+
+Afiliado: VIDELA PERALTA DANIELA ALEJANDRA
+
+D.N.I.: 33615127 Credencial: 00848599011
+
+Recetario: 785925120317329
+
+Fecha Receta: 03/12/2025
+
+Emitida: 03/12/2025 19:48
+
+Plan: MONOTRIBUTISTAS
+
+Union Personal/Accord Salud
+
+Afiliado: VIDELA PERALTA DANIELA ALEJANDRA
+
+D.N.I.: 33615127 Credencial: 00848599011
+
+Recetario: 785925120317086
+
+Fecha Receta: 03/12/2025
+
+Emitida: 03/12/2025 19:46
+
+Plan: MONOTRIBUTISTAS
+
+Union Personal/Accord Salud
+
+Afiliado: VIDELA PERALTA DANIELA ALEJANDRA
+
+D.N.I.: 33615127 Credencial: 00848599011
+
+Recetario: 785925120316946
+
+Fecha Receta: 03/12/2025
+
+Emitida: 03/12/2025 19:45
+
+Plan: MONOTRIBUTISTAS
 
 INSSSEP AMB
 Dispensada
@@ -161,55 +490,271 @@ Afiliado: KONOWALCZUK BEATRIZ NOEMI
 
 D.N.I.: 20394102 Credencial: 8000074938
 
-Recetario: 2530849114131
+Recetario: 2533752016225
 
-Fecha Receta: 04/11/2025
+Fecha Receta: 03/12/2025
 
-Emitida: 04/11/2025 17:50
+Emitida: 03/12/2025 19:40
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+
+Afiliado: BENITEZ INES VILMA VIVIANA
+
+D.N.I.: 17495661 Credencial: 8000343136
+
+Recetario: 2533752011535
+
+Fecha Receta: 03/12/2025
+
+Emitida: 03/12/2025 19:10
 
 Plan: Ambulatorio
 
 RECETARIO SOLIDARIO
 
-Afiliado: KLIMISZYN OLGA
+Afiliado: CABAÑA SOSA BAUTISTA BENJAMIN
 
-D.N.I.: 8941251 Credencial: 8941251
+D.N.I.: 70798617 Credencial: 70798617
 
-Recetario: 2530849047653
+Recetario: 2533752005685
 
-Fecha Receta: 04/11/2025
+Fecha Receta: 03/12/2025
 
-Emitida: 04/11/2025 11:27
+Emitida: 03/12/2025 18:39
 
 Plan: PLAN 1
 
 INSSSEP AMB
+
+Afiliado: FERNANDEZ ARES LIAM
+
+D.N.I.: 70345278 Credencial: 8000632673
+
+Recetario: 2533752003843
+
+Fecha Receta: 03/12/2025
+
+Emitida: 03/12/2025 18:30
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+
+Afiliado: TOLOZA MELINA ANAHI
+
+D.N.I.: 42068239 Credencial: 8000560106
+
+Recetario: 2533752003273
+
+Fecha Receta: 03/12/2025
+
+Emitida: 03/12/2025 18:27
+
+Plan: Ambulatorio
+
+INSSSEP AMB
 Dispensada
 
-Afiliado: VERON CARINA
+Afiliado: TOLOZA MELINA ANAHI
 
-D.N.I.: 30580893 Credencial: 8000643295
+D.N.I.: 42068239 Credencial: 8000560106
 
-Recetario: 2530849037672
+Recetario: 2533752001140
 
-Fecha Receta: 04/11/2025
+Fecha Receta: 03/12/2025
 
-Emitida: 04/11/2025 10:48
+Emitida: 03/12/2025 18:16
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+
+Afiliado: FERNANDEZ ARES LIAM
+
+D.N.I.: 70345278 Credencial: 8000632673
+
+Recetario: 2533752000916
+
+Fecha Receta: 03/12/2025
+
+Emitida: 03/12/2025 18:15
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: FERNANDEZ ARES LIAM
+
+D.N.I.: 70345278 Credencial: 8000632673
+
+Recetario: 2533752000041
+
+Fecha Receta: 03/12/2025
+
+Emitida: 03/12/2025 18:11
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: CABRERA MARIA ELBA
+
+D.N.I.: 16129672 Credencial: 8000063596
+
+Recetario: 2533751999573
+
+Fecha Receta: 03/12/2025
+
+Emitida: 03/12/2025 18:08
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+
+Afiliado: FERNÁNDEZ RENZO GAEL
+
+D.N.I.: 57728703 Credencial: 8000564478
+
+Recetario: 2533751998027
+
+Fecha Receta: 03/12/2025
+
+Emitida: 03/12/2025 18:01
+
+Plan: Ambulatorio
+
+RECETARIO SOLIDARIO
+
+Afiliado: CUEVAS ELSA ESTER
+
+D.N.I.: 18509767 Credencial: F18509767
+
+Recetario: 2533751992386
+
+Fecha Receta: 03/12/2025
+
+Emitida: 03/12/2025 17:33
+
+Plan: PLAN 1
+
+RECETARIO SOLIDARIO
+
+Afiliado: CUEVAS ELSA ESTER
+
+D.N.I.: 18509767 Credencial: F18509767
+
+Recetario: 2533751992010
+
+Fecha Receta: 03/12/2025
+
+Emitida: 03/12/2025 17:31
+
+Plan: PLAN 1
+
+INSSSEP AMB
+
+Afiliado: NAGORNY ALBA IRIS
+
+D.N.I.: 28340455 Credencial: 8000312622
+
+Recetario: 2533751938576
+
+Fecha Receta: 03/12/2025
+
+Emitida: 03/12/2025 11:53
 
 Plan: Plan Mujer
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: BALUK PABLO
+Afiliado: IVANOFF ELENA
 
-D.N.I.: 8587306 Credencial: 8000037431
+D.N.I.: 3392401 Credencial: 8000534626
 
-Recetario: 2530849028403
+Recetario: 2533751928616
 
-Fecha Receta: 04/11/2025
+Fecha Receta: 03/12/2025
 
-Emitida: 04/11/2025 10:13
+Emitida: 03/12/2025 11:15
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: IVANOFF ELENA
+
+D.N.I.: 3392401 Credencial: 8000534626
+
+Recetario: 2533751928180
+
+Fecha Receta: 03/12/2025
+
+Emitida: 03/12/2025 11:13
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+
+Afiliado: LANDRIEL ELDA RAQUEL
+
+D.N.I.: 13576176 Credencial: 8000055039
+
+Recetario: 2533751926523
+
+Fecha Receta: 03/12/2025
+
+Emitida: 03/12/2025 11:06
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: LANDRIEL ELDA RAQUEL
+
+D.N.I.: 13576176 Credencial: 8000055039
+
+Recetario: 2533751926233
+
+Fecha Receta: 03/12/2025
+
+Emitida: 03/12/2025 11:05
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: IVANOFF ELENA
+
+D.N.I.: 3392401 Credencial: 8000534626
+
+Recetario: 2533751921510
+
+Fecha Receta: 03/12/2025
+
+Emitida: 03/12/2025 10:47
+
+Plan: Cardio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: SANDOVAL PEDRO ANTONIO
+
+D.N.I.: 10980494 Credencial: 8000277971
+
+Recetario: 2533751920788
+
+Fecha Receta: 03/12/2025
+
+Emitida: 03/12/2025 10:45
 
 Plan: Cardio
 
@@ -220,200 +765,145 @@ Afiliado: TRNOVSKY GRACIELA BEATRIZ
 
 D.N.I.: 12421696 Credencial: 8000171788
 
-Recetario: 2530849028102
+Recetario: 2533751917131
 
-Fecha Receta: 04/11/2025
+Fecha Receta: 03/12/2025
 
-Emitida: 04/11/2025 10:12
+Emitida: 03/12/2025 10:30
+
+Plan: Cardio
+
+INSSSEP AMB
+
+Afiliado: BALUK PABLO
+
+D.N.I.: 8587306 Credencial: 8000037431
+
+Recetario: 2533751916855
+
+Fecha Receta: 03/12/2025
+
+Emitida: 03/12/2025 10:29
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: BALUK PABLO
+
+D.N.I.: 8587306 Credencial: 8000037431
+
+Recetario: 2533751916648
+
+Fecha Receta: 03/12/2025
+
+Emitida: 03/12/2025 10:28
 
 Plan: Cardio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: PIEDRABUENA MARTINA
+Afiliado: VALEFF JUAN
 
-D.N.I.: 4262920 Credencial: 8000499754
+D.N.I.: 14274639 Credencial: 8000429829
 
-Recetario: 2530849026247
+Recetario: 2533751908434
 
-Fecha Receta: 04/11/2025
+Fecha Receta: 03/12/2025
 
-Emitida: 04/11/2025 10:04
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: RAMOS MEZA DAVID MISAEL
-
-D.N.I.: 56585160 Credencial: 8000542756
-
-Recetario: 2530849024318
-
-Fecha Receta: 04/11/2025
-
-Emitida: 04/11/2025 9:57
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-
-Afiliado: RAMOS MEZA DAVID MISAEL
-
-D.N.I.: 56585160 Credencial: 8000542756
-
-Recetario: 2530849023103
-
-Fecha Receta: 04/11/2025
-
-Emitida: 04/11/2025 9:52
+Emitida: 03/12/2025 9:54
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: RAMOS MEZA DAVID MISAEL
+Afiliado: LANDRIEL RAUL OSCAR
 
-D.N.I.: 56585160 Credencial: 8000542756
+D.N.I.: 14274679 Credencial: 8000058878
 
-Recetario: 2530849023006
+Recetario: 2533651854220
 
-Fecha Receta: 04/11/2025
+Fecha Receta: 02/12/2025
 
-Emitida: 04/11/2025 9:51
+Emitida: 02/12/2025 18:45
 
-Plan: Ambulatorio
+Plan: Cardio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: NIKITIUK NATALIA
+Afiliado: INSAURRALDE MAYRA MARIA JOSE
 
-D.N.I.: 14137494 Credencial: 8000468150
+D.N.I.: 32061712 Credencial: 8000454656
 
-Recetario: 2530849022933
+Recetario: 2533651853139
 
-Fecha Receta: 04/11/2025
+Fecha Receta: 02/12/2025
 
-Emitida: 04/11/2025 9:51
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-
-Afiliado: BILAN ELENA TERESA
-
-D.N.I.: 13576177 Credencial: 8000337072
-
-Recetario: 2530849018045
-
-Fecha Receta: 04/11/2025
-
-Emitida: 04/11/2025 9:31
+Emitida: 02/12/2025 18:40
 
 Plan: Cardio
 
 INSSSEP AMB
 
-Afiliado: BILAN ELENA TERESA
+Afiliado: ROJAS MARISA RAQUEL
 
-D.N.I.: 13576177 Credencial: 8000337072
+D.N.I.: 31887089 Credencial: 8000535595
 
-Recetario: 2530849017696
+Recetario: 2533651842316
 
-Fecha Receta: 04/11/2025
+Fecha Receta: 02/12/2025
 
-Emitida: 04/11/2025 9:30
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-
-Afiliado: SIRICH JULIO OSCAR
-
-D.N.I.: 14220012 Credencial: 8000058174
-
-Recetario: 2530849016713
-
-Fecha Receta: 04/11/2025
-
-Emitida: 04/11/2025 9:25
+Emitida: 02/12/2025 17:51
 
 Plan: Ambulatorio
 
-INSSSEP AMB
+Union Personal/Accord Salud
 
-Afiliado: SIRICH JULIO OSCAR
+Afiliado: VIDELA PERALTA DANIELA ALEJANDRA
 
-D.N.I.: 14220012 Credencial: 8000058174
+D.N.I.: 33615127 Credencial: 00848599011
 
-Recetario: 2530849016584
+Recetario: 785925120226642
 
-Fecha Receta: 04/11/2025
+Fecha Receta: 02/12/2025
 
-Emitida: 04/11/2025 9:24
+Emitida: 02/12/2025 16:38
 
-Plan: Ambulatorio
-
-INSSSEP AMB
-
-Afiliado: SIRICH JULIO OSCAR
-
-D.N.I.: 14220012 Credencial: 8000058174
-
-Recetario: 2530849016447
-
-Fecha Receta: 04/11/2025
-
-Emitida: 04/11/2025 9:24
-
-Plan: Ambulatorio
+Plan: MONOTRIBUTISTAS
 
 INSSSEP AMB
+Dispensada
 
-Afiliado: VODOPIVEC AMALIA BEATRI
+Afiliado: BARBISAN MARIA INES
 
-D.N.I.: 16428747 Credencial: 8000064949
+D.N.I.: 17919455 Credencial: 8000071509
 
-Recetario: 2530849015871
+Recetario: 2533651756337
 
-Fecha Receta: 04/11/2025
+Fecha Receta: 02/12/2025
 
-Emitida: 04/11/2025 9:21
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-
-Afiliado: NIKITIUK NATALIA
-
-D.N.I.: 14137494 Credencial: 8000468150
-
-Recetario: 2530849015235
-
-Fecha Receta: 04/11/2025
-
-Emitida: 04/11/2025 9:18
+Emitida: 02/12/2025 10:31
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: NIKITIUK NATALIA
+Afiliado: HOLUBEK LORENA BELEN
 
-D.N.I.: 14137494 Credencial: 8000468150
+D.N.I.: 33580899 Credencial: 8000627663
 
-Recetario: 2530849014692
+Recetario: 2533651755207
 
-Fecha Receta: 04/11/2025
+Fecha Receta: 02/12/2025
 
-Emitida: 04/11/2025 9:16
+Emitida: 02/12/2025 10:27
 
-Plan: Cardio
+Plan: Plan Mujer
 
 INSSSEP AMB
 Dispensada
@@ -422,186 +912,53 @@ Afiliado: SAWCZUK PAULINA
 
 D.N.I.: 6040902 Credencial: 8000018155
 
-Recetario: 2530748981187
+Recetario: 2533651743497
 
-Fecha Receta: 03/11/2025
+Fecha Receta: 02/12/2025
 
-Emitida: 03/11/2025 19:54
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: GRISMADO NORBERTO JAVIER
-
-D.N.I.: 32266230 Credencial: 8000616129
-
-Recetario: 2530748978501
-
-Fecha Receta: 03/11/2025
-
-Emitida: 03/11/2025 19:37
+Emitida: 02/12/2025 9:42
 
 Plan: Ambulatorio
 
 INSSSEP AMB
-Dispensada
 
-Afiliado: ABDULA KARDASZ MISAEL
+Afiliado: LANDRIEL ELDA RAQUEL
 
-D.N.I.: 70395629 Credencial: 8000636962
+D.N.I.: 13576176 Credencial: 8000055039
 
-Recetario: 2530748971821
+Recetario: 2533651740815
 
-Fecha Receta: 03/11/2025
+Fecha Receta: 02/12/2025
 
-Emitida: 03/11/2025 19:03
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: JUNCO CATALINA
-
-D.N.I.: 26826534 Credencial: 8000331541
-
-Recetario: 2530748957903
-
-Fecha Receta: 03/11/2025
-
-Emitida: 03/11/2025 18:02
+Emitida: 02/12/2025 9:30
 
 Plan: Ambulatorio
 
 INSSSEP AMB
-Dispensada
 
-Afiliado: DULLKA GUILLERMO ABEL
+Afiliado: BERTINO NAHIARA CAMILA
 
-D.N.I.: 40035635 Credencial: 8000628650
+D.N.I.: 46963898 Credencial: 8000345931
 
-Recetario: 2530748946043
+Recetario: 2533651739737
 
-Fecha Receta: 03/11/2025
+Fecha Receta: 02/12/2025
 
-Emitida: 03/11/2025 17:10
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: GRISMADO NORBERTO JAVIER
-
-D.N.I.: 32266230 Credencial: 8000616129
-
-Recetario: 2530748889757
-
-Fecha Receta: 03/11/2025
-
-Emitida: 03/11/2025 11:52
-
-Plan: Ambulatorio
-
-Union Personal/Accord Salud
-
-Afiliado: VIDELA FRANCISCO DANIEL
-
-D.N.I.: 17189789 Credencial: 00848599003
-
-Recetario: 785925110367685
-
-Fecha Receta: 03/11/2025
-
-Emitida: 03/11/2025 10:31
-
-Plan: MONOTRIBUTISTAS
-
-Union Personal/Accord Salud
-
-Afiliado: PERALTA ROSA SUSANA
-
-D.N.I.: 18358105 Credencial: 00848599029
-
-Recetario: 785925110367110
-
-Fecha Receta: 03/11/2025
-
-Emitida: 03/11/2025 10:29
-
-Plan: MONOTRIBUTISTAS
-
-Union Personal/Accord Salud
-
-Afiliado: PERALTA ROSA SUSANA
-
-D.N.I.: 18358105 Credencial: 00848599029
-
-Recetario: 785925110366628
-
-Fecha Receta: 03/11/2025
-
-Emitida: 03/11/2025 10:28
-
-Plan: MONOTRIBUTISTAS
-
-Union Personal/Accord Salud
-
-Afiliado: VIDELA PERALTA DANIELA ALEJANDRA
-
-D.N.I.: 33615127 Credencial: 00848599011
-
-Recetario: 785925110365809
-
-Fecha Receta: 03/11/2025
-
-Emitida: 03/11/2025 10:25
-
-Plan: MONOTRIBUTISTAS
-
-Union Personal/Accord Salud
-
-Afiliado: VIDELA PERALTA DANIELA ALEJANDRA
-
-D.N.I.: 33615127 Credencial: 00848599011
-
-Recetario: 785925110364993
-
-Fecha Receta: 03/11/2025
-
-Emitida: 03/11/2025 10:22
-
-Plan: MONOTRIBUTISTAS
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: KARDASZ SOLEDAD EUNICE
-
-D.N.I.: 34966508 Credencial: 8000627494
-
-Recetario: 2530748860763
-
-Fecha Receta: 03/11/2025
-
-Emitida: 03/11/2025 10:06
+Emitida: 02/12/2025 9:26
 
 Plan: Ambulatorio
 
 INSSSEP AMB
-Dispensada
 
-Afiliado: RACHMANKO NORMA GLADIS
+Afiliado: BERTINO NAHIARA CAMILA
 
-D.N.I.: 20276647 Credencial: 8000084807
+D.N.I.: 46963898 Credencial: 8000345931
 
-Recetario: 2530748855274
+Recetario: 2533651739092
 
-Fecha Receta: 03/11/2025
+Fecha Receta: 02/12/2025
 
-Emitida: 03/11/2025 9:44
+Emitida: 02/12/2025 9:23
 
 Plan: Ambulatorio
 
@@ -612,11 +969,11 @@ Afiliado: MOSQUEDA DANIELA AGOSTINA
 
 D.N.I.: 44385488 Credencial: 8000309382
 
-Recetario: 2530448708270
+Recetario: 2533551696634
 
-Fecha Receta: 31/10/2025
+Fecha Receta: 01/12/2025
 
-Emitida: 31/10/2025 10:48
+Emitida: 01/12/2025 19:30
 
 Plan: Plan Mujer
 
@@ -627,173 +984,635 @@ Afiliado: GERGOFF MILOFF ROSA ALEJANDRA
 
 D.N.I.: 30188845 Credencial: 8000304802
 
-Recetario: 2530448708151
+Recetario: 2533551696285
 
-Fecha Receta: 31/10/2025
+Fecha Receta: 01/12/2025
 
-Emitida: 31/10/2025 10:48
+Emitida: 01/12/2025 19:29
+
+Plan: Plan Mujer
+
+INSSSEP AMB
+
+Afiliado: BARBISAN MARIA INES
+
+D.N.I.: 17919455 Credencial: 8000071509
+
+Recetario: 2533551689925
+
+Fecha Receta: 01/12/2025
+
+Emitida: 01/12/2025 18:57
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: BARBISAN MARIA INES
+
+D.N.I.: 17919455 Credencial: 8000071509
+
+Recetario: 2533551689727
+
+Fecha Receta: 01/12/2025
+
+Emitida: 01/12/2025 18:56
+
+Plan: Cardio
+
+INSSSEP AMB
+
+Afiliado: BARBISAN MARIA INES
+
+D.N.I.: 17919455 Credencial: 8000071509
+
+Recetario: 2533551687790
+
+Fecha Receta: 01/12/2025
+
+Emitida: 01/12/2025 18:46
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+
+Afiliado: BARBISAN MARIA INES
+
+D.N.I.: 17919455 Credencial: 8000071509
+
+Recetario: 2533551687363
+
+Fecha Receta: 01/12/2025
+
+Emitida: 01/12/2025 18:44
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: BARBISAN MARIA INES
+
+D.N.I.: 17919455 Credencial: 8000071509
+
+Recetario: 2533551687231
+
+Fecha Receta: 01/12/2025
+
+Emitida: 01/12/2025 18:44
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: MANSILLA TICIANA PAZ
+
+D.N.I.: 49199966 Credencial: 8000388019
+
+Recetario: 2533551680220
+
+Fecha Receta: 01/12/2025
+
+Emitida: 01/12/2025 18:13
 
 Plan: Plan Mujer
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: ALVAREZ RAMON OMAR
+Afiliado: MONZON MARIELA VANINA
 
-D.N.I.: 24465808 Credencial: 8000087301
+D.N.I.: 26826677 Credencial: 8000573727
 
-Recetario: 2530448699417
+Recetario: 2533551672057
 
-Fecha Receta: 31/10/2025
+Fecha Receta: 01/12/2025
 
-Emitida: 31/10/2025 10:06
+Emitida: 01/12/2025 17:40
+
+Plan: Plan Mujer
+
+RECETARIO SOLIDARIO
+Dispensada
+
+Afiliado: VEGA ALBARO JULIAN
+
+D.N.I.: 59632543 Credencial: 59632543
+
+Recetario: 2533551668789
+
+Fecha Receta: 01/12/2025
+
+Emitida: 01/12/2025 17:26
+
+Plan: PLAN 1
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: CABRERA MARIA ELBA
+
+D.N.I.: 16129672 Credencial: 8000063596
+
+Recetario: 2533551668615
+
+Fecha Receta: 01/12/2025
+
+Emitida: 01/12/2025 17:25
+
+Plan: Ambulatorio
+
+RECETARIO SOLIDARIO
+
+Afiliado: VEGA ALBARO JULIAN
+
+D.N.I.: 59632543 Credencial: 59632543
+
+Recetario: 2533551666438
+
+Fecha Receta: 01/12/2025
+
+Emitida: 01/12/2025 17:15
+
+Plan: PLAN 1
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: BILAN DE PELLERANO EMILIA
+
+D.N.I.: 5962459 Credencial: 8000016602
+
+Recetario: 2533551665823
+
+Fecha Receta: 01/12/2025
+
+Emitida: 01/12/2025 17:12
+
+Plan: Cardio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: BILAN DE PELLERANO EMILIA
+
+D.N.I.: 5962459 Credencial: 8000016602
+
+Recetario: 2533551665562
+
+Fecha Receta: 01/12/2025
+
+Emitida: 01/12/2025 17:11
+
+Plan: Cardio
+
+INSSSEP AMB
+
+Afiliado: SKOROPLAS MIRTA LILIAN
+
+D.N.I.: 23105249 Credencial: 8000087974
+
+Recetario: 2533551611123
+
+Fecha Receta: 01/12/2025
+
+Emitida: 01/12/2025 12:11
 
 Plan: Ambulatorio
 
 INSSSEP AMB
+
+Afiliado: ESPARZA VIDAL LUIS MARIA
+
+D.N.I.: 10174882 Credencial: 8000392741
+
+Recetario: 2533551593730
+
+Fecha Receta: 01/12/2025
+
+Emitida: 01/12/2025 11:06
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+
+Afiliado: ESPARZA VIDAL LUIS MARIA
+
+D.N.I.: 10174882 Credencial: 8000392741
+
+Recetario: 2533551593359
+
+Fecha Receta: 01/12/2025
+
+Emitida: 01/12/2025 11:04
+
+Plan: Cardio
+
+INSSSEP AMB
+
+Afiliado: ESPARZA VIDAL LUIS MARIA
+
+D.N.I.: 10174882 Credencial: 8000392741
+
+Recetario: 2533551593081
+
+Fecha Receta: 01/12/2025
+
+Emitida: 01/12/2025 11:03
+
+Plan: Cardio
+
+RECETARIO SOLIDARIO
+
+Afiliado: TORDO ALVARO EMANUEL
+
+D.N.I.: 55029066 Credencial: 55029066
+
+Recetario: 2533351513705
+
+Fecha Receta: 29/11/2025
+
+Emitida: 29/11/2025 10:02
+
+Plan: PLAN 1
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: JARA KARDASZ MICAL
+
+D.N.I.: 59848842 Credencial: 8000620048
+
+Recetario: 2533251498779
+
+Fecha Receta: 28/11/2025
+
+Emitida: 28/11/2025 20:20
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: KURKAZ OLGA ELVIRA
+
+D.N.I.: 10569041 Credencial: 8000039789
+
+Recetario: 2533251495287
+
+Fecha Receta: 28/11/2025
+
+Emitida: 28/11/2025 19:41
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: KURKAZ OLGA ELVIRA
+
+D.N.I.: 10569041 Credencial: 8000039789
+
+Recetario: 2533251495223
+
+Fecha Receta: 28/11/2025
+
+Emitida: 28/11/2025 19:40
+
+Plan: Ambulatorio
+
+RECETARIO SOLIDARIO
+Dispensada
+
+Afiliado: JARA JORGE
+
+D.N.I.: 33824963 Credencial: 33824963
+
+Recetario: 2533251484852
+
+Fecha Receta: 28/11/2025
+
+Emitida: 28/11/2025 18:23
+
+Plan: PLAN 1
+
+INSSSEP AMB
+Dispensada
 
 Afiliado: GODOY KARIN VANESA
 
 D.N.I.: 26526250 Credencial: 8000319736
 
-Recetario: 2530448696630
+Recetario: 2533251476708
 
-Fecha Receta: 31/10/2025
+Fecha Receta: 28/11/2025
 
-Emitida: 31/10/2025 9:51
+Emitida: 28/11/2025 17:30
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+
+Afiliado: AGUIRRE MARIELA ANTONIA
+
+D.N.I.: 27435237 Credencial: 8000600493
+
+Recetario: 2533251435605
+
+Fecha Receta: 28/11/2025
+
+Emitida: 28/11/2025 12:03
+
+Plan: Plan Mujer
+
+Union Personal/Accord Salud
+
+Afiliado: PERALTA ROSA SUSANA
+
+D.N.I.: 18358105 Credencial: 00848599029
+
+Recetario: 785925112835245
+
+Fecha Receta: 28/11/2025
+
+Emitida: 28/11/2025 12:01
+
+Plan: MONOTRIBUTISTAS
+
+Union Personal/Accord Salud
+
+Afiliado: PERALTA ROSA SUSANA
+
+D.N.I.: 18358105 Credencial: 00848599029
+
+Recetario: 785925112835012
+
+Fecha Receta: 28/11/2025
+
+Emitida: 28/11/2025 12:00
+
+Plan: MONOTRIBUTISTAS
+
+Union Personal/Accord Salud
+
+Afiliado: VIDELA PERALTA DANIELA ALEJANDRA
+
+D.N.I.: 33615127 Credencial: 00848599011
+
+Recetario: 785925112834657
+
+Fecha Receta: 28/11/2025
+
+Emitida: 28/11/2025 11:58
+
+Plan: MONOTRIBUTISTAS
+
+Union Personal/Accord Salud
+
+Afiliado: VIDELA PERALTA DANIELA ALEJANDRA
+
+D.N.I.: 33615127 Credencial: 00848599011
+
+Recetario: 785925112834058
+
+Fecha Receta: 28/11/2025
+
+Emitida: 28/11/2025 11:55
+
+Plan: MONOTRIBUTISTAS
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: INSAURRALDE MAYRA MARIA JOSE
+
+D.N.I.: 32061712 Credencial: 8000454656
+
+Recetario: 2533251429494
+
+Fecha Receta: 28/11/2025
+
+Emitida: 28/11/2025 11:33
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: BALUK FRANCIS GERMAN
+Afiliado: DEL CAMPO KIARA APHRIL
 
-D.N.I.: 36326928 Credencial: 8000626784
+D.N.I.: 47618282 Credencial: 8000454657
 
-Recetario: 2530348665111
+Recetario: 2533251429087
 
-Fecha Receta: 30/10/2025
+Fecha Receta: 28/11/2025
 
-Emitida: 30/10/2025 19:43
+Emitida: 28/11/2025 11:31
 
-Plan: Ambulatorio
+Plan: Plan Mujer
 
 INSSSEP AMB
+Dispensada
 
-Afiliado: BALUK FRANCIS GERMAN
+Afiliado: ABDULA GADIEL EMIR
 
-D.N.I.: 36326928 Credencial: 8000626784
+D.N.I.: 42864985 Credencial: 8000627492
 
-Recetario: 2530348665050
+Recetario: 2533251424875
 
-Fecha Receta: 30/10/2025
+Fecha Receta: 28/11/2025
 
-Emitida: 30/10/2025 19:42
+Emitida: 28/11/2025 11:12
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: BALUK FRANCIS GERMAN
+Afiliado: NAMTZ NOEMI GLADYS
 
-D.N.I.: 36326928 Credencial: 8000626784
+D.N.I.: 14220001 Credencial: 8000081954
 
-Recetario: 2530348664883
+Recetario: 2533251424054
 
-Fecha Receta: 30/10/2025
+Fecha Receta: 28/11/2025
 
-Emitida: 30/10/2025 19:41
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: GIMENEZ ROBERTO OSCAR
-
-D.N.I.: 11249647 Credencial: 8000044021
-
-Recetario: 2530348644477
-
-Fecha Receta: 30/10/2025
-
-Emitida: 30/10/2025 17:33
+Emitida: 28/11/2025 11:09
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: SIRICH JULIO OSCAR
+Afiliado: ROBELLO MARINA ALEJANDRA
 
-D.N.I.: 14220012 Credencial: 8000058174
+D.N.I.: 31496252 Credencial: 8000636968
 
-Recetario: 2530348610678
+Recetario: 2533251423072
 
-Fecha Receta: 30/10/2025
+Fecha Receta: 28/11/2025
 
-Emitida: 30/10/2025 13:16
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: GIMENEZ ROBERTO OSCAR
-
-D.N.I.: 11249647 Credencial: 8000044021
-
-Recetario: 2530348610391
-
-Fecha Receta: 30/10/2025
-
-Emitida: 30/10/2025 13:14
+Emitida: 28/11/2025 11:05
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: GIMENEZ ROBERTO OSCAR
+Afiliado: ROBELLO MARINA ALEJANDRA
 
-D.N.I.: 11249647 Credencial: 8000044021
+D.N.I.: 31496252 Credencial: 8000636968
 
-Recetario: 2530348610216
+Recetario: 2533251422217
 
-Fecha Receta: 30/10/2025
+Fecha Receta: 28/11/2025
 
-Emitida: 30/10/2025 13:12
+Emitida: 28/11/2025 11:00
+
+Plan: Ambulatorio
+
+RECETARIO SOLIDARIO
+
+Afiliado: TORDO ALVARO EMANUEL
+
+D.N.I.: 55029066 Credencial: 55029066
+
+Recetario: 2533251419635
+
+Fecha Receta: 28/11/2025
+
+Emitida: 28/11/2025 10:49
+
+Plan: PLAN 1
+
+RECETARIO SOLIDARIO
+
+Afiliado: TORDO ALVARO EMANUEL
+
+D.N.I.: 55029066 Credencial: 55029066
+
+Recetario: 2533251419244
+
+Fecha Receta: 28/11/2025
+
+Emitida: 28/11/2025 10:47
+
+Plan: PLAN 1
+
+INSSSEP AMB
+
+Afiliado: KURKAZ OLGA ELVIRA
+
+D.N.I.: 10569041 Credencial: 8000039789
+
+Recetario: 2533251411852
+
+Fecha Receta: 28/11/2025
+
+Emitida: 28/11/2025 10:14
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: LEGUIZA FRIDA AMALIA
+Afiliado: KURKAZ OLGA ELVIRA
 
-D.N.I.: 27435225 Credencial: 8000635735
+D.N.I.: 10569041 Credencial: 8000039789
 
-Recetario: 2530348605895
+Recetario: 2533251411368
 
-Fecha Receta: 30/10/2025
+Fecha Receta: 28/11/2025
 
-Emitida: 30/10/2025 12:40
+Emitida: 28/11/2025 10:11
+
+Plan: Ambulatorio
+
+Union Personal/Accord Salud
+
+Afiliado: VIDELA FRANCISCO DANIEL
+
+D.N.I.: 17189789 Credencial: 00848599003
+
+Recetario: 785925112801948
+
+Fecha Receta: 28/11/2025
+
+Emitida: 28/11/2025 9:27
+
+Plan: MONOTRIBUTISTAS
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: SCHAFFINO GILBERTO RUBEN
+
+D.N.I.: 7806097 Credencial: 8000212366
+
+Recetario: 2533251401571
+
+Fecha Receta: 28/11/2025
+
+Emitida: 28/11/2025 9:25
+
+Plan: Ambulatorio
+
+RECETARIO SOLIDARIO
+
+Afiliado: LUDUEÑA ERICK VALENTIN
+
+D.N.I.: 70572160 Credencial: 70572160
+
+Recetario: 2533251400126
+
+Fecha Receta: 28/11/2025
+
+Emitida: 28/11/2025 9:17
+
+Plan: PLAN 1
+
+INSSSEP AMB
+
+Afiliado: VICENTIN MONICA BIBIANA
+
+D.N.I.: 21859364 Credencial: 8000085240
+
+Recetario: 2533251399623
+
+Fecha Receta: 28/11/2025
+
+Emitida: 28/11/2025 9:14
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 
-Afiliado: KOLAKOVICH EMMA ISABELLA
+Afiliado: VICENTIN MONICA BIBIANA
 
-D.N.I.: 56224386 Credencial: 8000532690
+D.N.I.: 21859364 Credencial: 8000085240
 
-Recetario: 2530348596256
+Recetario: 2533251399173
 
-Fecha Receta: 30/10/2025
+Fecha Receta: 28/11/2025
 
-Emitida: 30/10/2025 11:44
+Emitida: 28/11/2025 9:11
+
+Plan: Cardio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: VALEFF JUAN
+
+D.N.I.: 14274639 Credencial: 8000429829
+
+Recetario: 2533251398497
+
+Fecha Receta: 28/11/2025
+
+Emitida: 28/11/2025 9:07
 
 Plan: Ambulatorio
 
@@ -804,452 +1623,471 @@ Afiliado: VALEFF JUAN
 
 D.N.I.: 14274639 Credencial: 8000429829
 
-Recetario: 2530348595338
+Recetario: 2533251398246
 
-Fecha Receta: 30/10/2025
+Fecha Receta: 28/11/2025
 
-Emitida: 30/10/2025 11:40
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: PINTO RAMONA MIRTHA
-
-D.N.I.: 11655997 Credencial: 8000334902
-
-Recetario: 2530348586851
-
-Fecha Receta: 30/10/2025
-
-Emitida: 30/10/2025 11:01
-
-Plan: Ambulatorio
-
-Jerárquicos Salud
-
-Afiliado: Martinez Gloria Ester
-
-D.N.I.: 10701082 Credencial: 46235-00
-
-Recetario: 2530348582866
-
-Fecha Receta: 30/10/2025
-
-Emitida: 30/10/2025 10:43
-
-Plan: PMI 3000
-
-Jerárquicos Salud
-
-Afiliado: Martinez Gloria Ester
-
-D.N.I.: 10701082 Credencial: 46235-00
-
-Recetario: 2530348582659
-
-Fecha Receta: 30/10/2025
-
-Emitida: 30/10/2025 10:43
-
-Plan: PMI 3000
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: BILAN DE PELLERANO EMILIA
-
-D.N.I.: 5962459 Credencial: 8000016602
-
-Recetario: 2530348576011
-
-Fecha Receta: 30/10/2025
-
-Emitida: 30/10/2025 10:11
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: GAWRYLUK TERESA MABEL
-
-D.N.I.: 16945564 Credencial: 8000358447
-
-Recetario: 2530348575435
-
-Fecha Receta: 30/10/2025
-
-Emitida: 30/10/2025 10:08
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: GAWRYLUK TERESA MABEL
-
-D.N.I.: 16945564 Credencial: 8000358447
-
-Recetario: 2530348575070
-
-Fecha Receta: 30/10/2025
-
-Emitida: 30/10/2025 10:06
+Emitida: 28/11/2025 9:05
 
 Plan: Cardio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: BILAN DE PELLERANO EMILIA
+Afiliado: IVIN ABIGAIL ANAHI
 
-D.N.I.: 5962459 Credencial: 8000016602
+D.N.I.: 36671554 Credencial: 8000625348
 
-Recetario: 2530348574495
+Recetario: 2533151291494
 
-Fecha Receta: 30/10/2025
+Fecha Receta: 27/11/2025
 
-Emitida: 30/10/2025 10:03
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-
-Afiliado: ROBELLO MARINA ALEJANDRA
-
-D.N.I.: 31496252 Credencial: 8000636968
-
-Recetario: 2530248535340
-
-Fecha Receta: 29/10/2025
-
-Emitida: 29/10/2025 19:15
-
-Plan: Ambulatorio
-
-RECETARIO SOLIDARIO
-
-Afiliado: CARDOZO RICARDO
-
-D.N.I.: 18219551 Credencial: 18219551
-
-Recetario: 2530248533722
-
-Fecha Receta: 29/10/2025
-
-Emitida: 29/10/2025 19:05
-
-Plan: PLAN 1
-
-RECETARIO SOLIDARIO
-Dispensada
-
-Afiliado: CARDOZO RICARDO
-
-D.N.I.: 18219551 Credencial: 18219551
-
-Recetario: 2530248533558
-
-Fecha Receta: 29/10/2025
-
-Emitida: 29/10/2025 19:04
-
-Plan: PLAN 1
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: IVANFF STOINOVSKY JUAN PABLO
-
-D.N.I.: 39180234 Credencial: 8000577281
-
-Recetario: 2530248526630
-
-Fecha Receta: 29/10/2025
-
-Emitida: 29/10/2025 18:24
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-
-Afiliado: KARDASZ IVANA NOELIA
-
-D.N.I.: 32664697 Credencial: 8000553453
-
-Recetario: 2530248520276
-
-Fecha Receta: 29/10/2025
-
-Emitida: 29/10/2025 17:50
+Emitida: 27/11/2025 11:30
 
 Plan: Plan Mujer
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: GODOY KARIN VANESA
+Afiliado: CARDOZO GLORIA BEATRIZ
 
-D.N.I.: 26526250 Credencial: 8000319736
+D.N.I.: 17760508 Credencial: 8000071392
 
-Recetario: 2530248520068
+Recetario: 2533151284487
 
-Fecha Receta: 29/10/2025
+Fecha Receta: 27/11/2025
 
-Emitida: 29/10/2025 17:49
+Emitida: 27/11/2025 11:02
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: GODOY KARIN VANESA
+Afiliado: NOVIK NILDA
 
-D.N.I.: 26526250 Credencial: 8000319736
+D.N.I.: 4941385 Credencial: 8000012214
 
-Recetario: 2530248519955
+Recetario: 2533151284014
 
-Fecha Receta: 29/10/2025
+Fecha Receta: 27/11/2025
 
-Emitida: 29/10/2025 17:48
+Emitida: 27/11/2025 11:00
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: NOVIK NILDA
+
+D.N.I.: 4941385 Credencial: 8000012214
+
+Recetario: 2533151283860
+
+Fecha Receta: 27/11/2025
+
+Emitida: 27/11/2025 10:59
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: NOVIK NILDA
+
+D.N.I.: 4941385 Credencial: 8000012214
+
+Recetario: 2533151283534
+
+Fecha Receta: 27/11/2025
+
+Emitida: 27/11/2025 10:58
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: KOTELCZUK OLGA
+
+D.N.I.: 10990353 Credencial: 8000041632
+
+Recetario: 2533151280478
+
+Fecha Receta: 27/11/2025
+
+Emitida: 27/11/2025 10:46
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: KOTELCZUK OLGA
+
+D.N.I.: 10990353 Credencial: 8000041632
+
+Recetario: 2533151280217
+
+Fecha Receta: 27/11/2025
+
+Emitida: 27/11/2025 10:45
 
 Plan: Ambulatorio
 
 RECETARIO SOLIDARIO
 
-Afiliado: SCHUSZTER MARIA INES
+Afiliado: BERTINO BRAIAN GASTON
 
-D.N.I.: 34815831 Credencial: 34815831
+D.N.I.: 40789727 Credencial: 40789727
 
-Recetario: 2530248517295
+Recetario: 2533151275255
 
-Fecha Receta: 29/10/2025
+Fecha Receta: 27/11/2025
 
-Emitida: 29/10/2025 17:34
+Emitida: 27/11/2025 10:24
 
 Plan: PLAN 1
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: WALTER RUBEN HORACIO
+Afiliado: MOSIEJCZUK PEDRO EDUARDO
 
-D.N.I.: 34966333 Credencial: 8000496515
+D.N.I.: 14932807 Credencial: 8000207860
 
-Recetario: 2530248516813
+Recetario: 2533151267807
 
-Fecha Receta: 29/10/2025
+Fecha Receta: 27/11/2025
 
-Emitida: 29/10/2025 17:32
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: ESPARZA KRAWIEC IVO GASTON
-
-D.N.I.: 43616070 Credencial: 8000510706
-
-Recetario: 2530248509960
-
-Fecha Receta: 29/10/2025
-
-Emitida: 29/10/2025 16:52
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: ESPARZA KRAWIEC IVO GASTON
-
-D.N.I.: 43616070 Credencial: 8000510706
-
-Recetario: 2530248509849
-
-Fecha Receta: 29/10/2025
-
-Emitida: 29/10/2025 16:51
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: NOVIK NILDA
-
-D.N.I.: 4941385 Credencial: 8000012214
-
-Recetario: 2530248460155
-
-Fecha Receta: 29/10/2025
-
-Emitida: 29/10/2025 11:12
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: NOVIK NILDA
-
-D.N.I.: 4941385 Credencial: 8000012214
-
-Recetario: 2530248459344
-
-Fecha Receta: 29/10/2025
-
-Emitida: 29/10/2025 11:08
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: NOVIK NILDA
-
-D.N.I.: 4941385 Credencial: 8000012214
-
-Recetario: 2530248459148
-
-Fecha Receta: 29/10/2025
-
-Emitida: 29/10/2025 11:08
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: NOVIK NILDA
-
-D.N.I.: 4941385 Credencial: 8000012214
-
-Recetario: 2530248458906
-
-Fecha Receta: 29/10/2025
-
-Emitida: 29/10/2025 11:06
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: NOVIK NILDA
-
-D.N.I.: 4941385 Credencial: 8000012214
-
-Recetario: 2530248458643
-
-Fecha Receta: 29/10/2025
-
-Emitida: 29/10/2025 11:05
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: NOVIK NILDA
-
-D.N.I.: 4941385 Credencial: 8000012214
-
-Recetario: 2530248458333
-
-Fecha Receta: 29/10/2025
-
-Emitida: 29/10/2025 11:04
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: NOVIK NILDA
-
-D.N.I.: 4941385 Credencial: 8000012214
-
-Recetario: 2530248457916
-
-Fecha Receta: 29/10/2025
-
-Emitida: 29/10/2025 11:02
+Emitida: 27/11/2025 9:52
 
 Plan: Cardio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: AYALA, TAMARA ELIZABETH
+Afiliado: BUSTAMANTE MARISA ISABEL
 
-D.N.I.: 35686560 Credencial: 8000605246
+D.N.I.: 20276614 Credencial: 8000468410
 
-Recetario: 2530248447439
+Recetario: 2533151266995
 
-Fecha Receta: 29/10/2025
+Fecha Receta: 27/11/2025
 
-Emitida: 29/10/2025 10:11
+Emitida: 27/11/2025 9:48
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: PECOVICH ANDREA ALEJANDRA
+Afiliado: BUSTAMANTE MARISA ISABEL
 
-D.N.I.: 23981010 Credencial: 8000088334
+D.N.I.: 20276614 Credencial: 8000468410
 
-Recetario: 2530248446749
+Recetario: 2533151266776
 
-Fecha Receta: 29/10/2025
+Fecha Receta: 27/11/2025
 
-Emitida: 29/10/2025 10:07
+Emitida: 27/11/2025 9:47
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: SPIEGL EMILSE ORNELLA
+
+D.N.I.: 35301668 Credencial: 8000531552
+
+Recetario: 2533151258224
+
+Fecha Receta: 27/11/2025
+
+Emitida: 27/11/2025 9:02
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: BILAN ALICIA
+
+D.N.I.: 12680112 Credencial: 8000051205
+
+Recetario: 2533051220886
+
+Fecha Receta: 26/11/2025
+
+Emitida: 26/11/2025 18:54
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: BILAN ALICIA
+
+D.N.I.: 12680112 Credencial: 8000051205
+
+Recetario: 2533051220508
+
+Fecha Receta: 26/11/2025
+
+Emitida: 26/11/2025 18:52
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: BILAN ALICIA
+
+D.N.I.: 12680112 Credencial: 8000051205
+
+Recetario: 2533051219920
+
+Fecha Receta: 26/11/2025
+
+Emitida: 26/11/2025 18:49
+
+Plan: Cardio
+
+RECETARIO SOLIDARIO
+
+Afiliado: MARCONI NATALIA SOLEDAD
+
+D.N.I.: 29454619 Credencial: 29454619
+
+Recetario: 2533051204353
+
+Fecha Receta: 26/11/2025
+
+Emitida: 26/11/2025 17:31
+
+Plan: PLAN 1
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: IVANOFF STOINOVSKY PEDRO
+
+D.N.I.: 16945583 Credencial: 8000067849
+
+Recetario: 2533051202934
+
+Fecha Receta: 26/11/2025
+
+Emitida: 26/11/2025 17:24
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: KONOWALCZUK BEATRIZ NOEMI
+
+D.N.I.: 20394102 Credencial: 8000074938
+
+Recetario: 2533051149250
+
+Fecha Receta: 26/11/2025
+
+Emitida: 26/11/2025 11:49
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: FUS RICARDO MARCELO JOSE
+
+D.N.I.: 23218576 Credencial: 8000439990
+
+Recetario: 2533051144639
+
+Fecha Receta: 26/11/2025
+
+Emitida: 26/11/2025 11:29
+
+Plan: Cardio
+
+INSSSEP AMB
+
+Afiliado: CRISTOFF MARIELA EDITH NOEMI
+
+D.N.I.: 26307388 Credencial: 8000320053
+
+Recetario: 2533051128895
+
+Fecha Receta: 26/11/2025
+
+Emitida: 26/11/2025 10:23
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 
-Afiliado: GARCIA EVA JAZMIN
+Afiliado: CRISTOFF MARIELA EDITH NOEMI
 
-D.N.I.: 53104839 Credencial: 8000582174
+D.N.I.: 26307388 Credencial: 8000320053
 
-Recetario: 2530248443142
+Recetario: 2533051128456
 
-Fecha Receta: 29/10/2025
+Fecha Receta: 26/11/2025
 
-Emitida: 29/10/2025 9:46
+Emitida: 26/11/2025 10:21
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: VULGAN JOSE ALBERTO
+
+D.N.I.: 7902776 Credencial: 8000031553
+
+Recetario: 2533051116381
+
+Fecha Receta: 26/11/2025
+
+Emitida: 26/11/2025 9:26
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: VULGAN JOSE ALBERTO
+
+D.N.I.: 7902776 Credencial: 8000031553
+
+Recetario: 2533051116292
+
+Fecha Receta: 26/11/2025
+
+Emitida: 26/11/2025 9:26
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: ALMIRON HECTOR ANIBAL
+
+D.N.I.: 20093337 Credencial: 8000419217
+
+Recetario: 2532951073736
+
+Fecha Receta: 25/11/2025
+
+Emitida: 25/11/2025 19:05
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: HOLUBEK EVELIN JANET
+
+D.N.I.: 37938107 Credencial: 8000544143
+
+Recetario: 2532951065750
+
+Fecha Receta: 25/11/2025
+
+Emitida: 25/11/2025 18:28
+
+Plan: Plan Mujer
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: HOLUBEK EVELIN JANET
+
+D.N.I.: 37938107 Credencial: 8000544143
+
+Recetario: 2532951065527
+
+Fecha Receta: 25/11/2025
+
+Emitida: 25/11/2025 18:27
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: HOLUBEK EVELIN JANET
+
+D.N.I.: 37938107 Credencial: 8000544143
+
+Recetario: 2532951065368
+
+Fecha Receta: 25/11/2025
+
+Emitida: 25/11/2025 18:26
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: HOLUBEK EVELIN JANET
+
+D.N.I.: 37938107 Credencial: 8000544143
+
+Recetario: 2532951065101
+
+Fecha Receta: 25/11/2025
+
+Emitida: 25/11/2025 18:25
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: KAVGIC ALDANA BELEN
+
+D.N.I.: 39180340 Credencial: 8000604276
+
+Recetario: 2532951029779
+
+Fecha Receta: 25/11/2025
+
+Emitida: 25/11/2025 15:22
+
+Plan: Plan Mujer
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: KAVGIC ALDANA BELEN
+
+D.N.I.: 39180340 Credencial: 8000604276
+
+Recetario: 2532951029499
+
+Fecha Receta: 25/11/2025
+
+Emitida: 25/11/2025 15:20
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 
-Afiliado: GARCIA EVA JAZMIN
+Afiliado: GARCIA EMILIA ELISA
 
-D.N.I.: 53104839 Credencial: 8000582174
+D.N.I.: 6402986 Credencial: 8000020003
 
-Recetario: 2530248442971
+Recetario: 2532951008408
 
-Fecha Receta: 29/10/2025
+Fecha Receta: 25/11/2025
 
-Emitida: 29/10/2025 9:45
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-
-Afiliado: GARCIA EVA JAZMIN
-
-D.N.I.: 53104839 Credencial: 8000582174
-
-Recetario: 2530248442415
-
-Fecha Receta: 29/10/2025
-
-Emitida: 29/10/2025 9:41
+Emitida: 25/11/2025 12:54
 
 Plan: Ambulatorio
 
@@ -1260,554 +2098,41 @@ Afiliado: GARCIA EMILIA ELISA
 
 D.N.I.: 6402986 Credencial: 8000020003
 
-Recetario: 2530148411211
+Recetario: 2532951008281
 
-Fecha Receta: 28/10/2025
+Fecha Receta: 25/11/2025
 
-Emitida: 28/10/2025 19:54
+Emitida: 25/11/2025 12:53
+
+Plan: Cardio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: PONCE BLANCA LEONIDAS
+
+D.N.I.: 10762829 Credencial: 8000082829
+
+Recetario: 2532950990296
+
+Fecha Receta: 25/11/2025
+
+Emitida: 25/11/2025 11:29
 
 Plan: Cardio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: LEGUIZAMON RENE ENRIQUE
+Afiliado: GIMENEZ ROBERTO OSCAR
 
-D.N.I.: 30580968 Credencial: 8000426516
+D.N.I.: 11249647 Credencial: 8000044021
 
-Recetario: 2530148387202
+Recetario: 2532950984972
 
-Fecha Receta: 28/10/2025
+Fecha Receta: 25/11/2025
 
-Emitida: 28/10/2025 17:22
-
-Plan: Cardio
-
-INSSSEP AMB
-
-Afiliado: ALEGRE JOSE LUIS
-
-D.N.I.: 17322587 Credencial: 8000068659
-
-Recetario: 2530148338960
-
-Fecha Receta: 28/10/2025
-
-Emitida: 28/10/2025 11:48
-
-Plan: Cardio
-
-INSSSEP AMB
-
-Afiliado: ALEGRE JOSE LUIS
-
-D.N.I.: 17322587 Credencial: 8000068659
-
-Recetario: 2530148336956
-
-Fecha Receta: 28/10/2025
-
-Emitida: 28/10/2025 11:39
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: GEORGEFF JORGE SIMON
-
-D.N.I.: 12246895 Credencial: 8000226655
-
-Recetario: 2530148330507
-
-Fecha Receta: 28/10/2025
-
-Emitida: 28/10/2025 11:10
-
-Plan: Cardio
-
-INSSSEP AMB
-
-Afiliado: GARCIA EVA JAZMIN
-
-D.N.I.: 53104839 Credencial: 8000582174
-
-Recetario: 2530148324887
-
-Fecha Receta: 28/10/2025
-
-Emitida: 28/10/2025 10:46
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-
-Afiliado: GARCIA EVA JAZMIN
-
-D.N.I.: 53104839 Credencial: 8000582174
-
-Recetario: 2530148324327
-
-Fecha Receta: 28/10/2025
-
-Emitida: 28/10/2025 10:43
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-
-Afiliado: KURKAZ OLGA ELVIRA
-
-D.N.I.: 10569041 Credencial: 8000039789
-
-Recetario: 2530148315375
-
-Fecha Receta: 28/10/2025
-
-Emitida: 28/10/2025 10:01
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: IVIN ABIGAIL ANAHI
-
-D.N.I.: 36671554 Credencial: 8000625348
-
-Recetario: 2530148314917
-
-Fecha Receta: 28/10/2025
-
-Emitida: 28/10/2025 9:59
-
-Plan: Plan Mujer
-
-INSSSEP AMB
-
-Afiliado: KURKASZ SUSANA ELENA
-
-D.N.I.: 6402912 Credencial: 8000019285
-
-Recetario: 2530148314165
-
-Fecha Receta: 28/10/2025
-
-Emitida: 28/10/2025 9:56
-
-Plan: Cardio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: BARBOZA SANDRA CAROLINA
-
-D.N.I.: 24597031 Credencial: 8000480740
-
-Recetario: 2530148311609
-
-Fecha Receta: 28/10/2025
-
-Emitida: 28/10/2025 9:42
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-
-Afiliado: GARCIA EVA JAZMIN
-
-D.N.I.: 53104839 Credencial: 8000582174
-
-Recetario: 2530148311186
-
-Fecha Receta: 28/10/2025
-
-Emitida: 28/10/2025 9:40
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: MOSIEJCZUK PEDRO EDUARDO
-
-D.N.I.: 14932807 Credencial: 8000207860
-
-Recetario: 2530148310346
-
-Fecha Receta: 28/10/2025
-
-Emitida: 28/10/2025 9:35
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: MOSIEJCZUK MATVEY YERIK
-
-D.N.I.: 53655431 Credencial: 8000465264
-
-Recetario: 2530148310036
-
-Fecha Receta: 28/10/2025
-
-Emitida: 28/10/2025 9:34
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: DEL CAMPO CRISTIAN MARCELO
-
-D.N.I.: 28340462 Credencial: 8000549786
-
-Recetario: 2530148306989
-
-Fecha Receta: 28/10/2025
-
-Emitida: 28/10/2025 9:15
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: DEL CAMPO CRISTIAN MARCELO
-
-D.N.I.: 28340462 Credencial: 8000549786
-
-Recetario: 2530148306667
-
-Fecha Receta: 28/10/2025
-
-Emitida: 28/10/2025 9:13
-
-Plan: Cardio
-
-RECETARIO SOLIDARIO
-
-Afiliado: BENITEZ CINTIA DANIELA
-
-D.N.I.: 39293793 Credencial: 39293793
-
-Recetario: 2530048284570
-
-Fecha Receta: 27/10/2025
-
-Emitida: 27/10/2025 19:56
-
-Plan: PLAN 1
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: FANDRICH CARMEN CECILIA
-
-D.N.I.: 34966525 Credencial: 8000607960
-
-Recetario: 2530048282677
-
-Fecha Receta: 27/10/2025
-
-Emitida: 27/10/2025 19:42
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-
-Afiliado: RAMIREZ CAROLINA ELIZABETH
-
-D.N.I.: 27025637 Credencial: 8000096916
-
-Recetario: 2530048279361
-
-Fecha Receta: 27/10/2025
-
-Emitida: 27/10/2025 19:21
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-
-Afiliado: BERTINO DIDIER FACUNDO
-
-D.N.I.: 53022036 Credencial: 8000448025
-
-Recetario: 2530048276832
-
-Fecha Receta: 27/10/2025
-
-Emitida: 27/10/2025 19:07
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: IVANFF STOINOVSKY JUAN PABLO
-
-D.N.I.: 39180234 Credencial: 8000577281
-
-Recetario: 2530048271852
-
-Fecha Receta: 27/10/2025
-
-Emitida: 27/10/2025 18:41
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: IVANFF STOINOVSKY JUAN PABLO
-
-D.N.I.: 39180234 Credencial: 8000577281
-
-Recetario: 2530048270301
-
-Fecha Receta: 27/10/2025
-
-Emitida: 27/10/2025 18:33
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-
-Afiliado: WOLOSZYN PATRICIA NOEMI
-
-D.N.I.: 27435264 Credencial: 8000322570
-
-Recetario: 2530048269180
-
-Fecha Receta: 27/10/2025
-
-Emitida: 27/10/2025 18:28
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: IVANOFF STOINOVSKY PEDRO
-
-D.N.I.: 16945583 Credencial: 8000067849
-
-Recetario: 2530048265191
-
-Fecha Receta: 27/10/2025
-
-Emitida: 27/10/2025 18:08
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-
-Afiliado: SOSA CRISTINA CEFERINA
-
-D.N.I.: 22236114 Credencial: 8000078585
-
-Recetario: 2530048264147
-
-Fecha Receta: 27/10/2025
-
-Emitida: 27/10/2025 18:04
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: KURKAZ OLGA ELVIRA
-
-D.N.I.: 10569041 Credencial: 8000039789
-
-Recetario: 2530048258179
-
-Fecha Receta: 27/10/2025
-
-Emitida: 27/10/2025 17:34
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: SOTELO SUSANA AIDE
-
-D.N.I.: 17919349 Credencial: 8000071505
-
-Recetario: 2530048222450
-
-Fecha Receta: 27/10/2025
-
-Emitida: 27/10/2025 13:30
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: SOTELO SUSANA AIDE
-
-D.N.I.: 17919349 Credencial: 8000071505
-
-Recetario: 2530048221594
-
-Fecha Receta: 27/10/2025
-
-Emitida: 27/10/2025 13:23
-
-Plan: Ambulatorio
-
-Union Personal/Accord Salud
-Dispensada
-
-Afiliado: VIDELA PERALTA DANIELA ALEJANDRA
-
-D.N.I.: 33615127 Credencial: 00848599011
-
-Recetario: 785925102790664
-
-Fecha Receta: 27/10/2025
-
-Emitida: 27/10/2025 10:37
-
-Plan: MONOTRIBUTISTAS
-
-Union Personal/Accord Salud
-Dispensada
-
-Afiliado: PERALTA ROSA SUSANA
-
-D.N.I.: 18358105 Credencial: 00848599029
-
-Recetario: 785925102788060
-
-Fecha Receta: 27/10/2025
-
-Emitida: 27/10/2025 10:24
-
-Plan: MONOTRIBUTISTAS
-
-Union Personal/Accord Salud
-Dispensada
-
-Afiliado: VIDELA FRANCISCO DANIEL
-
-D.N.I.: 17189789 Credencial: 00848599003
-
-Recetario: 785925102787331
-
-Fecha Receta: 27/10/2025
-
-Emitida: 27/10/2025 10:21
-
-Plan: MONOTRIBUTISTAS
-
-Union Personal/Accord Salud
-Dispensada
-
-Afiliado: VIDELA FRANCISCO DANIEL
-
-D.N.I.: 17189789 Credencial: 00848599003
-
-Recetario: 785925102786867
-
-Fecha Receta: 27/10/2025
-
-Emitida: 27/10/2025 10:19
-
-Plan: MONOTRIBUTISTAS
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: VULGAN JOSE ALBERTO
-
-D.N.I.: 7902776 Credencial: 8000031553
-
-Recetario: 2530048182073
-
-Fecha Receta: 27/10/2025
-
-Emitida: 27/10/2025 9:56
-
-Plan: Ambulatorio
-
-RECETARIO SOLIDARIO
-Dispensada
-
-Afiliado: LEGUIZA SANDRA NOEMI
-
-D.N.I.: 17919350 Credencial: 17919350
-
-Recetario: 2530048175962
-
-Fecha Receta: 27/10/2025
-
-Emitida: 27/10/2025 9:22
-
-Plan: PLAN 1
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: TISERA ALMA SAMIRA AYLEN
-
-D.N.I.: 44946152 Credencial: 8000573728
-
-Recetario: 2529948155948
-
-Fecha Receta: 26/10/2025
-
-Emitida: 26/10/2025 11:55
-
-Plan: Plan Mujer
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: AYALA, TAMARA ELIZABETH
-
-D.N.I.: 35686560 Credencial: 8000605246
-
-Recetario: 2529948155913
-
-Fecha Receta: 26/10/2025
-
-Emitida: 26/10/2025 11:53
-
-Plan: Plan Mujer
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: SOSA ZULMA ADELINA
-
-D.N.I.: 6229983 Credencial: 8000185428
-
-Recetario: 2529748118808
-
-Fecha Receta: 24/10/2025
-
-Emitida: 24/10/2025 19:53
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: SOSA ZULMA ADELINA
-
-D.N.I.: 6229983 Credencial: 8000185428
-
-Recetario: 2529748118706
-
-Fecha Receta: 24/10/2025
-
-Emitida: 24/10/2025 19:51
+Emitida: 25/11/2025 11:08
 
 Plan: Ambulatorio
 
@@ -1818,459 +2143,438 @@ Afiliado: GIMENEZ ROBERTO OSCAR
 
 D.N.I.: 11249647 Credencial: 8000044021
 
-Recetario: 2529748049998
+Recetario: 2532950984651
 
-Fecha Receta: 24/10/2025
+Fecha Receta: 25/11/2025
 
-Emitida: 24/10/2025 10:46
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: LEGUIZA FRIDA AMALIA
-
-D.N.I.: 27435225 Credencial: 8000635735
-
-Recetario: 2529748037957
-
-Fecha Receta: 24/10/2025
-
-Emitida: 24/10/2025 9:44
+Emitida: 25/11/2025 11:07
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: LEGUIZA FRIDA AMALIA
+Afiliado: GIMENEZ ROBERTO OSCAR
 
-D.N.I.: 27435225 Credencial: 8000635735
+D.N.I.: 11249647 Credencial: 8000044021
 
-Recetario: 2529748037684
+Recetario: 2532950983836
 
-Fecha Receta: 24/10/2025
+Fecha Receta: 25/11/2025
 
-Emitida: 24/10/2025 9:43
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: BILAN MARIA
-
-D.N.I.: 5451499 Credencial: 8000358638
-
-Recetario: 2529748034035
-
-Fecha Receta: 24/10/2025
-
-Emitida: 24/10/2025 9:22
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: BILAN MARIA
-
-D.N.I.: 5451499 Credencial: 8000358638
-
-Recetario: 2529748029860
-
-Fecha Receta: 24/10/2025
-
-Emitida: 24/10/2025 8:50
-
-Plan: Cardio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: BILAN MARIA
-
-D.N.I.: 5451499 Credencial: 8000358638
-
-Recetario: 2529748029670
-
-Fecha Receta: 24/10/2025
-
-Emitida: 24/10/2025 8:48
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-
-Afiliado: JARA JORGE
-
-D.N.I.: 33824963 Credencial: 8000553461
-
-Recetario: 2529648014197
-
-Fecha Receta: 23/10/2025
-
-Emitida: 23/10/2025 20:46
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: MONZON MARIELA VANINA
-
-D.N.I.: 26826677 Credencial: 8000573727
-
-Recetario: 2529648004365
-
-Fecha Receta: 23/10/2025
-
-Emitida: 23/10/2025 19:10
-
-Plan: Plan Mujer
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: ALMIRON MILENA
-
-D.N.I.: 47618206 Credencial: 8000419216
-
-Recetario: 2529647933902
-
-Fecha Receta: 23/10/2025
-
-Emitida: 23/10/2025 11:13
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: ALMIRON HECTOR ANIBAL
-
-D.N.I.: 20093337 Credencial: 8000419217
-
-Recetario: 2529647933610
-
-Fecha Receta: 23/10/2025
-
-Emitida: 23/10/2025 11:11
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: ALMIRON HECTOR ANIBAL
-
-D.N.I.: 20093337 Credencial: 8000419217
-
-Recetario: 2529647932616
-
-Fecha Receta: 23/10/2025
-
-Emitida: 23/10/2025 11:07
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: ALMIRON HECTOR ANIBAL
-
-D.N.I.: 20093337 Credencial: 8000419217
-
-Recetario: 2529647932366
-
-Fecha Receta: 23/10/2025
-
-Emitida: 23/10/2025 11:06
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: PAWLUK PABLO
-
-D.N.I.: 7806095 Credencial: 8000030121
-
-Recetario: 2529647927304
-
-Fecha Receta: 23/10/2025
-
-Emitida: 23/10/2025 10:43
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: GARCIA NOELI SOLEDAD
-
-D.N.I.: 36245523 Credencial: 8000542962
-
-Recetario: 2529647926861
-
-Fecha Receta: 23/10/2025
-
-Emitida: 23/10/2025 10:41
-
-Plan: Plan Mujer
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: GARCIA NOELI SOLEDAD
-
-D.N.I.: 36245523 Credencial: 8000542962
-
-Recetario: 2529647926501
-
-Fecha Receta: 23/10/2025
-
-Emitida: 23/10/2025 10:39
+Emitida: 25/11/2025 11:04
 
 Plan: Ambulatorio
 
 RECETARIO SOLIDARIO
+Dispensada
 
-Afiliado: BARRIENTOS SOFIA
+Afiliado: BENITEZ JUAN
 
-D.N.I.: 17088512 Credencial: 17088512
+D.N.I.: 17919495 Credencial: 17919495
 
-Recetario: 2529647916670
+Recetario: 2532950968977
 
-Fecha Receta: 23/10/2025
+Fecha Receta: 25/11/2025
 
-Emitida: 23/10/2025 9:48
+Emitida: 25/11/2025 10:07
 
 Plan: PLAN 1
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: GARCIA NOELI SOLEDAD
+Afiliado: BENITEZ NANCY LILIAN
 
-D.N.I.: 36245523 Credencial: 8000542962
+D.N.I.: 34966449 Credencial: 8000495995
 
-Recetario: 2529647916190
+Recetario: 2532950968631
 
-Fecha Receta: 23/10/2025
+Fecha Receta: 25/11/2025
 
-Emitida: 23/10/2025 9:45
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: GEORGEF WALTER DANIEL
-
-D.N.I.: 28340422 Credencial: 8000362454
-
-Recetario: 2529647910504
-
-Fecha Receta: 23/10/2025
-
-Emitida: 23/10/2025 9:12
+Emitida: 25/11/2025 10:06
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: KAVGIC ALDANA BELEN
+Afiliado: ALMIRON HECTOR ANIBAL
 
-D.N.I.: 39180340 Credencial: 8000604276
+D.N.I.: 20093337 Credencial: 8000419217
 
-Recetario: 2529647910279
+Recetario: 2532950954288
 
-Fecha Receta: 23/10/2025
+Fecha Receta: 25/11/2025
 
-Emitida: 23/10/2025 9:10
-
-Plan: Plan Mujer
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: KAVGIC ALDANA BELEN
-
-D.N.I.: 39180340 Credencial: 8000604276
-
-Recetario: 2529647910150
-
-Fecha Receta: 23/10/2025
-
-Emitida: 23/10/2025 9:09
+Emitida: 25/11/2025 9:00
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: GARCIA NOELI SOLEDAD
+Afiliado: ALMIRON HECTOR ANIBAL
 
-D.N.I.: 36245523 Credencial: 8000542962
+D.N.I.: 20093337 Credencial: 8000419217
 
-Recetario: 2529647908165
+Recetario: 2532950953865
 
-Fecha Receta: 23/10/2025
+Fecha Receta: 25/11/2025
 
-Emitida: 23/10/2025 8:55
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: JARA KARDASZ MICAL
-
-D.N.I.: 59848842 Credencial: 8000620048
-
-Recetario: 2529547882714
-
-Fecha Receta: 22/10/2025
-
-Emitida: 22/10/2025 19:22
+Emitida: 25/11/2025 8:57
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: LANDRIEL RAUL OSCAR
+Afiliado: TOURN NORMA ESTHER
 
-D.N.I.: 14274679 Credencial: 8000058878
+D.N.I.: 17760588 Credencial: 8000070680
 
-Recetario: 2529547818861
+Recetario: 2532950953830
 
-Fecha Receta: 22/10/2025
+Fecha Receta: 25/11/2025
 
-Emitida: 22/10/2025 12:04
+Emitida: 25/11/2025 8:57
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+
+Afiliado: TOURN NORMA ESTHER
+
+D.N.I.: 17760588 Credencial: 8000070680
+
+Recetario: 2532950953627
+
+Fecha Receta: 25/11/2025
+
+Emitida: 25/11/2025 8:56
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+
+Afiliado: SEGOVIA ADRIEL DAMIAN
+
+D.N.I.: 42985286 Credencial: 8000513678
+
+Recetario: 2532550888452
+
+Fecha Receta: 21/11/2025
+
+Emitida: 21/11/2025 21:31
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: LANDRIEL RAUL OSCAR
+Afiliado: SOTELO SUSANA AIDE
 
-D.N.I.: 14274679 Credencial: 8000058878
+D.N.I.: 17919349 Credencial: 8000071505
 
-Recetario: 2529547818759
+Recetario: 2532550884782
 
-Fecha Receta: 22/10/2025
+Fecha Receta: 21/11/2025
 
-Emitida: 22/10/2025 12:03
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: MOSIEJCZUK PEDRO EDUARDO
-
-D.N.I.: 14932807 Credencial: 8000207860
-
-Recetario: 2529547787050
-
-Fecha Receta: 22/10/2025
-
-Emitida: 22/10/2025 9:38
+Emitida: 21/11/2025 19:31
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: KURKAZ OLGA ELVIRA
+Afiliado: SOTELO SUSANA AIDE
 
-D.N.I.: 10569041 Credencial: 8000039789
+D.N.I.: 17919349 Credencial: 8000071505
 
-Recetario: 2529547784196
+Recetario: 2532550884733
 
-Fecha Receta: 22/10/2025
+Fecha Receta: 21/11/2025
 
-Emitida: 22/10/2025 9:22
+Emitida: 21/11/2025 19:31
+
+Plan: Ambulatorio
+
+RECETARIO SOLIDARIO
+
+Afiliado: BENITEZ JUAN
+
+D.N.I.: 17919495 Credencial: 17919495
+
+Recetario: 2532550880714
+
+Fecha Receta: 21/11/2025
+
+Emitida: 21/11/2025 18:15
+
+Plan: PLAN 1
+
+RECETARIO SOLIDARIO
+
+Afiliado: BENITEZ JUAN
+
+D.N.I.: 17919495 Credencial: 17919495
+
+Recetario: 2532550880343
+
+Fecha Receta: 21/11/2025
+
+Emitida: 21/11/2025 18:08
+
+Plan: PLAN 1
+
+INSSSEP AMB
+
+Afiliado: ALVAREZ RAMON OMAR
+
+D.N.I.: 24465808 Credencial: 8000087301
+
+Recetario: 2532550854373
+
+Fecha Receta: 21/11/2025
+
+Emitida: 21/11/2025 11:04
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+
+Afiliado: ALVAREZ RAMON OMAR
+
+D.N.I.: 24465808 Credencial: 8000087301
+
+Recetario: 2532550854247
+
+Fecha Receta: 21/11/2025
+
+Emitida: 21/11/2025 11:02
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+
+Afiliado: ALVAREZ RAMON OMAR
+
+D.N.I.: 24465808 Credencial: 8000087301
+
+Recetario: 2532550854133
+
+Fecha Receta: 21/11/2025
+
+Emitida: 21/11/2025 11:01
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: LEGUIZA FRIDA AMALIA
+
+D.N.I.: 27435225 Credencial: 8000635735
+
+Recetario: 2532550848182
+
+Fecha Receta: 21/11/2025
+
+Emitida: 21/11/2025 10:02
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: SOTELO SUSANA AIDE
+
+D.N.I.: 17919349 Credencial: 8000071505
+
+Recetario: 2532450811825
+
+Fecha Receta: 20/11/2025
+
+Emitida: 20/11/2025 18:17
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: SOTELO SUSANA AIDE
+
+D.N.I.: 17919349 Credencial: 8000071505
+
+Recetario: 2532450811537
+
+Fecha Receta: 20/11/2025
+
+Emitida: 20/11/2025 18:15
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: SKOKANDIC JUAN DOMINGO
+
+D.N.I.: 25600518 Credencial: 8000097917
+
+Recetario: 2532450805903
+
+Fecha Receta: 20/11/2025
+
+Emitida: 20/11/2025 17:41
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: CABRERA MARIA ELBA
+
+D.N.I.: 16129672 Credencial: 8000063596
+
+Recetario: 2532350677473
+
+Fecha Receta: 19/11/2025
+
+Emitida: 19/11/2025 18:05
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: ALBARRACIN OLGA ERMINDA
+
+D.N.I.: 6645015 Credencial: 8000405560
+
+Recetario: 2532350673389
+
+Fecha Receta: 19/11/2025
+
+Emitida: 19/11/2025 17:43
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: SPIEGL MIGUEL ANGEL
+
+D.N.I.: 14451935 Credencial: 8000358448
+
+Recetario: 2532350669489
+
+Fecha Receta: 19/11/2025
+
+Emitida: 19/11/2025 17:23
 
 Plan: Cardio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: KURKAZ OLGA ELVIRA
+Afiliado: BILAN DE PELLERANO EMILIA
 
-D.N.I.: 10569041 Credencial: 8000039789
+D.N.I.: 5962459 Credencial: 8000016602
 
-Recetario: 2529547783887
+Recetario: 2532350660914
 
-Fecha Receta: 22/10/2025
+Fecha Receta: 19/11/2025
 
-Emitida: 22/10/2025 9:21
+Emitida: 19/11/2025 16:33
 
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: KURKAZ OLGA ELVIRA
-
-D.N.I.: 10569041 Credencial: 8000039789
-
-Recetario: 2529547783604
-
-Fecha Receta: 22/10/2025
-
-Emitida: 22/10/2025 9:19
-
-Plan: Ambulatorio
+Plan: Cardio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: PACHECO PRISCILA ANTONELLA
+Afiliado: FERNANDEZ CARLA ABRIL
 
-D.N.I.: 47618292 Credencial: 8000358195
+D.N.I.: 49841489 Credencial: 8000400294
 
-Recetario: 2529447750111
+Recetario: 2532350614486
 
-Fecha Receta: 21/10/2025
+Fecha Receta: 19/11/2025
 
-Emitida: 21/10/2025 19:09
+Emitida: 19/11/2025 11:15
 
 Plan: Plan Mujer
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: LEGUIZA FRIDA AMALIA
+Afiliado: ALEGRE IRENE SOFIA
 
-D.N.I.: 27435225 Credencial: 8000635735
+D.N.I.: 56587542 Credencial: 8000577191
 
-Recetario: 2529447734290
+Recetario: 2532350613585
 
-Fecha Receta: 21/10/2025
+Fecha Receta: 19/11/2025
 
-Emitida: 21/10/2025 17:42
+Emitida: 19/11/2025 11:11
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+
+Afiliado: ZUBCO KUVASZUK MIRTA LILIANA
+
+D.N.I.: 22933327 Credencial: 8000079505
+
+Recetario: 2532350593715
+
+Fecha Receta: 19/11/2025
+
+Emitida: 19/11/2025 9:42
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: LEGUIZA FRIDA AMALIA
+Afiliado: ZUBCO KUVASZUK MIRTA LILIANA
 
-D.N.I.: 27435225 Credencial: 8000635735
+D.N.I.: 22933327 Credencial: 8000079505
 
-Recetario: 2529447734197
+Recetario: 2532350593504
 
-Fecha Receta: 21/10/2025
+Fecha Receta: 19/11/2025
 
-Emitida: 21/10/2025 17:42
+Emitida: 19/11/2025 9:40
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: RAMIREZ CAROLINA ELIZABETH
+
+D.N.I.: 27025637 Credencial: 8000096916
+
+Recetario: 2532350592070
+
+Fecha Receta: 19/11/2025
+
+Emitida: 19/11/2025 9:34
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: RUIZ CRISTINA DE LOS ANGELES
+
+D.N.I.: 16934807 Credencial: 8000450965
+
+Recetario: 2532350584431
+
+Fecha Receta: 19/11/2025
+
+Emitida: 19/11/2025 8:46
 
 Plan: Cardio
 
@@ -2281,11 +2585,26 @@ Afiliado: JUAREZ MARISA LEONOR
 
 D.N.I.: 20091007 Credencial: 8000074567
 
-Recetario: 2529447669138
+Recetario: 2532250550659
 
-Fecha Receta: 21/10/2025
+Fecha Receta: 18/11/2025
 
-Emitida: 21/10/2025 10:55
+Emitida: 18/11/2025 18:50
+
+Plan: Cardio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: JUAREZ MARISA LEONOR
+
+D.N.I.: 20091007 Credencial: 8000074567
+
+Recetario: 2532250550424
+
+Fecha Receta: 18/11/2025
+
+Emitida: 18/11/2025 18:49
 
 Plan: Ambulatorio
 
@@ -2296,11 +2615,11 @@ Afiliado: MENDOZA HECTOR RAUL
 
 D.N.I.: 16945545 Credencial: 8000214561
 
-Recetario: 2529447668551
+Recetario: 2532250550123
 
-Fecha Receta: 21/10/2025
+Fecha Receta: 18/11/2025
 
-Emitida: 21/10/2025 10:53
+Emitida: 18/11/2025 18:47
 
 Plan: Cardio
 
@@ -2311,73 +2630,28 @@ Afiliado: MENDOZA HECTOR RAUL
 
 D.N.I.: 16945545 Credencial: 8000214561
 
-Recetario: 2529447668109
+Recetario: 2532250549943
 
-Fecha Receta: 21/10/2025
+Fecha Receta: 18/11/2025
 
-Emitida: 21/10/2025 10:51
-
-Plan: Cardio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: HOFLER ROCIO AMELIA I
-
-D.N.I.: 36449527 Credencial: 8000598585
-
-Recetario: 2529447654429
-
-Fecha Receta: 21/10/2025
-
-Emitida: 21/10/2025 9:51
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: BILAN DE PELLERANO EMILIA
-
-D.N.I.: 5962459 Credencial: 8000016602
-
-Recetario: 2529447644463
-
-Fecha Receta: 21/10/2025
-
-Emitida: 21/10/2025 8:58
+Emitida: 18/11/2025 18:46
 
 Plan: Cardio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: BILAN DE PELLERANO EMILIA
+Afiliado: BENITEZ EMILSE CAROLINA
 
-D.N.I.: 5962459 Credencial: 8000016602
+D.N.I.: 25813464 Credencial: 8000343089
 
-Recetario: 2529447644227
+Recetario: 2532250482608
 
-Fecha Receta: 21/10/2025
+Fecha Receta: 18/11/2025
 
-Emitida: 21/10/2025 8:56
+Emitida: 18/11/2025 11:40
 
 Plan: Cardio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: GAWRYLUK PAOLA INES
-
-D.N.I.: 28340620 Credencial: 8000431019
-
-Recetario: 2529447641474
-
-Fecha Receta: 21/10/2025
-
-Emitida: 21/10/2025 8:34
-
-Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
@@ -2386,11 +2660,11 @@ Afiliado: GALIANO VANESA DEL CARMEN
 
 D.N.I.: 30580937 Credencial: 8000576416
 
-Recetario: 2529447641255
+Recetario: 2532250473225
 
-Fecha Receta: 21/10/2025
+Fecha Receta: 18/11/2025
 
-Emitida: 21/10/2025 8:32
+Emitida: 18/11/2025 11:01
 
 Plan: Plan Mujer
 
@@ -2401,205 +2675,323 @@ Afiliado: GALIANO VANESA DEL CARMEN
 
 D.N.I.: 30580937 Credencial: 8000576416
 
-Recetario: 2529447641133
+Recetario: 2532250463097
 
-Fecha Receta: 21/10/2025
+Fecha Receta: 18/11/2025
 
-Emitida: 21/10/2025 8:31
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: ROJAS MARISA RAQUEL
-
-D.N.I.: 31887089 Credencial: 8000535595
-
-Recetario: 2529447640635
-
-Fecha Receta: 21/10/2025
-
-Emitida: 21/10/2025 8:27
+Emitida: 18/11/2025 10:20
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: BUSTAMANTE MARISA ISABEL
+Afiliado: ALTAMIRANO ZUNILDA LIDIA
 
-D.N.I.: 20276614 Credencial: 8000468410
+D.N.I.: 13725316 Credencial: 8000325240
 
-Recetario: 2529347529086
+Recetario: 2532250456616
 
-Fecha Receta: 20/10/2025
+Fecha Receta: 18/11/2025
 
-Emitida: 20/10/2025 10:59
+Emitida: 18/11/2025 9:50
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: BUSTAMANTE MARISA ISABEL
+Afiliado: LOPEZ RAMONA MERCEDES
 
-D.N.I.: 20276614 Credencial: 8000468410
+D.N.I.: 16428744 Credencial: 8000064771
 
-Recetario: 2529347528696
+Recetario: 2532250451834
 
-Fecha Receta: 20/10/2025
+Fecha Receta: 18/11/2025
 
-Emitida: 20/10/2025 10:58
+Emitida: 18/11/2025 9:27
+
+Plan: Ambulatorio
+
+RECETARIO SOLIDARIO
+
+Afiliado: TORRES MIRIAN CARMEN
+
+D.N.I.: 31079594 Credencial: 31079594
+
+Recetario: 2532250451732
+
+Fecha Receta: 18/11/2025
+
+Emitida: 18/11/2025 9:26
+
+Plan: PLAN 1
+
+RECETARIO SOLIDARIO
+
+Afiliado: TORRES MIRIAN CARMEN
+
+D.N.I.: 31079594 Credencial: 31079594
+
+Recetario: 2532250451640
+
+Fecha Receta: 18/11/2025
+
+Emitida: 18/11/2025 9:26
+
+Plan: PLAN 1
+
+INSSSEP AMB
+
+Afiliado: TROCKOWIEC ROSA
+
+D.N.I.: 4863614 Credencial: 8000596361
+
+Recetario: 2532250447538
+
+Fecha Receta: 18/11/2025
+
+Emitida: 18/11/2025 9:02
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: PUJOL FERNANDEZ LAUTARO JAVIER
+
+D.N.I.: 48730093 Credencial: 8000378810
+
+Recetario: 2532250444695
+
+Fecha Receta: 18/11/2025
+
+Emitida: 18/11/2025 8:40
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: ALTAMIRANO ZUNILDA LIDIA
+
+D.N.I.: 13725316 Credencial: 8000325240
+
+Recetario: 2532150411652
+
+Fecha Receta: 17/11/2025
+
+Emitida: 17/11/2025 19:01
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: ALTAMIRANO ZUNILDA LIDIA
+
+D.N.I.: 13725316 Credencial: 8000325240
+
+Recetario: 2532150411441
+
+Fecha Receta: 17/11/2025
+
+Emitida: 17/11/2025 19:00
 
 Plan: Cardio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: MANSILLA TICIANA PAZ
+Afiliado: ALTAMIRANO ZUNILDA LIDIA
 
-D.N.I.: 49199966 Credencial: 8000388019
+D.N.I.: 13725316 Credencial: 8000325240
 
-Recetario: 2529347518994
+Recetario: 2532150411299
 
-Fecha Receta: 20/10/2025
+Fecha Receta: 17/11/2025
 
-Emitida: 20/10/2025 10:15
+Emitida: 17/11/2025 18:59
 
-Plan: Plan Mujer
+Plan: Cardio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: ALTAMIRANO ZUNILDA LIDIA
+
+D.N.I.: 13725316 Credencial: 8000325240
+
+Recetario: 2532150411171
+
+Fecha Receta: 17/11/2025
+
+Emitida: 17/11/2025 18:58
+
+Plan: Cardio
 
 INSSSEP AMB
 
-Afiliado: VICENTIN MONICA BIBIANA
+Afiliado: CZYZ ROSA ELIZABETH
 
-D.N.I.: 21859364 Credencial: 8000085240
+D.N.I.: 18669702 Credencial: 8000010236
 
-Recetario: 2529347516512
+Recetario: 2532150405646
 
-Fecha Receta: 20/10/2025
+Fecha Receta: 17/11/2025
 
-Emitida: 20/10/2025 10:03
+Emitida: 17/11/2025 18:30
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 
-Afiliado: VICENTIN MONICA BIBIANA
+Afiliado: LANDRIEL CANO CARINA ESTER
 
-D.N.I.: 21859364 Credencial: 8000085240
+D.N.I.: 25427141 Credencial: 8000351834
 
-Recetario: 2529347516135
+Recetario: 2532150404187
 
-Fecha Receta: 20/10/2025
+Fecha Receta: 17/11/2025
 
-Emitida: 20/10/2025 10:01
+Emitida: 17/11/2025 18:22
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: ABDULA KARDASZ MISAEL
+Afiliado: PASICH PECOVICH ANGEL AGUSTIN
 
-D.N.I.: 70395629 Credencial: 8000636962
+D.N.I.: 48729749 Credencial: 8000373138
 
-Recetario: 2529347503199
+Recetario: 2532150396330
 
-Fecha Receta: 20/10/2025
+Fecha Receta: 17/11/2025
 
-Emitida: 20/10/2025 8:40
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: ABDULA KARDASZ MISAEL
-
-D.N.I.: 70395629 Credencial: 8000636962
-
-Recetario: 2529147470085
-
-Fecha Receta: 18/10/2025
-
-Emitida: 18/10/2025 10:25
-
-Plan: PMI
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: JARA KARDASZ MICAL
-
-D.N.I.: 59848842 Credencial: 8000620048
-
-Recetario: 2529147469941
-
-Fecha Receta: 18/10/2025
-
-Emitida: 18/10/2025 10:23
-
-Plan: Ambulatorio
-
-INSSSEP AMB
-
-Afiliado: JARA KARDASZ MICAL
-
-D.N.I.: 59848842 Credencial: 8000620048
-
-Recetario: 2529047454287
-
-Fecha Receta: 17/10/2025
-
-Emitida: 17/10/2025 20:02
+Emitida: 17/11/2025 17:44
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: FERNANDEZ CARLA ABRIL
+Afiliado: GUZMAN SOLEDAD
 
-D.N.I.: 49841489 Credencial: 8000400294
+D.N.I.: 38765285 Credencial: 8000616772
 
-Recetario: 2529047442486
+Recetario: 2532150395278
 
-Fecha Receta: 17/10/2025
+Fecha Receta: 17/11/2025
 
-Emitida: 17/10/2025 18:17
+Emitida: 17/11/2025 17:39
 
-Plan: Plan Mujer
+Plan: Ambulatorio
+
+Sancor Salud
+Dispensada
+
+Afiliado: MOLINA GRISELDA BEATRIZ
+
+D.N.I.: 20963473 Credencial: 134673800
+
+Recetario: 2532150389280
+
+Fecha Receta: 17/11/2025
+
+Emitida: 17/11/2025 17:09
+
+Plan: S3000
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: BARNASTHPOL SONIA MIRTHA
+Afiliado: PELLERANO CESAR OMAR
 
-D.N.I.: 22236185 Credencial: 8000244264
+D.N.I.: 14274692 Credencial: 8000491753
 
-Recetario: 2529047398723
+Recetario: 2532150388510
 
-Fecha Receta: 17/10/2025
+Fecha Receta: 17/11/2025
 
-Emitida: 17/10/2025 11:58
+Emitida: 17/11/2025 17:05
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: RACHMANKO NORMA GLADIS
+Afiliado: PELLERANO CESAR OMAR
 
-D.N.I.: 20276647 Credencial: 8000084807
+D.N.I.: 14274692 Credencial: 8000491753
 
-Recetario: 2529047398044
+Recetario: 2532150388197
 
-Fecha Receta: 17/10/2025
+Fecha Receta: 17/11/2025
 
-Emitida: 17/10/2025 11:54
+Emitida: 17/11/2025 17:03
+
+Plan: Cardio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: PELLERANO CESAR OMAR
+
+D.N.I.: 14274692 Credencial: 8000491753
+
+Recetario: 2532150388080
+
+Fecha Receta: 17/11/2025
+
+Emitida: 17/11/2025 17:03
 
 Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: PELLERANO CESAR OMAR
+
+D.N.I.: 14274692 Credencial: 8000491753
+
+Recetario: 2532150387940
+
+Fecha Receta: 17/11/2025
+
+Emitida: 17/11/2025 17:02
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: MANSILLA BARBISAN JUAN EUGENIO
+
+D.N.I.: 48081540 Credencial: 8000364043
+
+Recetario: 2532150387578
+
+Fecha Receta: 17/11/2025
+
+Emitida: 17/11/2025 17:00
+
+Plan: Ambulatorio
+
+RECETARIO SOLIDARIO
+Dispensada
+
+Afiliado: PILIPCZUK MATIAS JAVIER
+
+D.N.I.: 48249035 Credencial: 48249035
+
+Recetario: 2532150384507
+
+Fecha Receta: 17/11/2025
+
+Emitida: 17/11/2025 16:43
+
+Plan: PLAN 1
 
 INSSSEP AMB
 Dispensada
@@ -2608,70 +3000,161 @@ Afiliado: KAVGIC CLARA INES
 
 D.N.I.: 42276509 Credencial: 8000300510
 
-Recetario: 2529047395144
+Recetario: 2532150326684
 
-Fecha Receta: 17/10/2025
+Fecha Receta: 17/11/2025
 
-Emitida: 17/10/2025 11:38
+Emitida: 17/11/2025 10:47
 
 Plan: Ambulatorio
 
 INSSSEP AMB
+Dispensada
 
-Afiliado: SLAVIK SUSANA AURORA
+Afiliado: GERGOFF PECHERINCOFF BENITO
 
-D.N.I.: 17398641 Credencial: 8000518710
+D.N.I.: 7537229 Credencial: 8000440100
 
-Recetario: 2529047384911
+Recetario: 2532150316664
 
-Fecha Receta: 17/10/2025
+Fecha Receta: 17/11/2025
 
-Emitida: 17/10/2025 10:47
+Emitida: 17/11/2025 9:59
 
 Plan: Ambulatorio
-
-Sancor Salud
-Dispensada
-
-Afiliado: ARNDT AYELEN MAGALI
-
-D.N.I.: 42732909 Credencial: 208239602
-
-Recetario: 2529047380091
-
-Fecha Receta: 17/10/2025
-
-Emitida: 17/10/2025 10:24
-
-Plan: S1500
-
-Sancor Salud
-Dispensada
-
-Afiliado: ARNDT AYELEN MAGALI
-
-D.N.I.: 42732909 Credencial: 208239602
-
-Recetario: 2529047371492
-
-Fecha Receta: 17/10/2025
-
-Emitida: 17/10/2025 9:38
-
-Plan: S1500
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: KARDASZ ORNELLA LILIANA
+Afiliado: GERGOFF PECHERINCOFF BENITO
 
-D.N.I.: 36976060 Credencial: 8000639369
+D.N.I.: 7537229 Credencial: 8000440100
 
-Recetario: 2529047359684
+Recetario: 2532150316419
 
-Fecha Receta: 17/10/2025
+Fecha Receta: 17/11/2025
 
-Emitida: 17/10/2025 6:15
+Emitida: 17/11/2025 9:58
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: GERGOFF PECHERINCOFF NORA MELI
+
+D.N.I.: 26826669 Credencial: 8000352758
+
+Recetario: 2532150316094
+
+Fecha Receta: 17/11/2025
+
+Emitida: 17/11/2025 9:56
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: INSAURRALDE MAYRA MARIA JOSE
+
+D.N.I.: 32061712 Credencial: 8000454656
+
+Recetario: 2532150308868
+
+Fecha Receta: 17/11/2025
+
+Emitida: 17/11/2025 9:16
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: KOBLUK CINTIA NATALIA
+
+D.N.I.: 36973932 Credencial: 8000501161
+
+Recetario: 2532150308775
+
+Fecha Receta: 17/11/2025
+
+Emitida: 17/11/2025 9:15
+
+Plan: Plan Mujer
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: INSAURRALDE MAYRA MARIA JOSE
+
+D.N.I.: 32061712 Credencial: 8000454656
+
+Recetario: 2532150308653
+
+Fecha Receta: 17/11/2025
+
+Emitida: 17/11/2025 9:14
+
+Plan: Plan Mujer
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: KOBLUK SAMUEL EMILIO
+
+D.N.I.: 17037705 Credencial: 8000576655
+
+Recetario: 2531850253091
+
+Fecha Receta: 14/11/2025
+
+Emitida: 14/11/2025 20:32
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: KOBLUK SAMUEL EMILIO
+
+D.N.I.: 17037705 Credencial: 8000576655
+
+Recetario: 2531850252995
+
+Fecha Receta: 14/11/2025
+
+Emitida: 14/11/2025 20:31
+
+Plan: Cardio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: KOBLUK SAMUEL EMILIO
+
+D.N.I.: 17037705 Credencial: 8000576655
+
+Recetario: 2531850252820
+
+Fecha Receta: 14/11/2025
+
+Emitida: 14/11/2025 20:28
+
+Plan: Cardio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: MASALYKA LILIANA ELIZABETH
+
+D.N.I.: 14703662 Credencial: 8000061059
+
+Recetario: 2531850252768
+
+Fecha Receta: 14/11/2025
+
+Emitida: 14/11/2025 20:27
 
 Plan: Ambulatorio
 
@@ -2682,85 +3165,1063 @@ Afiliado: MASALYKA LILIANA ELIZABETH
 
 D.N.I.: 14703662 Credencial: 8000061059
 
-Recetario: 2528947336364
+Recetario: 2531850252699
 
-Fecha Receta: 16/10/2025
+Fecha Receta: 14/11/2025
 
-Emitida: 16/10/2025 18:56
+Emitida: 14/11/2025 20:25
+
+Plan: Cardio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: PACHECO PRISCILA ANTONELLA
+
+D.N.I.: 47618292 Credencial: 8000358195
+
+Recetario: 2531850188148
+
+Fecha Receta: 14/11/2025
+
+Emitida: 14/11/2025 11:31
+
+Plan: Plan Mujer
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: SCHAFFINO GILBERTO RUBEN
+
+D.N.I.: 7806097 Credencial: 8000212366
+
+Recetario: 2531850181433
+
+Fecha Receta: 14/11/2025
+
+Emitida: 14/11/2025 10:59
+
+Plan: Ambulatorio
+
+Union Personal/Accord Salud
+Dispensada
+
+Afiliado: VIDELA FRANCISCO DANIEL
+
+D.N.I.: 17189789 Credencial: 00848599003
+
+Recetario: 785925111479949
+
+Fecha Receta: 14/11/2025
+
+Emitida: 14/11/2025 10:52
+
+Plan: MONOTRIBUTISTAS
+
+Union Personal/Accord Salud
+
+Afiliado: VIDELA PERALTA DANIELA ALEJANDRA
+
+D.N.I.: 33615127 Credencial: 00848599011
+
+Recetario: 785925111479671
+
+Fecha Receta: 14/11/2025
+
+Emitida: 14/11/2025 10:51
+
+Plan: MONOTRIBUTISTAS
+
+Union Personal/Accord Salud
+
+Afiliado: VIDELA PERALTA DANIELA ALEJANDRA
+
+D.N.I.: 33615127 Credencial: 00848599011
+
+Recetario: 785925111479335
+
+Fecha Receta: 14/11/2025
+
+Emitida: 14/11/2025 10:49
+
+Plan: MONOTRIBUTISTAS
+
+Union Personal/Accord Salud
+
+Afiliado: VIDELA PERALTA DANIELA ALEJANDRA
+
+D.N.I.: 33615127 Credencial: 00848599011
+
+Recetario: 785925111479176
+
+Fecha Receta: 14/11/2025
+
+Emitida: 14/11/2025 10:49
+
+Plan: MONOTRIBUTISTAS
+
+Union Personal/Accord Salud
+
+Afiliado: VIDELA PERALTA DANIELA ALEJANDRA
+
+D.N.I.: 33615127 Credencial: 00848599011
+
+Recetario: 785925111478898
+
+Fecha Receta: 14/11/2025
+
+Emitida: 14/11/2025 10:47
+
+Plan: MONOTRIBUTISTAS
+
+Union Personal/Accord Salud
+
+Afiliado: VIDELA PERALTA DANIELA ALEJANDRA
+
+D.N.I.: 33615127 Credencial: 00848599011
+
+Recetario: 785925111478820
+
+Fecha Receta: 14/11/2025
+
+Emitida: 14/11/2025 10:47
+
+Plan: MONOTRIBUTISTAS
+
+Union Personal/Accord Salud
+
+Afiliado: VIDELA PERALTA DANIELA ALEJANDRA
+
+D.N.I.: 33615127 Credencial: 00848599011
+
+Recetario: 785925111478727
+
+Fecha Receta: 14/11/2025
+
+Emitida: 14/11/2025 10:47
+
+Plan: MONOTRIBUTISTAS
+
+Union Personal/Accord Salud
+
+Afiliado: VIDELA PERALTA DANIELA ALEJANDRA
+
+D.N.I.: 33615127 Credencial: 00848599011
+
+Recetario: 785925111478267
+
+Fecha Receta: 14/11/2025
+
+Emitida: 14/11/2025 10:45
+
+Plan: MONOTRIBUTISTAS
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: BERTINO VILMA VANESA
+
+D.N.I.: 32061818 Credencial: 8000518979
+
+Recetario: 2531850160267
+
+Fecha Receta: 14/11/2025
+
+Emitida: 14/11/2025 9:11
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: MASALYKA LILIANA ELIZABETH
+Afiliado: BERTINO VILMA VANESA
 
-D.N.I.: 14703662 Credencial: 8000061059
+D.N.I.: 32061818 Credencial: 8000518979
 
-Recetario: 2528947336220
+Recetario: 2531850160092
 
-Fecha Receta: 16/10/2025
+Fecha Receta: 14/11/2025
 
-Emitida: 16/10/2025 18:55
-
-Plan: Cardio
-
-INSSSEP AMB
-Dispensada
-
-Afiliado: KOBLUK SAMUEL EMILIO
-
-D.N.I.: 17037705 Credencial: 8000576655
-
-Recetario: 2528947335992
-
-Fecha Receta: 16/10/2025
-
-Emitida: 16/10/2025 18:53
+Emitida: 14/11/2025 9:10
 
 Plan: Ambulatorio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: KOBLUK SAMUEL EMILIO
+Afiliado: BERTINO DANIEL ALCIDES
 
-D.N.I.: 17037705 Credencial: 8000576655
+D.N.I.: 27706549 Credencial: 8000485388
 
-Recetario: 2528947335662
+Recetario: 2531850159307
 
-Fecha Receta: 16/10/2025
+Fecha Receta: 14/11/2025
 
-Emitida: 16/10/2025 18:51
+Emitida: 14/11/2025 9:04
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: GERGOFF PECHERINCOFF NORA MELI
+
+D.N.I.: 26826669 Credencial: 8000352758
+
+Recetario: 2531750122778
+
+Fecha Receta: 13/11/2025
+
+Emitida: 13/11/2025 18:28
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: GERGOFF PECHERINCOFF NORA MELI
+
+D.N.I.: 26826669 Credencial: 8000352758
+
+Recetario: 2531750122414
+
+Fecha Receta: 13/11/2025
+
+Emitida: 13/11/2025 18:25
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: GERGOFF PECHERINCOFF NORA MELI
+
+D.N.I.: 26826669 Credencial: 8000352758
+
+Recetario: 2531750122084
+
+Fecha Receta: 13/11/2025
+
+Emitida: 13/11/2025 18:23
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: RAMIREZ CAROLINA ELIZABETH
+
+D.N.I.: 27025637 Credencial: 8000096916
+
+Recetario: 2531750069394
+
+Fecha Receta: 13/11/2025
+
+Emitida: 13/11/2025 12:30
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: BERTINO DANIEL ALCIDES
+
+D.N.I.: 27706549 Credencial: 8000485388
+
+Recetario: 2531750068459
+
+Fecha Receta: 13/11/2025
+
+Emitida: 13/11/2025 12:23
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: ALMIRON HECTOR ANIBAL
+
+D.N.I.: 20093337 Credencial: 8000074796
+
+Recetario: 2531750047265
+
+Fecha Receta: 13/11/2025
+
+Emitida: 13/11/2025 10:40
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: ALMIRON HECTOR ANIBAL
+
+D.N.I.: 20093337 Credencial: 8000074796
+
+Recetario: 2531750047095
+
+Fecha Receta: 13/11/2025
+
+Emitida: 13/11/2025 10:39
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: ALMIRON HECTOR ANIBAL
+
+D.N.I.: 20093337 Credencial: 8000074796
+
+Recetario: 2531750046854
+
+Fecha Receta: 13/11/2025
+
+Emitida: 13/11/2025 10:38
 
 Plan: Cardio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: KOBLUK SAMUEL EMILIO
+Afiliado: ALMIRON HECTOR ANIBAL
 
-D.N.I.: 17037705 Credencial: 8000576655
+D.N.I.: 20093337 Credencial: 8000074796
 
-Recetario: 2528947335488
+Recetario: 2531750046520
 
-Fecha Receta: 16/10/2025
+Fecha Receta: 13/11/2025
 
-Emitida: 16/10/2025 18:50
+Emitida: 13/11/2025 10:36
 
-Plan: Cardio    
+Plan: Cardio
 
 INSSSEP AMB
 Dispensada
 
-Afiliado: KOBLUK SAMUEL EMILIO
+Afiliado: KARDASZ IVANA NOELIA
 
-D.N.I.: 17037705 Credencial: 8000576655
+D.N.I.: 32664697 Credencial: 8000553453
 
-Recetario: 2528947335282
+Recetario: 2531650003537
 
-Fecha Receta: 16/10/2025
+Fecha Receta: 12/11/2025
 
-Emitida: 16/10/2025 18:49
+Emitida: 12/11/2025 19:41
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: MOREIRA EVA MARIA
+
+D.N.I.: 59147744 Credencial: 8000597556
+
+Recetario: 2531649988674
+
+Fecha Receta: 12/11/2025
+
+Emitida: 12/11/2025 18:12
+
+Plan: Ambulatorio
+
+Sancor Salud
+Dispensada
+
+Afiliado: ARNDT AYELEN MAGALI
+
+D.N.I.: 42732909 Credencial: 208239602
+
+Recetario: 2531649988136
+
+Fecha Receta: 12/11/2025
+
+Emitida: 12/11/2025 18:09
+
+Plan: S1500
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: ACOSTA MONICA BEATRIZ
+
+D.N.I.: 22236141 Credencial: 8000079295
+
+Recetario: 2531649971296
+
+Fecha Receta: 12/11/2025
+
+Emitida: 12/11/2025 16:33
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: ACOSTA MONICA BEATRIZ
+
+D.N.I.: 22236141 Credencial: 8000079295
+
+Recetario: 2531649970986
+
+Fecha Receta: 12/11/2025
+
+Emitida: 12/11/2025 16:31
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: ACOSTA MONICA BEATRIZ
+
+D.N.I.: 22236141 Credencial: 8000079295
+
+Recetario: 2531649970551
+
+Fecha Receta: 12/11/2025
+
+Emitida: 12/11/2025 16:28
 
 Plan: Cardio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: SERVIN DALMA NOELIA
+
+D.N.I.: 36326921 Credencial: 8000582173
+
+Recetario: 2531649970356
+
+Fecha Receta: 12/11/2025
+
+Emitida: 12/11/2025 16:27
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: AYALA, TAMARA ELIZABETH
+
+D.N.I.: 35686560 Credencial: 8000605246
+
+Recetario: 2531649904643
+
+Fecha Receta: 12/11/2025
+
+Emitida: 12/11/2025 9:46
+
+Plan: Plan Mujer
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: KRAWIEC ARIELA CARINA
+
+D.N.I.: 25854742 Credencial: 8000618739
+
+Recetario: 2531549778405
+
+Fecha Receta: 11/11/2025
+
+Emitida: 11/11/2025 11:14
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+
+Afiliado: SAWCZUK PAULINA
+
+D.N.I.: 6040902 Credencial: 8000018155
+
+Recetario: 2531549767471
+
+Fecha Receta: 11/11/2025
+
+Emitida: 11/11/2025 10:30
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: SAWCZUK PAULINA
+
+D.N.I.: 6040902 Credencial: 8000018155
+
+Recetario: 2531549766429
+
+Fecha Receta: 11/11/2025
+
+Emitida: 11/11/2025 10:26
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: SAWCZUK PAULINA
+
+D.N.I.: 6040902 Credencial: 8000018155
+
+Recetario: 2531549766211
+
+Fecha Receta: 11/11/2025
+
+Emitida: 11/11/2025 10:25
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: VALDEZ ROMERO, NOSAXA EMILIA
+
+D.N.I.: 70395612 Credencial: 8000634186
+
+Recetario: 2531449724803
+
+Fecha Receta: 10/11/2025
+
+Emitida: 10/11/2025 19:55
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: CABRERA MARIA ELBA
+
+D.N.I.: 16129672 Credencial: 8000063596
+
+Recetario: 2531449718630
+
+Fecha Receta: 10/11/2025
+
+Emitida: 10/11/2025 19:19
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: CABRERA MARIA ELBA
+
+D.N.I.: 16129672 Credencial: 8000063596
+
+Recetario: 2531449718333
+
+Fecha Receta: 10/11/2025
+
+Emitida: 10/11/2025 19:17
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: MOREIRA EVA MARIA
+
+D.N.I.: 59147744 Credencial: 8000597556
+
+Recetario: 2531449717995
+
+Fecha Receta: 10/11/2025
+
+Emitida: 10/11/2025 19:15
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: BALUK EUGENIO CARLOS
+
+D.N.I.: 14220191 Credencial: 8000293911
+
+Recetario: 2531449717512
+
+Fecha Receta: 10/11/2025
+
+Emitida: 10/11/2025 19:12
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: BALUK EUGENIO CARLOS
+
+D.N.I.: 14220191 Credencial: 8000293911
+
+Recetario: 2531449717310
+
+Fecha Receta: 10/11/2025
+
+Emitida: 10/11/2025 19:11
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: BERTINO RICARDO OSVALDO
+
+D.N.I.: 12680025 Credencial: 8000085610
+
+Recetario: 2531449713704
+
+Fecha Receta: 10/11/2025
+
+Emitida: 10/11/2025 18:54
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: ABDULA KARDASZ MISAEL
+
+D.N.I.: 70395629 Credencial: 8000636962
+
+Recetario: 2531449711684
+
+Fecha Receta: 10/11/2025
+
+Emitida: 10/11/2025 18:45
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: LEGUIZA FRIDA AMALIA
+
+D.N.I.: 27435225 Credencial: 8000635735
+
+Recetario: 2531449706593
+
+Fecha Receta: 10/11/2025
+
+Emitida: 10/11/2025 18:21
+
+Plan: Ambulatorio
+
+RECETARIO SOLIDARIO
+Dispensada
+
+Afiliado: VILLALBA ROJAS CLOE MARTINA
+
+D.N.I.: 70280438 Credencial: 70280438
+
+Recetario: 2531449700283
+
+Fecha Receta: 10/11/2025
+
+Emitida: 10/11/2025 17:56
+
+Plan: PLAN 1
+
+RECETARIO SOLIDARIO
+
+Afiliado: VILLALBA ROJAS CLOE MARTINA
+
+D.N.I.: 70280438 Credencial: 70280438
+
+Recetario: 2531449700093
+
+Fecha Receta: 10/11/2025
+
+Emitida: 10/11/2025 17:56
+
+Plan: PLAN 1
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: MANSILLA BARBISAN JUAN EUGENIO
+
+D.N.I.: 48081540 Credencial: 8000364043
+
+Recetario: 2531449685190
+
+Fecha Receta: 10/11/2025
+
+Emitida: 10/11/2025 16:55
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: MANSILLA BARBISAN JUAN EUGENIO
+
+D.N.I.: 48081540 Credencial: 8000364043
+
+Recetario: 2531449685006
+
+Fecha Receta: 10/11/2025
+
+Emitida: 10/11/2025 16:55
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: DABALO MARIA FRANCISCA
+
+D.N.I.: 5380430 Credencial: 8000013630
+
+Recetario: 2531449681872
+
+Fecha Receta: 10/11/2025
+
+Emitida: 10/11/2025 16:41
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: ZUBCO KUVASZUK MIRTA LILIANA
+
+D.N.I.: 22933327 Credencial: 8000079505
+
+Recetario: 2531449633333
+
+Fecha Receta: 10/11/2025
+
+Emitida: 10/11/2025 11:38
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+
+Afiliado: ALVAREZ ADELINA LUISA
+
+D.N.I.: 10282431 Credencial: 8000038526
+
+Recetario: 2531449623025
+
+Fecha Receta: 10/11/2025
+
+Emitida: 10/11/2025 10:55
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+
+Afiliado: ALVAREZ ADELINA LUISA
+
+D.N.I.: 10282431 Credencial: 8000038526
+
+Recetario: 2531449622843
+
+Fecha Receta: 10/11/2025
+
+Emitida: 10/11/2025 10:54
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: ALVAREZ ADELINA LUISA
+
+D.N.I.: 10282431 Credencial: 8000038526
+
+Recetario: 2531449622086
+
+Fecha Receta: 10/11/2025
+
+Emitida: 10/11/2025 10:51
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: KAVGIC ALDANA BELEN
+
+D.N.I.: 39180340 Credencial: 8000604276
+
+Recetario: 2531449621549
+
+Fecha Receta: 10/11/2025
+
+Emitida: 10/11/2025 10:49
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: MOSIEJCZUK MATVEY YERIK
+
+D.N.I.: 53655431 Credencial: 8000465264
+
+Recetario: 2531449598295
+
+Fecha Receta: 10/11/2025
+
+Emitida: 10/11/2025 8:55
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: KARDASZ IVANA NOELIA
+
+D.N.I.: 32664697 Credencial: 8000553453
+
+Recetario: 2531349581832
+
+Fecha Receta: 09/11/2025
+
+Emitida: 09/11/2025 11:53
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: KARDASZ IVANA NOELIA
+
+D.N.I.: 32664697 Credencial: 8000553453
+
+Recetario: 2531149537254
+
+Fecha Receta: 07/11/2025
+
+Emitida: 07/11/2025 19:01
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: HOLUBEK EVELIN JANET
+
+D.N.I.: 37938107 Credencial: 8000544143
+
+Recetario: 2531149477773
+
+Fecha Receta: 07/11/2025
+
+Emitida: 07/11/2025 11:21
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+
+Afiliado: HOLUBEK EVELIN JANET
+
+D.N.I.: 37938107 Credencial: 8000544143
+
+Recetario: 2531149477193
+
+Fecha Receta: 07/11/2025
+
+Emitida: 07/11/2025 11:18
+
+Plan: Plan Mujer
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: ESPARZA VIDAL LUIS MARIA
+
+D.N.I.: 10174882 Credencial: 8000392741
+
+Recetario: 2531149468867
+
+Fecha Receta: 07/11/2025
+
+Emitida: 07/11/2025 10:38
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: ESPARZA VIDAL LUIS MARIA
+
+D.N.I.: 10174882 Credencial: 8000392741
+
+Recetario: 2531149468225
+
+Fecha Receta: 07/11/2025
+
+Emitida: 07/11/2025 10:35
+
+Plan: Cardio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: FUS RICARDO MARCELO JOSE
+
+D.N.I.: 23218576 Credencial: 8000439990
+
+Recetario: 2531149465407
+
+Fecha Receta: 07/11/2025
+
+Emitida: 07/11/2025 10:21
+
+Plan: Cardio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: SAUCEDO MARIO RUBEN
+
+D.N.I.: 11655965 Credencial: 8000045845
+
+Recetario: 2531149460682
+
+Fecha Receta: 07/11/2025
+
+Emitida: 07/11/2025 9:58
+
+Plan: Ambulatorio
+
+RECETARIO SOLIDARIO
+Dispensada
+
+Afiliado: BUSTAMANTE NELIDA HAIDEE
+
+D.N.I.: 22760775 Credencial: 22760775
+
+Recetario: 2531149460060
+
+Fecha Receta: 07/11/2025
+
+Emitida: 07/11/2025 9:55
+
+Plan: PLAN 1
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: ESPARZA ROJO PAOLA ANDREA
+
+D.N.I.: 24841880 Credencial: 8000124860
+
+Recetario: 2531149458752
+
+Fecha Receta: 07/11/2025
+
+Emitida: 07/11/2025 9:48
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: LOPEZ MARIA ROSA
+
+D.N.I.: 17189713 Credencial: 8000068824
+
+Recetario: 2531049386903
+
+Fecha Receta: 06/11/2025
+
+Emitida: 06/11/2025 15:58
+
+Plan: Cardio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: LOPEZ RAMONA MERCEDES
+
+D.N.I.: 16428744 Credencial: 8000064771
+
+Recetario: 2531049386624
+
+Fecha Receta: 06/11/2025
+
+Emitida: 06/11/2025 15:56
+
+Plan: Cardio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: LOPEZ RAMONA MERCEDES
+
+D.N.I.: 16428744 Credencial: 8000064771
+
+Recetario: 2531049386393
+
+Fecha Receta: 06/11/2025
+
+Emitida: 06/11/2025 15:54
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: LOPEZ RAMONA MERCEDES
+
+D.N.I.: 16428744 Credencial: 8000064771
+
+Recetario: 2531049386040
+
+Fecha Receta: 06/11/2025
+
+Emitida: 06/11/2025 15:52
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: LOPEZ RAMONA MERCEDES
+
+D.N.I.: 16428744 Credencial: 8000064771
+
+Recetario: 2531049385637
+
+Fecha Receta: 06/11/2025
+
+Emitida: 06/11/2025 15:50
+
+Plan: Ambulatorio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: SANDOVAL PEDRO ANTONIO
+
+D.N.I.: 10980494 Credencial: 8000277971
+
+Recetario: 2531049315956
+
+Fecha Receta: 06/11/2025
+
+Emitida: 06/11/2025 9:24
+
+Plan: Cardio
+
+INSSSEP AMB
+Dispensada
+
+Afiliado: NAGORNY ALBA IRIS
+
+D.N.I.: 28340455 Credencial: 8000312622
+
+Recetario: 2530949296050
+
+Fecha Receta: 05/11/2025
+
+Emitida: 05/11/2025 22:31
+
+Plan: Plan Mujer

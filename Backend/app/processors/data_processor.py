@@ -93,6 +93,7 @@ class ProcesadorRecetasINSSSEP:
     """Procesa archivos de recetas INSSSEP."""
 
     # Patrón robusto que maneja variaciones en el formato
+    # Filtra y extrae SOLO recetas de INSSSEP AMB
     PATRON_RECETA = re.compile(
         r"INSSSEP AMB(?:\s*\n(?:Dispensada|Consultada))?\s*\n"
         r"Afiliado:\s*([^\n]+)\s*\n"
@@ -102,31 +103,84 @@ class ProcesadorRecetasINSSSEP:
     
     # Patrón alternativo para formatos más simples
     PATRON_ALTERNATIVO = re.compile(
-        r"INSSSEP AMB[^\n]*\n(?:Dispensada\n)?Afiliado:\s*(.*?)\nD\.N\.I\.:\s*(\d+)\s*Credencial:\s*(\d+)",
+        r"INSSSEP AMB[^\n]*\n(?:Dispensada\n)?Afiliado:\s*(.*?)\nD\.N\.I\.: ?(\d+)\s*Credencial:\s*(\d+)",
         re.MULTILINE
     )
+
+    @staticmethod
+    def filtrar_recetas_insssep(texto: str) -> Tuple[str, int, int]:
+        """
+        Filtra el texto para extraer solo las recetas que pertenecen a INSSSEP AMB.
+        
+        Args:
+            texto: Texto completo que puede contener recetas de múltiples obras sociales
+            
+        Returns:
+            Tuple[str, int, int]: (texto_filtrado, total_recetas, recetas_insssep)
+        """
+        # Buscar todas las ocurrencias de INSSSEP AMB con su contexto completo
+        patron_bloque = re.compile(
+            r"(INSSSEP AMB(?:\s*\n(?:Dispensada|Consultada))?\s*\n"
+            r"Afiliado:\s*[^\n]+\s*\n"
+            r"D\.N\.I\.:\s*\d+\s+Credencial:\s*\d+[^\n]*)",
+            re.MULTILINE
+        )
+        
+        bloques_insssep = patron_bloque.findall(texto)
+        
+        # Contar total de recetas (todas las que tengan estructura similar)
+        patron_cualquier_receta = re.compile(
+            r"(?:INSSSEP|OSEP|IOSPER|PAMI|[A-Z]{3,})\s+(?:AMB|[A-Z]+)\s*\n"
+            r"(?:Dispensada|Consultada)?\s*\n?"
+            r"Afiliado:",
+            re.MULTILINE
+        )
+        total_recetas = len(patron_cualquier_receta.findall(texto))
+        recetas_insssep = len(bloques_insssep)
+        
+        # Unir los bloques filtrados
+        texto_filtrado = '\n'.join(bloques_insssep)
+        
+        return texto_filtrado, total_recetas, recetas_insssep
 
     @staticmethod
     def procesar(texto: str, codigo_diagnostico: str = "B349") -> Dict[str, Afiliado]:
         """
         Procesa texto con formato de recetas INSSSEP.
-        Extrae todos los afiliados y cuenta cuántas recetas tiene cada uno.
+        Primero filtra para extraer SOLO recetas de INSSSEP AMB,
+        luego extrae todos los afiliados y cuenta cuántas recetas tiene cada uno.
 
         Args:
-            texto: Texto de entrada con recetas INSSSEP
+            texto: Texto de entrada con recetas (puede contener múltiples obras sociales)
             codigo_diagnostico: Código por defecto a usar
 
         Returns:
             Dict[DNI, Afiliado]
         """
+        # PASO 1: Filtrar solo recetas INSSSEP
+        texto_filtrado, total_recetas, recetas_insssep = ProcesadorRecetasINSSSEP.filtrar_recetas_insssep(texto)
+        
+        if recetas_insssep == 0:
+            print(f"⚠️ ADVERTENCIA: No se encontraron recetas INSSSEP AMB en el archivo")
+            print(f"   Total de recetas encontradas: {total_recetas}")
+            print(f"   Recetas INSSSEP: 0")
+            return {}
+        
+        if total_recetas > recetas_insssep:
+            print(f"ℹ️ FILTRADO APLICADO:")
+            print(f"   Total de recetas en archivo: {total_recetas}")
+            print(f"   Recetas INSSSEP filtradas: {recetas_insssep}")
+            print(f"   Recetas de otras obras sociales descartadas: {total_recetas - recetas_insssep}")
+        
+        # PASO 2: Procesar solo las recetas INSSSEP filtradas
         afiliados = {}
         
         # Intentar con el patrón principal
-        coincidencias = ProcesadorRecetasINSSSEP.PATRON_RECETA.findall(texto)
+        coincidencias = ProcesadorRecetasINSSSEP.PATRON_RECETA.findall(texto_filtrado)
         
         # Si no encuentra nada, intentar con el patrón alternativo
         if not coincidencias:
-            coincidencias = ProcesadorRecetasINSSSEP.PATRON_ALTERNATIVO.findall(texto)
+            coincidencias = ProcesadorRecetasINSSSEP.PATRON_ALTERNATIVO.findall(texto_filtrado)
 
         # Conteo de recetas por DNI
         for nombre, dni, credencial in coincidencias:
@@ -442,8 +496,8 @@ class ProcesadorUnificado:
         lineas = []
 
         for afiliado in self.ordenar_por_frecuencia():
-            # Convertir recetas a consultas: cada 3 recetas = 1 consulta
-            consultas_de_recetas = (afiliado.recetas + 2) // 3 if afiliado.recetas > 0 else 0
+            # Convertir recetas a consultas: cada 4 recetas = 1 consulta
+            consultas_de_recetas = (afiliado.recetas + 3) // 4 if afiliado.recetas > 0 else 0
 
             # Total de consultas
             total_consultas = afiliado.consultas + consultas_de_recetas
@@ -478,7 +532,7 @@ class ProcesadorUnificado:
             estado, mensaje = afiliado.validar_consultas()
 
             # Calcular líneas que generará este afiliado
-            consultas_de_recetas = (afiliado.recetas + 2) // 3 if afiliado.recetas > 0 else 0
+            consultas_de_recetas = (afiliado.recetas + 3) // 4 if afiliado.recetas > 0 else 0
             total_consultas = afiliado.consultas + consultas_de_recetas
             if total_consultas == 0:
                 total_consultas = 1
@@ -522,13 +576,13 @@ class ProcesadorUnificado:
         Formato: CODIGO,DNI,NOMBRE,CREDENCIAL
 
         Conversión de recetas a consultas:
-        - Cada 3 recetas = 1 consulta
-        - Fórmula: (recetas + 2) // 3 para redondear hacia arriba
+        - Cada 4 recetas = 1 consulta
+        - Fórmula: (recetas + 3) // 4 para redondear hacia arriba
 
         Ejemplos:
-        - 1-3 recetas = 1 consulta
-        - 4-6 recetas = 2 consultas
-        - 7-9 recetas = 3 consultas
+        - 1-4 recetas = 1 consulta
+        - 5-8 recetas = 2 consultas
+        - 9-12 recetas = 3 consultas
 
         Total de líneas = consultas directas + consultas convertidas de recetas
 
@@ -547,9 +601,9 @@ class ProcesadorUnificado:
             # Usar el método a_formato_extension que ya separa correctamente el nombre
             linea = afiliado.a_formato_extension()
 
-            # Convertir recetas a consultas: cada 3 recetas = 1 consulta
-            # Fórmula: (recetas + 2) // 3 → redondea hacia arriba
-            consultas_de_recetas = (afiliado.recetas + 2) // 3 if afiliado.recetas > 0 else 0
+            # Convertir recetas a consultas: cada 4 recetas = 1 consulta
+            # Fórmula: (recetas + 3) // 4 → redondea hacia arriba
+            consultas_de_recetas = (afiliado.recetas + 3) // 4 if afiliado.recetas > 0 else 0
 
             # Total de consultas = consultas directas + consultas convertidas de recetas
             total_consultas = afiliado.consultas + consultas_de_recetas

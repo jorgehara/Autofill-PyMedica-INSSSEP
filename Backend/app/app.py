@@ -10,6 +10,11 @@ import os
 from datetime import datetime
 from pathlib import Path
 import logging
+from dotenv import load_dotenv
+import secrets
+
+# Cargar variables de entorno
+load_dotenv()
 
 from processors.data_processor import (
     ProcesadorUnificado,
@@ -19,22 +24,42 @@ from processors.data_processor import (
 
 # Configuración
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'insssep-autofill-secret-key-2024'
-app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max
-app.config['UPLOAD_FOLDER'] = Path(__file__).parent / 'uploads'
-app.config['EXPORT_FOLDER'] = Path(__file__).parent / 'exports'
 
-CORS(app)
+# Secret key desde variable de entorno o generar una aleatoria
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', secrets.token_hex(32))
+app.config['MAX_CONTENT_LENGTH'] = int(os.getenv('MAX_CONTENT_LENGTH', 16 * 1024 * 1024))
+
+# Directorios desde variables de entorno o default
+upload_folder = os.getenv('UPLOAD_FOLDER', str(Path(__file__).parent / 'uploads'))
+export_folder = os.getenv('EXPORT_FOLDER', str(Path(__file__).parent / 'exports'))
+app.config['UPLOAD_FOLDER'] = Path(upload_folder)
+app.config['EXPORT_FOLDER'] = Path(export_folder)
+
+# CORS - permitir orígenes específicos en producción
+allowed_origins = os.getenv('ALLOWED_ORIGINS', '*')
+if allowed_origins != '*':
+    allowed_origins = allowed_origins.split(',')
+CORS(app, origins=allowed_origins)
 
 # Crear directorios necesarios
 app.config['UPLOAD_FOLDER'].mkdir(exist_ok=True)
 app.config['EXPORT_FOLDER'].mkdir(exist_ok=True)
 
 # Configurar logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
+log_level = os.getenv('LOG_LEVEL', 'INFO')
+log_file = os.getenv('LOG_FILE', None)
+
+logging_config = {
+    'level': getattr(logging, log_level),
+    'format': '%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    'datefmt': '%Y-%m-%d %H:%M:%S'
+}
+
+if log_file:
+    logging_config['filename'] = log_file
+    logging_config['filemode'] = 'a'
+
+logging.basicConfig(**logging_config)
 logger = logging.getLogger(__name__)
 
 # Extensiones permitidas
@@ -486,11 +511,27 @@ def error_interno(e):
 
 
 if __name__ == '__main__':
+    # Configuración para desarrollo local
+    env = os.getenv('FLASK_ENV', 'development')
+    debug = env == 'development'
+    
     print("=" * 60)
     print("Sistema de Procesamiento INSSSEP")
     print("=" * 60)
-    print("\nServidor iniciado en: http://localhost:5000")
+    print(f"\nModo: {env.upper()}")
+    print(f"Servidor iniciado en: http://localhost:5000")
     print("\nPresiona Ctrl+C para detener el servidor")
     print("=" * 60)
 
-    app.run(debug=True, host='0.0.0.0', port=5000, use_reloader=True, extra_files=['processors/data_processor.py'])
+    if env == 'production':
+        print("\n⚠️  ADVERTENCIA: Usando servidor de desarrollo en producción")
+        print("   Se recomienda usar Gunicorn: gunicorn -c gunicorn_config.py app:app")
+        print("=" * 60)
+    
+    app.run(
+        debug=debug,
+        host=os.getenv('HOST', '0.0.0.0'),
+        port=int(os.getenv('PORT', 5000)),
+        use_reloader=debug,
+        extra_files=['processors/data_processor.py'] if debug else None
+    )

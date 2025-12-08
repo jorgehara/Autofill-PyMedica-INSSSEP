@@ -62,6 +62,13 @@ if not exist "exports" mkdir exports
 echo [✓] Directorios creados
 echo.
 
+REM Limpiar caché de Python
+echo [!] Limpiando caché de Python...
+if exist "__pycache__" rd /s /q "__pycache__"
+if exist "processors\__pycache__" rd /s /q "processors\__pycache__"
+echo [✓] Caché limpiado
+echo.
+
 echo ╔══════════════════════════════════════════════════════════════╗
 echo ║                 INICIANDO SERVIDOR...                       ║
 echo ╚══════════════════════════════════════════════════════════════╝
@@ -74,7 +81,8 @@ echo.
 echo ══════════════════════════════════════════════════════════════
 echo.
 
-REM Iniciar aplicación
+REM Iniciar aplicación con variables para forzar recarga
+set PYTHONDONTWRITEBYTECODE=1
 python app.py
 
 pause

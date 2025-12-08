@@ -430,18 +430,34 @@ class ProcesadorUnificado:
     def exportar_para_extension(self) -> str:
         """
         Exporta datos en formato para la extensión Chrome.
+        Duplica líneas según total de consultas (consultas + recetas convertidas).
 
         Returns:
             String con formato CSV (codigo,dni,nombre,credencial)
         """
         lineas = []
+
         for afiliado in self.ordenar_por_frecuencia():
-            lineas.append(afiliado.a_formato_extension())
+            # Convertir recetas a consultas: cada 3 recetas = 1 consulta
+            consultas_de_recetas = (afiliado.recetas + 2) // 3 if afiliado.recetas > 0 else 0
+
+            # Total de consultas
+            total_consultas = afiliado.consultas + consultas_de_recetas
+
+            # Si no tiene consultas, generar al menos 1 línea
+            if total_consultas == 0:
+                total_consultas = 1
+
+            # Duplicar la línea según el total de consultas
+            for _ in range(total_consultas):
+                lineas.append(afiliado.a_formato_extension())
+
         return '\n'.join(lineas)
 
     def exportar_detallado(self) -> str:
         """
         Exporta reporte detallado con todas las columnas.
+        Muestra información completa de cada afiliado incluyendo líneas que generará.
 
         Returns:
             String con formato tabla
@@ -452,8 +468,18 @@ class ProcesadorUnificado:
         lineas.append("=" * 100)
         lineas.append("")
 
+        total_lineas_archivo = 0
+
         for i, afiliado in enumerate(self.ordenar_por_frecuencia(), 1):
             estado, mensaje = afiliado.validar_consultas()
+
+            # Calcular líneas que generará este afiliado
+            consultas_de_recetas = (afiliado.recetas + 2) // 3 if afiliado.recetas > 0 else 0
+            total_consultas = afiliado.consultas + consultas_de_recetas
+            if total_consultas == 0:
+                total_consultas = 1
+
+            total_lineas_archivo += total_consultas
 
             lineas.append(f"{i}. {afiliado.nombre}")
             lineas.append(f"   DNI: {afiliado.dni}")
@@ -462,12 +488,27 @@ class ProcesadorUnificado:
             lineas.append(f"   Tipo: {afiliado.tipo}")
             lineas.append(f"   Consultas: {afiliado.consultas}")
             lineas.append(f"   Recetas: {afiliado.recetas}")
+
+            if afiliado.recetas > 0:
+                lineas.append(f"   Recetas convertidas: {consultas_de_recetas} consultas")
+
+            lineas.append(f"   Total consultas: {total_consultas}")
+            lineas.append(f"   Líneas en archivo: {total_consultas}")
             lineas.append(f"   Estado: {estado.value.upper()} - {mensaje}")
 
             if afiliado.cuil:
                 lineas.append(f"   CUIL: {afiliado.cuil}")
 
             lineas.append("-" * 100)
+
+        # Agregar resumen al final
+        lineas.append("")
+        lineas.append("=" * 100)
+        lineas.append("RESUMEN")
+        lineas.append("=" * 100)
+        lineas.append(f"Total de afiliados únicos: {len(self.afiliados)}")
+        lineas.append(f"Total de líneas en archivo CSV: {total_lineas_archivo}")
+        lineas.append("=" * 100)
 
         return '\n'.join(lineas)
 

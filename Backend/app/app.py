@@ -493,4 +493,4 @@ if __name__ == '__main__':
     print("\nPresiona Ctrl+C para detener el servidor")
     print("=" * 60)
 
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=5000, use_reloader=True, extra_files=['processors/data_processor.py'])

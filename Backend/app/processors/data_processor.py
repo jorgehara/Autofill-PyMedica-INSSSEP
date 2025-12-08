@@ -40,7 +40,10 @@ class Afiliado:
 
     def a_formato_extension(self) -> str:
         """Convierte a formato para la extensión Chrome."""
-        return f"{self.codigo},{self.dni},{self.nombre},{self.credencial}"
+        # Formato: CODIGO,DNI,NOMBRE_COMPLETO_SIN_ESPACIOS,DNI
+        # El campo afiliado siempre es el DNI para que funcione correctamente
+        nombre_sin_espacios = self.nombre.replace(' ', '')
+        return f"{self.codigo},{self.dni},{nombre_sin_espacios},{self.dni}"
 
     def validar_consultas(self) -> Tuple[EstadoValidacion, str]:
         """
@@ -136,12 +139,13 @@ class ProcesadorRecetasINSSSEP:
                 afiliados[dni].recetas += 1
             else:
                 # Crear nuevo afiliado con 1 receta
+                # IMPORTANTE: Usar DNI como credencial en la salida
                 afiliados[dni] = Afiliado(
                     codigo=codigo_diagnostico,
                     dni=dni,
                     nombre=nombre,
                     tipo="Titular",
-                    credencial=credencial,
+                    credencial=dni,  # Usar DNI en lugar de credencial del archivo
                     cuil=None,  # Se generará después si es necesario
                     consultas=0,  # Las recetas no son consultas
                     recetas=1
@@ -540,13 +544,8 @@ class ProcesadorUnificado:
         lineas = []
 
         for afiliado in self.ordenar_por_frecuencia():
-            codigo = afiliado.codigo
-            dni = afiliado.dni
-            nombre = afiliado.nombre
-            credencial = afiliado.credencial
-
-            # Formato CSV: CODIGO,DNI,NOMBRE,CREDENCIAL
-            linea = f"{codigo},{dni},{nombre},{credencial}"
+            # Usar el método a_formato_extension que ya separa correctamente el nombre
+            linea = afiliado.a_formato_extension()
 
             # Convertir recetas a consultas: cada 3 recetas = 1 consulta
             # Fórmula: (recetas + 2) // 3 → redondea hacia arriba

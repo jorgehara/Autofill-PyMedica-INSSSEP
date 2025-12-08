@@ -85,8 +85,32 @@ document.addEventListener('DOMContentLoaded', function() {
             const textarea = document.getElementById('datos');
             const raw = textarea.value.trim();
             if (!raw) return;
-            // Procesar cada línea y unir por coma
-            const lineas = raw.split('\n').map(linea => linea.split(/\s+/).join(',')).join(',');
+            
+            // Procesar cada línea: CODIGO DNI NOMBRE... Titular CREDENCIAL
+            // Convertir a: CODIGO,DNI,NOMBRE_SIN_ESPACIOS,DNI
+            const lineas = raw.split('\n').map(linea => {
+                const partes = linea.trim().split(/\s+/);
+                if (partes.length < 4) return linea; // Si no tiene el formato esperado, dejar como está
+                
+                const codigo = partes[0];
+                const dni = partes[1];
+                
+                // Encontrar dónde está "Titular" o "Beneficiario"
+                let indiceTipo = partes.findIndex(p => p === 'Titular' || p === 'Beneficiario' || p === 'Familiar');
+                
+                if (indiceTipo === -1) {
+                    // Si no encuentra el tipo, asumir que todo entre DNI y último número es el nombre
+                    indiceTipo = partes.length - 1;
+                }
+                
+                // El nombre son todas las palabras entre DNI y el tipo
+                const nombrePartes = partes.slice(2, indiceTipo);
+                const nombreCompleto = nombrePartes.join(''); // Unir sin espacios
+                
+                // Formato final: CODIGO,DNI,NOMBRE_COMPLETO,DNI
+                return `${codigo},${dni},${nombreCompleto},${dni}`;
+            }).join('\n');
+            
             textarea.value = lineas;
         });
     }
@@ -125,6 +149,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 autofillPacienteIndex: pacienteIndex
             }, function() {
                 mostrarMensajeEstado('Listado guardado en memoria.', 'success');
+                mostrarPacienteActual();
+            });
+        });
+    }
+
+    // Botón para limpiar caché y memoria
+    const limpiarCacheBtn = document.getElementById('limpiarCache');
+    if (limpiarCacheBtn) {
+        limpiarCacheBtn.addEventListener('click', function() {
+            chrome.storage.local.clear(function() {
+                pacientes = [];
+                pacienteIndex = 0;
+                document.getElementById('datos').value = '';
+                document.getElementById('codigo').value = '';
+                document.getElementById('dni').value = '';
+                document.getElementById('nombre').value = '';
+                document.getElementById('afiliado').value = '';
+                mostrarMensajeEstado('Caché limpiado correctamente.', 'success');
                 mostrarPacienteActual();
             });
         });

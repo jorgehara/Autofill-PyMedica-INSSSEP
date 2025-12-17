@@ -8,9 +8,25 @@
 </head>
 <body
     style="font-family: Arial, sans-serif; padding: 16px; background: #f5f5f5; border-radius: 8px; width: 450px; box-sizing: border-box;">
-    <div style="width: 450px; height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem;">
+    <div style="width: 450px; height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
         <textarea id="datos" name="datos" rows="12" placeholder="Pegue el listado tabulado aquí..." style="width: 400px; height: 120px;"></textarea>
     </div>
+
+    <!-- Buscador -->
+    <div style="background: #fff; border: 1px solid #ccc; border-radius: 4px; padding: 10px; margin: 0 auto 1rem; max-width: 400px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 8px;">
+            <input type="text" id="buscarTexto" placeholder="Buscar en lista..." style="flex: 1; padding: 6px 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px;">
+            <button type="button" id="buscarAnterior" style="background:#666;color:white;border:none;padding:6px 12px;border-radius:4px;font-size:12px;cursor:pointer;">&#9650;</button>
+            <button type="button" id="buscarSiguiente" style="background:#666;color:white;border:none;padding:6px 12px;border-radius:4px;font-size:12px;cursor:pointer;">&#9660;</button>
+            <span id="contadorBusqueda" style="font-size: 12px; color: #666; min-width: 60px; text-align: center;">0/0</span>
+        </div>
+        <div style="display: flex; gap: 8px; align-items: center;">
+            <input type="text" id="reemplazarTexto" placeholder="Reemplazar con..." style="flex: 1; padding: 6px 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px;">
+            <button type="button" id="btnReemplazar" style="background:#ff9800;color:white;border:none;padding:6px 12px;border-radius:4px;font-size:12px;font-weight:bold;cursor:pointer;">Reemplazar</button>
+            <button type="button" id="btnReemplazarTodos" style="background:#f44336;color:white;border:none;padding:6px 12px;border-radius:4px;font-size:12px;font-weight:bold;cursor:pointer;">Todos</button>
+        </div>
+    </div>
+
     <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 1rem;">
         <button type="button" id="formatearLista" style="background:#009688;color:white;border:none;padding:6px 16px;border-radius:4px;font-weight:bold;">Formatear lista</button>
         <button type="button" id="guardarListado" style="background:#ffa000;color:white;border:none;padding:6px 16px;border-radius:4px;font-weight:bold;">Guardar listado en memoria</button>

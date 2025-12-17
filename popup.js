@@ -293,4 +293,169 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         document.getElementById('nombreGrande').textContent = p.nombre;
     }
+
+    // === FUNCIONALIDAD DE BÚSQUEDA Y REEMPLAZO ===
+    let resultadosBusqueda = [];
+    let indiceActual = -1;
+    let ultimaBusqueda = '';
+
+    const buscarInput = document.getElementById('buscarTexto');
+    const contadorSpan = document.getElementById('contadorBusqueda');
+    const textarea = document.getElementById('datos');
+
+    // Función para buscar todas las ocurrencias
+    function buscarEnTexto(textoBuscado) {
+        resultadosBusqueda = [];
+        indiceActual = -1;
+
+        if (!textoBuscado || textoBuscado.trim() === '') {
+            contadorSpan.textContent = '0/0';
+            return;
+        }
+
+        const contenido = textarea.value;
+        const busquedaLower = textoBuscado.toLowerCase();
+        let posicion = 0;
+
+        // Buscar todas las ocurrencias (búsqueda case-insensitive)
+        while (posicion < contenido.length) {
+            const encontrado = contenido.toLowerCase().indexOf(busquedaLower, posicion);
+            if (encontrado === -1) break;
+
+            resultadosBusqueda.push({
+                inicio: encontrado,
+                fin: encontrado + textoBuscado.length,
+                texto: contenido.substring(encontrado, encontrado + textoBuscado.length)
+            });
+            posicion = encontrado + 1;
+        }
+
+        // Actualizar contador
+        contadorSpan.textContent = resultadosBusqueda.length > 0 ? `0/${resultadosBusqueda.length}` : '0/0';
+
+        // Si hay resultados, ir al primero automáticamente
+        if (resultadosBusqueda.length > 0) {
+            irAResultado(0);
+        }
+    }
+
+    // Función para ir a un resultado específico
+    function irAResultado(indice) {
+        if (indice < 0 || indice >= resultadosBusqueda.length) return;
+
+        indiceActual = indice;
+        const resultado = resultadosBusqueda[indice];
+
+        // Seleccionar el texto encontrado en el textarea
+        textarea.focus();
+        textarea.setSelectionRange(resultado.inicio, resultado.fin);
+
+        // Scroll automático a la posición
+        const linea = textarea.value.substring(0, resultado.inicio).split('\n').length;
+        textarea.scrollTop = Math.max(0, (linea - 3) * 20); // Aproximado
+
+        // Actualizar contador
+        contadorSpan.textContent = `${indice + 1}/${resultadosBusqueda.length}`;
+    }
+
+    // Evento: Buscar mientras se escribe
+    if (buscarInput) {
+        buscarInput.addEventListener('input', function() {
+            const textoBuscado = buscarInput.value;
+            ultimaBusqueda = textoBuscado;
+            buscarEnTexto(textoBuscado);
+        });
+
+        // Evento: Presionar Enter para buscar siguiente
+        buscarInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                if (resultadosBusqueda.length > 0) {
+                    const siguiente = (indiceActual + 1) % resultadosBusqueda.length;
+                    irAResultado(siguiente);
+                }
+            }
+        });
+    }
+
+    // Botón: Buscar Anterior
+    const btnBuscarAnterior = document.getElementById('buscarAnterior');
+    if (btnBuscarAnterior) {
+        btnBuscarAnterior.addEventListener('click', function() {
+            if (resultadosBusqueda.length === 0) return;
+            const anterior = indiceActual <= 0 ? resultadosBusqueda.length - 1 : indiceActual - 1;
+            irAResultado(anterior);
+        });
+    }
+
+    // Botón: Buscar Siguiente
+    const btnBuscarSiguiente = document.getElementById('buscarSiguiente');
+    if (btnBuscarSiguiente) {
+        btnBuscarSiguiente.addEventListener('click', function() {
+            if (resultadosBusqueda.length === 0) return;
+            const siguiente = (indiceActual + 1) % resultadosBusqueda.length;
+            irAResultado(siguiente);
+        });
+    }
+
+    // Botón: Reemplazar (solo la ocurrencia actual)
+    const btnReemplazar = document.getElementById('btnReemplazar');
+    const reemplazarInput = document.getElementById('reemplazarTexto');
+    if (btnReemplazar && reemplazarInput) {
+        btnReemplazar.addEventListener('click', function() {
+            if (indiceActual < 0 || indiceActual >= resultadosBusqueda.length) return;
+
+            const resultado = resultadosBusqueda[indiceActual];
+            const textoReemplazo = reemplazarInput.value;
+            const contenidoActual = textarea.value;
+
+            // Reemplazar el texto
+            const nuevoContenido = contenidoActual.substring(0, resultado.inicio) +
+                                   textoReemplazo +
+                                   contenidoActual.substring(resultado.fin);
+
+            textarea.value = nuevoContenido;
+
+            // Guardar en storage
+            chrome.storage.local.set({ autofillTextarea: nuevoContenido });
+
+            // Actualizar la búsqueda
+            buscarEnTexto(buscarInput.value);
+
+            mostrarMensajeEstado('Texto reemplazado', 'success');
+        });
+    }
+
+    // Botón: Reemplazar Todos
+    const btnReemplazarTodos = document.getElementById('btnReemplazarTodos');
+    if (btnReemplazarTodos && reemplazarInput) {
+        btnReemplazarTodos.addEventListener('click', function() {
+            const textoBuscado = buscarInput.value;
+            const textoReemplazo = reemplazarInput.value;
+
+            if (!textoBuscado || textoBuscado.trim() === '') {
+                mostrarMensajeEstado('Ingrese texto para buscar', 'error');
+                return;
+            }
+
+            // Crear expresión regular para reemplazo global (case-insensitive)
+            const regex = new RegExp(textoBuscado.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+            const nuevoContenido = textarea.value.replace(regex, textoReemplazo);
+
+            const cantidadReemplazos = resultadosBusqueda.length;
+
+            textarea.value = nuevoContenido;
+
+            // Guardar en storage
+            chrome.storage.local.set({ autofillTextarea: nuevoContenido });
+
+            // Limpiar búsqueda
+            buscarInput.value = '';
+            resultadosBusqueda = [];
+            indiceActual = -1;
+            contadorSpan.textContent = '0/0';
+
+            mostrarMensajeEstado(`${cantidadReemplazos} reemplazo(s) realizado(s)`, 'success');
+        });
+    }
 });

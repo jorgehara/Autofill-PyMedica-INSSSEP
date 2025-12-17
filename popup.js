@@ -301,7 +301,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const buscarInput = document.getElementById('buscarTexto');
     const contadorSpan = document.getElementById('contadorBusqueda');
-    const textarea = document.getElementById('datos');
+    // textarea ya está declarado arriba (línea 9)
 
     // Función para buscar todas las ocurrencias
     function buscarEnTexto(textoBuscado) {

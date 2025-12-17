@@ -118,6 +118,40 @@ document.addEventListener('DOMContentLoaded', function() {
     let pacientes = [];
     let pacienteIndex = 0;
 
+    // Función para actualizar el array de pacientes desde el textarea
+    function actualizarPacientesDesdeTextarea() {
+        const datosRaw = document.getElementById('datos').value.trim();
+        if (!datosRaw) {
+            pacientes = [];
+            pacienteIndex = 0;
+            chrome.storage.local.set({
+                autofillListadoPacientes: pacientes,
+                autofillPacienteIndex: pacienteIndex
+            });
+            return;
+        }
+
+        pacientes = datosRaw.split('\n').map(linea => {
+            const partes = linea.split(',');
+            return {
+                codigo: partes[0] ? partes[0].trim() : '',
+                dni: partes[1] ? partes[1].trim() : '',
+                nombre: partes[2] ? partes[2].trim() : '',
+                afiliado: partes[3] ? partes[3].trim() : ''
+            };
+        }).filter(p => p.codigo && p.dni && p.nombre && p.afiliado);
+
+        // Ajustar índice si se salió del rango
+        if (pacienteIndex >= pacientes.length) {
+            pacienteIndex = Math.max(0, pacientes.length - 1);
+        }
+
+        chrome.storage.local.set({
+            autofillListadoPacientes: pacientes,
+            autofillPacienteIndex: pacienteIndex
+        });
+    }
+
     // Cargar listado desde memoria al abrir el popup
     chrome.storage.local.get(['autofillListadoPacientes', 'autofillPacienteIndex'], function(result) {
         if (result.autofillListadoPacientes && result.autofillListadoPacientes.length > 0) {
@@ -134,23 +168,11 @@ document.addEventListener('DOMContentLoaded', function() {
         guardarBtn.addEventListener('click', function() {
             const datosRaw = document.getElementById('datos').value.trim();
             if (!datosRaw) return;
-            pacientes = datosRaw.split('\n').map(linea => {
-                const partes = linea.split(',');
-                return {
-                    codigo: partes[0] ? partes[0].trim() : '',
-                    dni: partes[1] ? partes[1].trim() : '',
-                    nombre: partes[2] ? partes[2].trim() : '',
-                    afiliado: partes[3] ? partes[3].trim() : ''
-                };
-            }).filter(p => p.codigo && p.dni && p.nombre && p.afiliado);
+
             pacienteIndex = 0;
-            chrome.storage.local.set({
-                autofillListadoPacientes: pacientes,
-                autofillPacienteIndex: pacienteIndex
-            }, function() {
-                mostrarMensajeEstado('Listado guardado en memoria.', 'success');
-                mostrarPacienteActual();
-            });
+            actualizarPacientesDesdeTextarea();
+            mostrarMensajeEstado('Listado guardado en memoria.', 'success');
+            mostrarPacienteActual();
         });
     }
 
@@ -215,6 +237,53 @@ document.addEventListener('DOMContentLoaded', function() {
                 chrome.storage.local.set({ autofillPacienteIndex: pacienteIndex });
                 mostrarPacienteActual();
             }
+        });
+    }
+
+    // Botón para editar el paciente actual
+    const editarPacienteBtn = document.getElementById('editarPaciente');
+    if (editarPacienteBtn) {
+        editarPacienteBtn.addEventListener('click', function() {
+            // Verificar que hay pacientes y un índice válido
+            if (pacientes.length === 0 || pacienteIndex < 0 || pacienteIndex >= pacientes.length) {
+                mostrarMensajeEstado('No hay paciente para editar', 'error');
+                return;
+            }
+
+            // Obtener los valores actuales del formulario
+            const codigoNuevo = document.getElementById('codigo').value.trim();
+            const dniNuevo = document.getElementById('dni').value.trim();
+            const nombreNuevo = document.getElementById('nombre').value.trim();
+            const afiliadoNuevo = document.getElementById('afiliado').value.trim();
+
+            // Validar que todos los campos estén completos
+            if (!codigoNuevo || !dniNuevo || !nombreNuevo || !afiliadoNuevo) {
+                mostrarMensajeEstado('Complete todos los campos', 'error');
+                return;
+            }
+
+            // Actualizar el paciente en el array
+            pacientes[pacienteIndex] = {
+                codigo: codigoNuevo,
+                dni: dniNuevo,
+                nombre: nombreNuevo,
+                afiliado: afiliadoNuevo
+            };
+
+            // Actualizar el textarea con todos los pacientes modificados
+            const nuevoContenido = pacientes.map(p => `${p.codigo},${p.dni},${p.nombre},${p.afiliado}`).join('\n');
+            textarea.value = nuevoContenido;
+
+            // Guardar en storage
+            chrome.storage.local.set({
+                autofillTextarea: nuevoContenido,
+                autofillListadoPacientes: pacientes,
+                autofillPacienteIndex: pacienteIndex
+            });
+
+            // Actualizar visualización
+            mostrarPacienteActual();
+            mostrarMensajeEstado('Paciente editado correctamente', 'success');
         });
     }
 
@@ -419,10 +488,16 @@ document.addEventListener('DOMContentLoaded', function() {
             // Guardar en storage
             chrome.storage.local.set({ autofillTextarea: nuevoContenido });
 
+            // Actualizar el array de pacientes en memoria
+            actualizarPacientesDesdeTextarea();
+
             // Actualizar la búsqueda
             buscarEnTexto(buscarInput.value);
 
-            mostrarMensajeEstado('Texto reemplazado', 'success');
+            // Mostrar el paciente actual actualizado
+            mostrarPacienteActual();
+
+            mostrarMensajeEstado('Texto reemplazado y guardado', 'success');
         });
     }
 
@@ -449,13 +524,19 @@ document.addEventListener('DOMContentLoaded', function() {
             // Guardar en storage
             chrome.storage.local.set({ autofillTextarea: nuevoContenido });
 
+            // Actualizar el array de pacientes en memoria
+            actualizarPacientesDesdeTextarea();
+
             // Limpiar búsqueda
             buscarInput.value = '';
             resultadosBusqueda = [];
             indiceActual = -1;
             contadorSpan.textContent = '0/0';
 
-            mostrarMensajeEstado(`${cantidadReemplazos} reemplazo(s) realizado(s)`, 'success');
+            // Mostrar el paciente actual actualizado
+            mostrarPacienteActual();
+
+            mostrarMensajeEstado(`${cantidadReemplazos} reemplazo(s) realizado(s) y guardado(s)`, 'success');
         });
     }
 });

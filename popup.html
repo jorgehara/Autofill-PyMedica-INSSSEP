@@ -7,9 +7,9 @@
     <!-- ...existing code... -->
 </head>
 <body
-    style="font-family: Arial, sans-serif; padding: 16px; background: #f5f5f5; border-radius: 8px; width: 450px; box-sizing: border-box;">
-    <div style="width: 450px; height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-        <textarea id="datos" name="datos" rows="12" placeholder="Pegue el listado tabulado aquí..." style="width: 400px; height: 120px;"></textarea>
+    style=" font-family: Arial, sans-serif; padding: 4px; background: #f5f5f5; border-radius: 8px; width: 450px; box-sizing: border-box;">
+    <div style="width: 450px; height: 40px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+        <textarea id="datos" name="datos" rows="12" placeholder="Pegue el listado tabulado aquí..." style="width: 400px; height: 50px;"></textarea>
     </div>
 
     <!-- Buscador -->
@@ -27,12 +27,12 @@
         </div>
     </div>
 
-    <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 1rem;">
+    <div style="display: flex; justify-content: center; gap: 4px; margin-bottom: 1rem;">
         <button type="button" id="formatearLista" style="background:#009688;color:white;border:none;padding:6px 16px;border-radius:4px;font-weight:bold;">Formatear lista</button>
         <button type="button" id="guardarListado" style="background:#ffa000;color:white;border:none;padding:6px 16px;border-radius:4px;font-weight:bold;">Guardar listado en memoria</button>
         <button type="button" id="limpiarCache" style="background:#d32f2f;color:white;border:none;padding:6px 16px;border-radius:4px;font-weight:bold;">Limpiar caché</button>
     </div>
-    <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 1rem;">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 4px; margin-bottom: 0.5rem;">
         <button type="button" id="anteriorPaciente" style="background:#888;color:white;border:none;padding:6px 16px;border-radius:4px;font-weight:bold;">Anterior</button>
         <span id="pacienteActual" style="font-weight:bold; color:#1976d2;">Paciente 1 de 1</span>
         <button type="button" id="siguientePaciente" style="background:#888;color:white;border:none;padding:6px 16px;border-radius:4px;font-weight:bold;">Siguiente</button>
@@ -41,7 +41,7 @@
         <span id="totalPacientes" style="margin-left:10px; color:#555; font-size: 14px;"></span>
     </div>
 <form id="datosForm" style="display: flex; flex-direction: column; gap: 10px; max-width: 350px; margin: 0 auto;">
-        <button type="button" id="cargarCampos" style="background:#43a047;color:white;border:none;padding:8px 0;border-radius:4px;font-weight:bold;margin-top:8px;">Cargar campos</button>
+        <button type="button" id="cargarCampos" style="background:#43a047;color:white;border:none;padding:4px 0;border-radius:4px;font-weight:bold;margin-top:4px;">Cargar campos</button>
         <label for="codigo">Código:</label>
         <input type="text" id="codigo" name="codigo" required>
         <label for="dni">DNI:</label>
@@ -50,9 +50,9 @@
         <input type="text" id="nombre" name="nombre" required>
         <label for="afiliado">N° Afiliado:</label>
         <input type="text" id="afiliado" name="afiliado" required>
-    <div style="display: flex; gap: 10px; margin-top: 8px;">
-        <button type="button" id="editarPaciente" style="flex: 1; background:#ff9800;color:white;border:none;padding:8px 0;border-radius:4px;font-weight:bold;">Editar</button>
-        <button type="submit" style="flex: 1; background:#1976d2;color:white;border:none;padding:8px 0;border-radius:4px;font-weight:bold;">Rellenar</button>
+    <div style="display: flex; gap: 10px; margin-top: 4px;">
+        <button type="button" id="editarPaciente" style="flex: 1; background:#ff9800;color:white;border:none;padding:4px 0;border-radius:4px;font-weight:bold;">Editar</button>
+        <button type="submit" style="flex: 1; background:#1976d2;color:white;border:none;padding:4px 0;border-radius:4px;font-weight:bold;">Rellenar</button>
     </div>
     </form>
     <script src="popup.js"></script>

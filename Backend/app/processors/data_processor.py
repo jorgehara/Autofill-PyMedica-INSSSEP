@@ -485,10 +485,13 @@ class ProcesadorUnificado:
             if a.estado == estado
         ]
 
-    def exportar_para_extension(self) -> str:
+    def exportar_para_extension(self, recetas_por_orden: int = 4) -> str:
         """
         Exporta datos en formato para la extensión Chrome.
         Duplica líneas según total de consultas (consultas + recetas convertidas).
+
+        Args:
+            recetas_por_orden: Cantidad de recetas que equivalen a 1 orden/consulta (default: 4)
 
         Returns:
             String con formato CSV (codigo,dni,nombre,credencial)
@@ -496,8 +499,8 @@ class ProcesadorUnificado:
         lineas = []
 
         for afiliado in self.ordenar_por_frecuencia():
-            # Convertir recetas a consultas: cada 4 recetas = 1 consulta
-            consultas_de_recetas = (afiliado.recetas + 3) // 4 if afiliado.recetas > 0 else 0
+            # Convertir recetas a consultas según el ratio configurado
+            consultas_de_recetas = (afiliado.recetas + recetas_por_orden - 1) // recetas_por_orden if afiliado.recetas > 0 else 0
 
             # Total de consultas
             total_consultas = afiliado.consultas + consultas_de_recetas
@@ -512,10 +515,13 @@ class ProcesadorUnificado:
 
         return '\n'.join(lineas)
 
-    def exportar_detallado(self) -> str:
+    def exportar_detallado(self, recetas_por_orden: int = 4) -> str:
         """
         Exporta reporte detallado con todas las columnas.
         Muestra información completa de cada afiliado incluyendo líneas que generará.
+
+        Args:
+            recetas_por_orden: Cantidad de recetas que equivalen a 1 orden/consulta (default: 4)
 
         Returns:
             String con formato tabla
@@ -532,7 +538,7 @@ class ProcesadorUnificado:
             estado, mensaje = afiliado.validar_consultas()
 
             # Calcular líneas que generará este afiliado
-            consultas_de_recetas = (afiliado.recetas + 3) // 4 if afiliado.recetas > 0 else 0
+            consultas_de_recetas = (afiliado.recetas + recetas_por_orden - 1) // recetas_por_orden if afiliado.recetas > 0 else 0
             total_consultas = afiliado.consultas + consultas_de_recetas
             if total_consultas == 0:
                 total_consultas = 1
@@ -570,27 +576,13 @@ class ProcesadorUnificado:
 
         return '\n'.join(lineas)
 
-    def exportar_formato_final(self) -> str:
+    def exportar_formato_final(self, recetas_por_orden: int = 4) -> str:
         """
         Exporta en formato CSV duplicando líneas según total de consultas.
         Formato: CODIGO,DNI,NOMBRE,CREDENCIAL
 
-        Conversión de recetas a consultas:
-        - Cada 4 recetas = 1 consulta
-        - Fórmula: (recetas + 3) // 4 para redondear hacia arriba
-
-        Ejemplos:
-        - 1-4 recetas = 1 consulta
-        - 5-8 recetas = 2 consultas
-        - 9-12 recetas = 3 consultas
-
-        Total de líneas = consultas directas + consultas convertidas de recetas
-
-        Si un afiliado tiene:
-        - 3 consultas + 0 recetas = 3 líneas
-        - 0 consultas + 4 recetas = 2 líneas (4 recetas = 2 consultas)
-        - 2 consultas + 3 recetas = 3 líneas (2 + 1)
-        - Si no tiene ninguna, genera 1 línea por defecto
+        Args:
+            recetas_por_orden: Cantidad de recetas que equivalen a 1 orden/consulta (default: 4)
 
         Returns:
             String en formato CSV con líneas duplicadas por total de consultas
@@ -601,9 +593,8 @@ class ProcesadorUnificado:
             # Usar el método a_formato_extension que ya separa correctamente el nombre
             linea = afiliado.a_formato_extension()
 
-            # Convertir recetas a consultas: cada 4 recetas = 1 consulta
-            # Fórmula: (recetas + 3) // 4 → redondea hacia arriba
-            consultas_de_recetas = (afiliado.recetas + 3) // 4 if afiliado.recetas > 0 else 0
+            # Convertir recetas a consultas según el ratio configurado
+            consultas_de_recetas = (afiliado.recetas + recetas_por_orden - 1) // recetas_por_orden if afiliado.recetas > 0 else 0
 
             # Total de consultas = consultas directas + consultas convertidas de recetas
             total_consultas = afiliado.consultas + consultas_de_recetas

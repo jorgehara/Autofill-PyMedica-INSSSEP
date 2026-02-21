@@ -67,6 +67,7 @@ const elementos = {
     statErrores: document.getElementById('statErrores'),
 
     // Exportar
+    recetasPorOrden: document.getElementById('recetasPorOrden'),
     btnExportarFinal: document.getElementById('btnExportarFinal'),
     btnExportarExtension: document.getElementById('btnExportarExtension'),
     btnExportarCSV: document.getElementById('btnExportarCSV'),
@@ -525,7 +526,8 @@ async function descargarArchivo(formato) {
     }
 
     try {
-        const response = await fetch(`${API_BASE}/api/exportar/${formato}`);
+        const recetasPorOrden = parseInt(elementos.recetasPorOrden.value) || 4;
+        const response = await fetch(`${API_BASE}/api/exportar/${formato}?recetas_por_orden=${recetasPorOrden}`);
 
         if (!response.ok) {
             throw new Error('Error al exportar');

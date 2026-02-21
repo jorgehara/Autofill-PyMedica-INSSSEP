@@ -360,26 +360,27 @@ def exportar(formato):
 
     try:
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        recetas_por_orden = int(request.args.get('recetas_por_orden', 4))
 
         if formato == 'extension':
-            contenido = procesador_actual.exportar_para_extension()
+            contenido = procesador_actual.exportar_para_extension(recetas_por_orden)
             filename = f"lista_extension_{timestamp}.txt"
             mimetype = 'text/plain'
 
         elif formato == 'detallado':
-            contenido = procesador_actual.exportar_detallado()
+            contenido = procesador_actual.exportar_detallado(recetas_por_orden)
             filename = f"reporte_detallado_{timestamp}.txt"
             mimetype = 'text/plain'
 
         elif formato == 'final':
             # Formato CSV: CODIGO,DNI,NOMBRE,TIPO,DNI (duplica líneas por recetas)
-            contenido = procesador_actual.exportar_formato_final()
+            contenido = procesador_actual.exportar_formato_final(recetas_por_orden)
             filename = f"formato_final_{timestamp}.csv"
             mimetype = 'text/csv'
 
         elif formato == 'csv':
             # Exportar CSV duplicando líneas según consultas totales
-            contenido = procesador_actual.exportar_formato_final()
+            contenido = procesador_actual.exportar_formato_final(recetas_por_orden)
             filename = f"datos_completos_{timestamp}.csv"
             mimetype = 'text/csv'
 

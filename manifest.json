@@ -1,22 +1,20 @@
 {
     "manifest_version": 3,
     "name": "INSSSEP AutoFill PyMedica",
-    "version": "1.1",
+    "version": "1.3",
     "description": "Extensión para autocompletar formularios de INSSSEP",
     "permissions": [
         "activeTab",
         "storage",
-        "sidePanel"
+        "scripting"
     ],
     "host_permissions": [
         "http://localhost:5000/*",
         "https://online.insssep.gob.ar/INSSSEP/init.do"
     ],
     "action": {
-        "default_popup": "popup.html"
-    },
-    "side_panel": {
-        "default_path": "sidepanel.html"
+        "default_popup": "popup.html",
+        "default_title": "INSSSEP AutoFill"
     },
     "background": {
         "service_worker": "background.js",
@@ -28,5 +26,41 @@
             "js": ["content.js"],
             "run_at": "document_idle"
         }
-    ]
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["overlay.js"],
+            "matches": ["https://online.insssep.gob.ar/*"]
+        }
+    ],
+    "commands": {
+        "toggle-overlay": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+I",
+                "mac": "Command+Shift+I"
+            },
+            "description": "Mostrar/Ocultar overlay de INSSSEP"
+        },
+        "rellenar-formulario": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+R",
+                "mac": "Command+Shift+R"
+            },
+            "description": "Rellenar formulario del paciente actual"
+        },
+        "siguiente-paciente": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+Right",
+                "mac": "Command+Shift+Right"
+            },
+            "description": "Siguiente paciente"
+        },
+        "anterior-paciente": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+Left",
+                "mac": "Command+Shift+Left"
+            },
+            "description": "Paciente anterior"
+        }
+    }
 }

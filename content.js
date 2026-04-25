@@ -397,16 +397,93 @@ if (window.location.href.includes('consultaMedica.do')) {
     
     // Variable de control para evitar múltiples clics
     let impresionEjecutada = false;
-    let intervaloBusqueda = null;
+    let aceptarEjecutado = false;
+    
+    function intentarClickAceptar() {
+        // Si ya se ejecutó Aceptar, no hacer nada
+        if (aceptarEjecutado) {
+            console.log('[AutoFill] Aceptar ya ejecutado');
+            return;
+        }
+        
+        console.log('[AutoFill] Buscando botón Aceptar...');
+        
+        let btnAceptar = null;
+        
+        // Estrategia 1: Selector específico del usuario
+        try {
+            btnAceptar = document.querySelector("body > form > table:nth-child(6) > tbody > tr > td > input:nth-child(1)");
+            if (btnAceptar && btnAceptar.value === 'Aceptar') {
+                console.log('[AutoFill] Botón Aceptar encontrado por selector específico');
+            } else {
+                btnAceptar = null;
+            }
+        } catch (e) {
+            console.log('[AutoFill] Selector específico no funcionó');
+        }
+        
+        // Estrategia 2: Buscar por name
+        if (!btnAceptar) {
+            btnAceptar = document.querySelector('input[name="Aceptar"]');
+            if (btnAceptar) console.log('[AutoFill] Botón Aceptar encontrado por name');
+        }
+        
+        // Estrategia 3: Buscar por value
+        if (!btnAceptar) {
+            btnAceptar = document.querySelector('input[value="Aceptar"]');
+            if (btnAceptar) console.log('[AutoFill] Botón Aceptar encontrado por value');
+        }
+        
+        // Estrategia 4: Buscar por type submit
+        if (!btnAceptar) {
+            const botones = document.querySelectorAll('input[type="submit"]');
+            for (const btn of botones) {
+                if (btn.value === 'Aceptar' || btn.name === 'Aceptar') {
+                    btnAceptar = btn;
+                    console.log('[AutoFill] Botón Aceptar encontrado por type submit');
+                    break;
+                }
+            }
+        }
+        
+        // Estrategia 5: Buscar en tabla específica
+        if (!btnAceptar) {
+            const tablas = document.querySelectorAll('table');
+            for (const tabla of tablas) {
+                const inputs = tabla.querySelectorAll('input[type="submit"], input[type="button"]');
+                for (const input of inputs) {
+                    if (input.value === 'Aceptar') {
+                        btnAceptar = input;
+                        console.log('[AutoFill] Botón Aceptar encontrado en tabla');
+                        break;
+                    }
+                }
+                if (btnAceptar) break;
+            }
+        }
+        
+        if (btnAceptar) {
+            console.log('[AutoFill] Botón Aceptar encontrado, haciendo clic...');
+            aceptarEjecutado = true;
+            setTimeout(() => {
+                btnAceptar.click();
+                console.log('[AutoFill] Click en botón Aceptar ejecutado - Proceso completo');
+            }, 500);
+        } else {
+            console.log('[AutoFill] Botón Aceptar no encontrado');
+        }
+    }
+    
+    // Guardar en localStorage que necesitamos clickear Aceptar después
+    function guardarNecesidadAceptar() {
+        localStorage.setItem('insssep_needs_accept', 'true');
+        localStorage.setItem('insssep_accept_timestamp', Date.now().toString());
+    }
     
     function intentarImprimirTicket() {
         // Si ya se ejecutó, no hacer nada
         if (impresionEjecutada) {
-            console.log('[AutoFill] Impresión ya ejecutada, deteniendo búsqueda');
-            if (intervaloBusqueda) {
-                clearInterval(intervaloBusqueda);
-                intervaloBusqueda = null;
-            }
+            console.log('[AutoFill] Impresión ya ejecutada');
             return;
         }
         
@@ -417,9 +494,10 @@ if (window.location.href.includes('consultaMedica.do')) {
         if (btn) {
             console.log('[AutoFill] Botón encontrado por ID: #impresion');
             impresionEjecutada = true;
+            guardarNecesidadAceptar();
             setTimeout(() => {
                 btn.click();
-                console.log('[AutoFill] Click en botón Imprimir ejecutado - Finalizando');
+                console.log('[AutoFill] Click en botón Imprimir ejecutado - Esperando cierre de diálogo...');
             }, 500);
             return;
         }
@@ -429,9 +507,10 @@ if (window.location.href.includes('consultaMedica.do')) {
         if (btn) {
             console.log('[AutoFill] Botón encontrado por name: toPrint');
             impresionEjecutada = true;
+            guardarNecesidadAceptar();
             setTimeout(() => {
                 btn.click();
-                console.log('[AutoFill] Click en botón Imprimir ejecutado - Finalizando');
+                console.log('[AutoFill] Click en botón Imprimir ejecutado - Esperando cierre de diálogo...');
             }, 500);
             return;
         }
@@ -441,9 +520,10 @@ if (window.location.href.includes('consultaMedica.do')) {
         if (btn) {
             console.log('[AutoFill] Botón encontrado por value: Imprimir');
             impresionEjecutada = true;
+            guardarNecesidadAceptar();
             setTimeout(() => {
                 btn.click();
-                console.log('[AutoFill] Click en botón Imprimir ejecutado - Finalizando');
+                console.log('[AutoFill] Click en botón Imprimir ejecutado - Esperando cierre de diálogo...');
             }, 500);
             return;
         }
@@ -454,9 +534,10 @@ if (window.location.href.includes('consultaMedica.do')) {
             if (b.value === 'Imprimir' || b.name === 'toPrint') {
                 console.log('[AutoFill] Botón encontrado por clase buttonStyle');
                 impresionEjecutada = true;
+                guardarNecesidadAceptar();
                 setTimeout(() => {
                     b.click();
-                    console.log('[AutoFill] Click en botón Imprimir ejecutado - Finalizando');
+                    console.log('[AutoFill] Click en botón Imprimir ejecutado - Esperando cierre de diálogo...');
                 }, 500);
                 return;
             }
@@ -466,9 +547,10 @@ if (window.location.href.includes('consultaMedica.do')) {
         if (typeof window.imprimir === 'function') {
             console.log('[AutoFill] Llamando función imprimir() directamente');
             impresionEjecutada = true;
+            guardarNecesidadAceptar();
             setTimeout(() => {
                 window.imprimir();
-                console.log('[AutoFill] Función imprimir() ejecutada - Finalizando');
+                console.log('[AutoFill] Función imprimir() ejecutada - Esperando cierre de diálogo...');
             }, 500);
             return;
         }
@@ -476,10 +558,32 @@ if (window.location.href.includes('consultaMedica.do')) {
         console.log('[AutoFill] Botón Imprimir no encontrado en este intento');
     }
     
-    // Intentar múltiples veces con intervalos, pero detenerse al encontrar
+    // Verificar si venimos de una impresión (al cargar la página)
+    const necesitaAceptar = localStorage.getItem('insssep_needs_accept');
+    const timestamp = localStorage.getItem('insssep_accept_timestamp');
+    if (necesitaAceptar === 'true' && timestamp) {
+        const tiempoTranscurrido = Date.now() - parseInt(timestamp);
+        // Si pasaron menos de 30 segundos desde la impresión
+        if (tiempoTranscurrido < 30000) {
+            console.log('[AutoFill] Detectado que necesitamos clickear Aceptar');
+            // Esperar a que la página esté lista
+            setTimeout(() => {
+                intentarClickAceptar();
+                // Limpiar el flag
+                localStorage.removeItem('insssep_needs_accept');
+                localStorage.removeItem('insssep_accept_timestamp');
+            }, 1000);
+        } else {
+            // Limpiar si pasó mucho tiempo
+            localStorage.removeItem('insssep_needs_accept');
+            localStorage.removeItem('insssep_accept_timestamp');
+        }
+    }
+    
+    // Intentar múltiples veces con intervalos cortos, pero detenerse al encontrar
+    setTimeout(intentarImprimirTicket, 500);
     setTimeout(intentarImprimirTicket, 1000);
-    setTimeout(intentarImprimirTicket, 2000);
-    setTimeout(intentarImprimirTicket, 3000);
+    setTimeout(intentarImprimirTicket, 1500);
     
     // Detener completamente después de 5 segundos por seguridad
     setTimeout(() => {
@@ -487,4 +591,43 @@ if (window.location.href.includes('consultaMedica.do')) {
             console.log('[AutoFill] Tiempo máximo alcanzado, deteniendo búsqueda');
         }
     }, 5000);
+    
+    // Evento afterprint - se dispara inmediatamente después de cerrar el diálogo de impresión
+    window.addEventListener('afterprint', () => {
+        console.log('[AutoFill] afterprint detectado - Impresión completada');
+        const needsAccept = localStorage.getItem('insssep_needs_accept');
+        if (needsAccept === 'true' && !aceptarEjecutado) {
+            console.log('[AutoFill] Buscando Aceptar después de impresión...');
+            // Intentar inmediatamente y varias veces rápido
+            intentarClickAceptar();
+            setTimeout(intentarClickAceptar, 300);
+            setTimeout(intentarClickAceptar, 600);
+            setTimeout(() => {
+                localStorage.removeItem('insssep_needs_accept');
+                localStorage.removeItem('insssep_accept_timestamp');
+            }, 1000);
+        }
+    });
+    
+    // Backup: por si el evento afterprint no funciona en algunos navegadores
+    let checkInterval = setInterval(() => {
+        const needsAccept = localStorage.getItem('insssep_needs_accept');
+        if (needsAccept === 'true' && impresionEjecutada && !aceptarEjecutado) {
+            // Verificar si el documento está visible (no hay diálogo de impresión)
+            if (document.visibilityState === 'visible') {
+                console.log('[AutoFill] Documento visible, intentando Aceptar...');
+                intentarClickAceptar();
+                if (aceptarEjecutado) {
+                    clearInterval(checkInterval);
+                    localStorage.removeItem('insssep_needs_accept');
+                    localStorage.removeItem('insssep_accept_timestamp');
+                }
+            }
+        }
+    }, 500);
+    
+    // Limpiar intervalo después de 15 segundos
+    setTimeout(() => {
+        clearInterval(checkInterval);
+    }, 15000);
 }

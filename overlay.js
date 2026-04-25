@@ -1258,7 +1258,14 @@ Uno por linea..."></textarea>
     // Detectar si estamos en página de ticket (consultaMedica.do)
     if (window.location.href.includes('consultaMedica.do')) {
         console.log('[AutoFill Overlay] Página de ticket detectada');
-        mostrarStatus('Ticket emitido - Imprimiendo automáticamente...');
+        
+        // Verificar si necesitamos clickear Aceptar
+        const necesitaAceptar = localStorage.getItem('insssep_needs_accept');
+        if (necesitaAceptar === 'true') {
+            mostrarStatus('Cerrá el diálogo de impresión para continuar...');
+        } else {
+            mostrarStatus('Ticket emitido - Imprimiendo automáticamente...');
+        }
     }
     
 

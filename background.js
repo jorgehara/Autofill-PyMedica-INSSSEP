@@ -4,6 +4,9 @@ chrome.runtime.onInstalled.addListener(() => {
     console.log("AutoFill Médica instalada y lista para usar.");
 });
 
+// Permitir que el side panel se abra en cualquier página
+chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: false });
+
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     console.log("Mensaje recibido en background:", request);
     
@@ -27,4 +30,22 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     }
     
     return true; // Mantiene la conexión abierta para la respuesta asíncrona
+});
+
+// Habilitar side panel solo en el dominio de INSSSEP
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+    if (changeInfo.status === 'complete' && tab.url) {
+        if (tab.url.includes('online.insssep.gob.ar')) {
+            chrome.sidePanel.setOptions({
+                tabId: tabId,
+                path: 'sidepanel.html',
+                enabled: true
+            });
+        } else {
+            chrome.sidePanel.setOptions({
+                tabId: tabId,
+                enabled: false
+            });
+        }
+    }
 });

@@ -1,4 +1,58 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // ── Toggle listado ──
+    const toggleListadoBtn = document.getElementById('toggleListado');
+    const datosTextarea = document.getElementById('datos');
+    let listadoExpandido = true;
+    chrome.storage.local.get('listadoExpandido', function(r) {
+        if (r.listadoExpandido === false) colapsar();
+    });
+    function colapsar() {
+        datosTextarea.style.display = 'none';
+        toggleListadoBtn.textContent = '▼';
+        toggleListadoBtn.title = 'Expandir';
+        listadoExpandido = false;
+    }
+    function expandir() {
+        datosTextarea.style.display = '';
+        toggleListadoBtn.textContent = '▲';
+        toggleListadoBtn.title = 'Minimizar';
+        listadoExpandido = true;
+    }
+    toggleListadoBtn.addEventListener('click', function() {
+        listadoExpandido ? colapsar() : expandir();
+        chrome.storage.local.set({ listadoExpandido });
+    });
+
+    // ── Abrir Side Panel ──
+    const abrirPanelBtn = document.getElementById('abrirSidePanel');
+    if (abrirPanelBtn) {
+        abrirPanelBtn.addEventListener('click', async function() {
+            try {
+                await chrome.sidePanel.open({ windowId: chrome.windows.WINDOW_ID_CURRENT });
+                window.close(); // Cerrar el popup después de abrir el panel
+            } catch (err) {
+                console.error('Error al abrir side panel:', err);
+                mostrarMensajeEstado('Error al abrir panel lateral', 'error');
+            }
+        });
+    }
+
+    // ── Tema dark/light ──
+    const themeBtn = document.getElementById('themeToggle');
+    chrome.storage.local.get('theme', function(r) {
+        if (r.theme === 'dark') applyTheme('dark');
+    });
+    function applyTheme(t) {
+        document.body.classList.toggle('dark', t === 'dark');
+        themeBtn.textContent = t === 'dark' ? '☀️' : '🌙';
+    }
+    themeBtn.addEventListener('click', function() {
+        const isDark = document.body.classList.toggle('dark');
+        const t = isDark ? 'dark' : 'light';
+        themeBtn.textContent = isDark ? '☀️' : '🌙';
+        chrome.storage.local.set({ theme: t });
+    });
+
     // Escuchar mensaje para cerrar el popup
     chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         if (request.accion === 'cerrar-popup') {
@@ -288,79 +342,55 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Mensaje de estado visual
+    const STATUS_STYLES = {
+        success: { bg: 'color-mix(in srgb, var(--success) 15%, var(--surface))', color: 'var(--success)', border: 'var(--success)' },
+        error:   { bg: 'color-mix(in srgb, var(--danger)  15%, var(--surface))', color: 'var(--danger)',  border: 'var(--danger)'  },
+        info:    { bg: 'color-mix(in srgb, var(--primary) 15%, var(--surface))', color: 'var(--primary)', border: 'var(--primary)' },
+    };
     function mostrarMensajeEstado(mensaje, tipo = 'info') {
-        let statusDiv = document.getElementById('statusMessage');
-        if (!statusDiv) {
-            statusDiv = document.createElement('div');
-            statusDiv.id = 'statusMessage';
-            statusDiv.style.margin = '10px 0';
-            statusDiv.style.padding = '10px';
-            statusDiv.style.borderRadius = '4px';
-            statusDiv.style.textAlign = 'center';
-            statusDiv.style.fontWeight = 'bold';
-            document.body.insertBefore(statusDiv, document.getElementById('datosForm'));
-        }
+        const statusDiv = document.getElementById('statusMessage');
+        const s = STATUS_STYLES[tipo] || STATUS_STYLES.info;
         statusDiv.textContent = mensaje;
+        statusDiv.style.background = s.bg;
+        statusDiv.style.color = s.color;
+        statusDiv.style.border = `1px solid ${s.border}`;
         statusDiv.style.display = 'block';
-        if (tipo === 'success') {
-            statusDiv.style.background = '#0f401b';
-            statusDiv.style.color = '#4ec9b0';
-            statusDiv.style.border = '1px solid #1e4e2e';
-        } else if (tipo === 'error') {
-            statusDiv.style.background = '#4e1c24';
-            statusDiv.style.color = '#f14c4c';
-            statusDiv.style.border = '1px solid #6e2936';
-        } else {
-            statusDiv.style.background = '#1976d2';
-            statusDiv.style.color = '#fff';
-            statusDiv.style.border = '1px solid #1976d2';
-        }
-        setTimeout(() => { statusDiv.style.display = 'none'; }, 2500);
+        clearTimeout(statusDiv._timeout);
+        statusDiv._timeout = setTimeout(() => { statusDiv.style.display = 'none'; }, 2500);
     }
 
     // Mostrar nombre del paciente actual en grande
+    const elAnteriorBtn   = document.getElementById('anteriorPaciente');
+    const elSiguienteBtn  = document.getElementById('siguientePaciente');
+    const elIrPaciente    = document.getElementById('irPaciente');
+    const elTotal         = document.getElementById('totalPacientes');
+    const elActual        = document.getElementById('pacienteActual');
+    const elNombreGrande  = document.getElementById('nombreGrande');
+
     function mostrarPacienteActual() {
-        const anteriorBtn = document.getElementById('anteriorPaciente');
-        const siguienteBtn = document.getElementById('siguientePaciente');
-        const irPaciente = document.getElementById('irPaciente');
-        const totalPacientes = document.getElementById('totalPacientes');
-        const pacienteActual = document.getElementById('pacienteActual');
-        const nombreGrande = document.getElementById('nombreGrande');
         if (pacientes.length === 0) {
-            pacienteActual.textContent = 'Sin pacientes';
-            totalPacientes.textContent = 'Total: 0';
-            anteriorBtn.disabled = true;
-            siguienteBtn.disabled = true;
-            irPaciente.value = 1;
-            irPaciente.disabled = true;
-            if (nombreGrande) {
-                nombreGrande.textContent = '';
-            }
+            elActual.textContent = 'Sin pacientes';
+            elTotal.textContent  = 'Total: 0';
+            elAnteriorBtn.disabled  = true;
+            elSiguienteBtn.disabled = true;
+            elIrPaciente.value   = 1;
+            elIrPaciente.disabled = true;
+            elNombreGrande.textContent = '';
             return;
         }
         const p = pacientes[pacienteIndex];
-        document.getElementById('codigo').value = p.codigo;
-        document.getElementById('dni').value = p.dni;
-        document.getElementById('nombre').value = p.nombre;
+        document.getElementById('codigo').value   = p.codigo;
+        document.getElementById('dni').value      = p.dni;
+        document.getElementById('nombre').value   = p.nombre;
         document.getElementById('afiliado').value = p.afiliado;
-        pacienteActual.textContent = `Paciente ${pacienteIndex + 1} de ${pacientes.length}`;
-        irPaciente.max = pacientes.length;
-        irPaciente.value = pacienteIndex + 1;
-        irPaciente.disabled = false;
-        totalPacientes.textContent = `Total: ${pacientes.length}`;
-        anteriorBtn.disabled = pacienteIndex === 0;
-        siguienteBtn.disabled = pacienteIndex === pacientes.length - 1;
-        if (!nombreGrande) {
-            const div = document.createElement('div');
-            div.id = 'nombreGrande';
-            div.style.fontSize = '1.3em';
-            div.style.fontWeight = 'bold';
-            div.style.color = '#1976d2';
-            div.style.textAlign = 'center';
-            div.style.margin = '10px 0 5px 0';
-            document.body.insertBefore(div, document.getElementById('datosForm'));
-        }
-        document.getElementById('nombreGrande').textContent = p.nombre;
+        elActual.textContent         = `Paciente ${pacienteIndex + 1} de ${pacientes.length}`;
+        elTotal.textContent          = `Total: ${pacientes.length}`;
+        elIrPaciente.max             = pacientes.length;
+        elIrPaciente.value           = pacienteIndex + 1;
+        elIrPaciente.disabled        = false;
+        elAnteriorBtn.disabled       = pacienteIndex === 0;
+        elSiguienteBtn.disabled      = pacienteIndex === pacientes.length - 1;
+        elNombreGrande.textContent   = p.nombre;
     }
 
     // === FUNCIONALIDAD DE BÚSQUEDA Y REEMPLAZO ===

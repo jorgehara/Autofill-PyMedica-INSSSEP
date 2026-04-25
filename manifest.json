@@ -1,11 +1,12 @@
 {
     "manifest_version": 3,
     "name": "INSSSEP AutoFill PyMedica",
-    "version": "1.0",
+    "version": "1.1",
     "description": "Extensión para autocompletar formularios de INSSSEP",
     "permissions": [
         "activeTab",
-        "storage"
+        "storage",
+        "sidePanel"
     ],
     "host_permissions": [
         "http://localhost:5000/*",
@@ -13,6 +14,9 @@
     ],
     "action": {
         "default_popup": "popup.html"
+    },
+    "side_panel": {
+        "default_path": "sidepanel.html"
     },
     "background": {
         "service_worker": "background.js",

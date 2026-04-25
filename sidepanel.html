@@ -55,7 +55,8 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
             background: var(--bg);
             color: var(--text);
-            width: 440px;
+            width: 100%;
+            min-width: 320px;
             padding: 12px;
             font-size: 13px;
             transition: background 0.2s, color 0.2s;
@@ -69,7 +70,7 @@
             margin-bottom: 10px;
         }
         .header-title {
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 700;
             color: var(--primary);
             letter-spacing: 0.3px;
@@ -114,7 +115,7 @@
         /* ── Textarea ── */
         #datos {
             width: 100%;
-            height: 160px;
+            height: 120px;
             resize: vertical;
             border: 1px solid var(--border);
             border-radius: var(--radius-sm);
@@ -290,16 +291,31 @@
             background: var(--border);
             margin: 8px 0;
         }
+
+        /* ── Keyboard shortcuts hint ── */
+        .shortcuts-hint {
+            font-size: 10px;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 8px;
+            padding: 6px;
+            background: var(--surface2);
+            border-radius: var(--radius-sm);
+        }
+        .shortcuts-hint kbd {
+            background: var(--border);
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: monospace;
+            font-size: 9px;
+        }
     </style>
 </head>
 <body>
     <!-- Header -->
     <div class="header">
         <div class="header-title">INSSSEP AutoFill <span>PyMedica</span></div>
-        <div style="display:flex;gap:6px;">
-            <button id="abrirSidePanel" class="btn btn-primary" style="padding:4px 10px;font-size:11px;" title="Abrir panel lateral">📌 Panel</button>
-            <button id="themeToggle" title="Cambiar tema">☀️</button>
-        </div>
+        <button id="themeToggle" title="Cambiar tema">☀️</button>
     </div>
 
     <!-- Status -->
@@ -373,6 +389,13 @@
         </form>
     </div>
 
-    <script src="popup.js"></script>
+    <!-- Atajos de teclado -->
+    <div class="shortcuts-hint">
+        <kbd>Ctrl</kbd>+<kbd>←</kbd> Anterior | 
+        <kbd>Ctrl</kbd>+<kbd>→</kbd> Siguiente | 
+        <kbd>Ctrl</kbd>+<kbd>Enter</kbd> Rellenar
+    </div>
+
+    <script src="sidepanel.js"></script>
 </body>
 </html>

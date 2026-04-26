@@ -1268,6 +1268,15 @@ Uno por linea..."></textarea>
         }
     }
     
+    // Detectar si estamos en ticket.do (después de Aceptar) y vamos a redirigir
+    if (window.location.href.includes('ticket.do')) {
+        const vieneDeTicket = localStorage.getItem('insssep_viene_de_ticket');
+        if (vieneDeTicket === 'true') {
+            console.log('[AutoFill Overlay] Redirigiendo a Consulta Médica...');
+            mostrarStatus('Volviendo a Consulta Médica...');
+        }
+    }
+    
 
 
     // Verificar si hay un segundo relleno pendiente (después de recarga de página)

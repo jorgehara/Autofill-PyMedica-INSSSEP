@@ -391,6 +391,97 @@ if (window.location.href.includes('online.insssep.gob.ar/INSSSEP/')) {
     console.log('[AutoFill] Overlay inyectado');
 }
 
+// Detectar si estamos en la página ticket.do (después de Aceptar) y necesitamos volver a Consulta Médica
+if (window.location.href.includes('ticket.do')) {
+    console.log('[AutoFill] Detectada página ticket.do - verificando si necesitamos ir a Consulta Médica...');
+    
+    // Verificar si venimos de completar un ticket (después de Aceptar)
+    const vieneDeTicket = localStorage.getItem('insssep_viene_de_ticket');
+    if (vieneDeTicket === 'true') {
+        console.log('[AutoFill] Venimos de completar un ticket, buscando enlace Consulta Médica...');
+        
+        function buscarYClickConsultaMedica() {
+            let enlace = null;
+            
+            // Estrategia 1: Buscar por href exacto
+            enlace = document.querySelector('a[href="./menuConsultaMedica.do"]');
+            if (enlace) {
+                console.log('[AutoFill] Enlace Consulta Médica encontrado por href exacto');
+            }
+            
+            // Estrategia 2: Buscar por href que contenga menuConsultaMedica
+            if (!enlace) {
+                enlace = document.querySelector('a[href*="menuConsultaMedica.do"]');
+                if (enlace) console.log('[AutoFill] Enlace Consulta Médica encontrado por href parcial');
+            }
+            
+            // Estrategia 3: Selector específico del usuario
+            if (!enlace) {
+                try {
+                    enlace = document.querySelector("body > table > tbody > tr:nth-child(2) > td.backMenu > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(1) > td.linkMenu > table > tbody > tr:nth-child(2) > td:nth-child(2) > a");
+                    if (enlace && (enlace.textContent.includes('Consulta Médica') || enlace.href.includes('menuConsultaMedica'))) {
+                        console.log('[AutoFill] Enlace Consulta Médica encontrado por selector específico');
+                    } else {
+                        enlace = null;
+                    }
+                } catch (e) {
+                    console.log('[AutoFill] Selector específico no funcionó');
+                }
+            }
+            
+            // Estrategia 4: Buscar por texto exacto
+            if (!enlace) {
+                const links = document.querySelectorAll('a');
+                for (const link of links) {
+                    const texto = link.textContent.trim();
+                    if (texto === 'Consulta Médica' || texto === 'Consulta Medica') {
+                        enlace = link;
+                        console.log('[AutoFill] Enlace Consulta Médica encontrado por texto exacto');
+                        break;
+                    }
+                }
+            }
+            
+            // Estrategia 5: Buscar por clase linkMenu y texto
+            if (!enlace) {
+                const links = document.querySelectorAll('a.linkMenu');
+                for (const link of links) {
+                    if (link.textContent.includes('Consulta Médica') || 
+                        link.textContent.includes('Consulta Medica')) {
+                        enlace = link;
+                        console.log('[AutoFill] Enlace Consulta Médica encontrado por clase linkMenu');
+                        break;
+                    }
+                }
+            }
+            
+            if (enlace) {
+                console.log('[AutoFill] Haciendo clic en Consulta Médica:', enlace);
+                setTimeout(() => {
+                    enlace.click();
+                    console.log('[AutoFill] Click en Consulta Médica ejecutado');
+                }, 500);
+                
+                // Limpiar el flag
+                localStorage.removeItem('insssep_viene_de_ticket');
+            } else {
+                console.log('[AutoFill] Enlace Consulta Médica no encontrado');
+                // Debug: listar todos los enlaces encontrados
+                const allLinks = document.querySelectorAll('a');
+                console.log('[AutoFill] Total de enlaces en página:', allLinks.length);
+                allLinks.forEach((link, i) => {
+                    if (i < 10) console.log(`  - Link ${i}: "${link.textContent.trim()}" href="${link.href}"`);
+                });
+            }
+        }
+        
+        // Intentar varias veces con delays más largos para dar tiempo a cargar
+        setTimeout(buscarYClickConsultaMedica, 1000);
+        setTimeout(buscarYClickConsultaMedica, 2000);
+        setTimeout(buscarYClickConsultaMedica, 3500);
+    }
+}
+
 // Detectar página de ticket (consultaMedica.do) e imprimir automáticamente
 if (window.location.href.includes('consultaMedica.do')) {
     console.log('[AutoFill] Detectada página de ticket - Iniciando impresión automática...');
@@ -465,9 +556,13 @@ if (window.location.href.includes('consultaMedica.do')) {
         if (btnAceptar) {
             console.log('[AutoFill] Botón Aceptar encontrado, haciendo clic...');
             aceptarEjecutado = true;
+            
+            // Guardar flag para volver a Consulta Médica después
+            localStorage.setItem('insssep_viene_de_ticket', 'true');
+            
             setTimeout(() => {
                 btnAceptar.click();
-                console.log('[AutoFill] Click en botón Aceptar ejecutado - Proceso completo');
+                console.log('[AutoFill] Click en botón Aceptar ejecutado - Redirigiendo a menú...');
             }, 500);
         } else {
             console.log('[AutoFill] Botón Aceptar no encontrado');

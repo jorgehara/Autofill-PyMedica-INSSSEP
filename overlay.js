@@ -1281,20 +1281,49 @@ Uno por linea..."></textarea>
     if (window.location.href.includes('init.do') && window.location.href.includes('INSSSEP')) {
         const vieneDeConsultaMedica = localStorage.getItem('insssep_viene_de_consulta_medica');
         if (vieneDeConsultaMedica === 'true') {
-            console.log('[AutoFill Overlay] Volvimos al formulario, avanzando al siguiente paciente...');
-            mostrarStatus('Avanzando al siguiente paciente...');
+            console.log('[AutoFill Overlay] Volvimos al formulario, preparando avance al siguiente paciente...');
+            mostrarStatus('Cargando datos y avanzando...');
             
-            // Esperar un momento para que todo cargue y avanzar
-            setTimeout(() => {
+            // Función para intentar avanzar con reintentos
+            function intentarAvanzarSiguiente(retryCount = 0) {
+                // Verificar si hay pacientes cargados
+                if (pacientes.length === 0) {
+                    if (retryCount < 5) {
+                        console.log(`[AutoFill Overlay] Pacientes no cargados aún, reintentando... (${retryCount + 1}/5)`);
+                        setTimeout(() => intentarAvanzarSiguiente(retryCount + 1), 500);
+                        return;
+                    } else {
+                        console.log('[AutoFill Overlay] No hay pacientes cargados después de 5 intentos');
+                        mostrarStatus('No hay pacientes para avanzar', 'error');
+                        localStorage.removeItem('insssep_viene_de_consulta_medica');
+                        localStorage.removeItem('insssep_viene_de_ticket');
+                        return;
+                    }
+                }
+                
+                // Verificar que no estemos en el último paciente
+                if (pacienteIndex >= pacientes.length - 1) {
+                    console.log('[AutoFill Overlay] Ya estamos en el último paciente');
+                    mostrarStatus('Último paciente alcanzado');
+                    localStorage.removeItem('insssep_viene_de_consulta_medica');
+                    localStorage.removeItem('insssep_viene_de_ticket');
+                    return;
+                }
+                
+                // Avanzar al siguiente paciente
+                console.log(`[AutoFill Overlay] Avanzando de paciente ${pacienteIndex + 1} a ${pacienteIndex + 2}`);
                 siguientePaciente();
-                console.log('[AutoFill Overlay] Avanzado al siguiente paciente automáticamente');
                 
                 // Limpiar flags
                 localStorage.removeItem('insssep_viene_de_consulta_medica');
                 localStorage.removeItem('insssep_viene_de_ticket');
                 
-                mostrarStatus('Listo - Paciente actualizado');
-            }, 1000);
+                mostrarStatus(`Paciente ${pacienteIndex + 1} de ${pacientes.length} - Listo`);
+                console.log('[AutoFill Overlay] Avance completado exitosamente');
+            }
+            
+            // Iniciar después de que los datos se hayan restaurado
+            setTimeout(intentarAvanzarSiguiente, 800);
         }
     }
     

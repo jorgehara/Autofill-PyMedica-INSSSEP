@@ -1277,6 +1277,27 @@ Uno por linea..."></textarea>
         }
     }
     
+    // Detectar si acabamos de volver al formulario y debemos avanzar al siguiente paciente
+    if (window.location.href.includes('init.do') && window.location.href.includes('INSSSEP')) {
+        const vieneDeConsultaMedica = localStorage.getItem('insssep_viene_de_consulta_medica');
+        if (vieneDeConsultaMedica === 'true') {
+            console.log('[AutoFill Overlay] Volvimos al formulario, avanzando al siguiente paciente...');
+            mostrarStatus('Avanzando al siguiente paciente...');
+            
+            // Esperar un momento para que todo cargue y avanzar
+            setTimeout(() => {
+                siguientePaciente();
+                console.log('[AutoFill Overlay] Avanzado al siguiente paciente automáticamente');
+                
+                // Limpiar flags
+                localStorage.removeItem('insssep_viene_de_consulta_medica');
+                localStorage.removeItem('insssep_viene_de_ticket');
+                
+                mostrarStatus('Listo - Paciente actualizado');
+            }, 1000);
+        }
+    }
+    
 
 
     // Verificar si hay un segundo relleno pendiente (después de recarga de página)

@@ -731,26 +731,4 @@ if (window.location.href.includes('consultaMedica.do')) {
     }, 15000);
 }
 
-// Detectar si estamos en la página init.do (formulario de consulta médica) después de volver del menú
-if (window.location.href.includes('init.do') && window.location.href.includes('INSSSEP')) {
-    console.log('[AutoFill] Detectada página init.do (formulario de consulta médica)');
-    
-    // Verificar si venimos del flujo automático completo
-    const vieneDeConsultaMedica = localStorage.getItem('insssep_viene_de_consulta_medica');
-    if (vieneDeConsultaMedica === 'true') {
-        console.log('[AutoFill] Volvimos al formulario desde Consulta Médica, avanzando al siguiente paciente...');
-        
-        // Enviar mensaje al overlay para avanzar al siguiente paciente
-        setTimeout(() => {
-            window.postMessage({
-                tipo: 'insssep-autofill-action',
-                accion: 'siguiente-atajo'
-            }, '*');
-            console.log('[AutoFill] Comando enviado: Siguiente paciente');
-            
-            // Limpiar flags
-            localStorage.removeItem('insssep_viene_de_consulta_medica');
-            localStorage.removeItem('insssep_viene_de_ticket');
-        }, 800);
-    }
-}
+// El overlay maneja automáticamente el avance al siguiente paciente cuando vuelve a init.do

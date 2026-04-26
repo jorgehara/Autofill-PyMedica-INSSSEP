@@ -457,12 +457,16 @@ if (window.location.href.includes('ticket.do')) {
             
             if (enlace) {
                 console.log('[AutoFill] Haciendo clic en Consulta Médica:', enlace);
+                
+                // Guardar flag para saber que vamos al formulario y debemos avanzar al siguiente
+                localStorage.setItem('insssep_viene_de_consulta_medica', 'true');
+                
                 setTimeout(() => {
                     enlace.click();
                     console.log('[AutoFill] Click en Consulta Médica ejecutado');
                 }, 500);
                 
-                // Limpiar el flag
+                // Limpiar el flag anterior
                 localStorage.removeItem('insssep_viene_de_ticket');
             } else {
                 console.log('[AutoFill] Enlace Consulta Médica no encontrado');
@@ -725,4 +729,28 @@ if (window.location.href.includes('consultaMedica.do')) {
     setTimeout(() => {
         clearInterval(checkInterval);
     }, 15000);
+}
+
+// Detectar si estamos en la página init.do (formulario de consulta médica) después de volver del menú
+if (window.location.href.includes('init.do') && window.location.href.includes('INSSSEP')) {
+    console.log('[AutoFill] Detectada página init.do (formulario de consulta médica)');
+    
+    // Verificar si venimos del flujo automático completo
+    const vieneDeConsultaMedica = localStorage.getItem('insssep_viene_de_consulta_medica');
+    if (vieneDeConsultaMedica === 'true') {
+        console.log('[AutoFill] Volvimos al formulario desde Consulta Médica, avanzando al siguiente paciente...');
+        
+        // Enviar mensaje al overlay para avanzar al siguiente paciente
+        setTimeout(() => {
+            window.postMessage({
+                tipo: 'insssep-autofill-action',
+                accion: 'siguiente-atajo'
+            }, '*');
+            console.log('[AutoFill] Comando enviado: Siguiente paciente');
+            
+            // Limpiar flags
+            localStorage.removeItem('insssep_viene_de_consulta_medica');
+            localStorage.removeItem('insssep_viene_de_ticket');
+        }, 800);
+    }
 }

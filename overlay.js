@@ -1277,43 +1277,7 @@ Uno por linea..."></textarea>
         }
     }
     
-    // Detectar si acabamos de volver al formulario y debemos avanzar al siguiente paciente
-    if (window.location.href.includes('init.do') && window.location.href.includes('INSSSEP')) {
-        const vieneDeConsultaMedica = localStorage.getItem('insssep_viene_de_consulta_medica');
-        if (vieneDeConsultaMedica === 'true') {
-            console.log('[AutoFill Overlay] Volvimos al formulario, preparando avance al siguiente paciente...');
-            mostrarStatus('Avanzando al siguiente paciente...');
-            
-            // Esperar a que el overlay esté listo y hacer click directo en el botón
-            setTimeout(() => {
-                const btnSiguiente = document.getElementById('af-siguiente');
-                if (btnSiguiente) {
-                    console.log('[AutoFill Overlay] Botón Siguiente encontrado, haciendo click...');
-                    btnSiguiente.click();
-                    mostrarStatus('Avanzado al siguiente paciente');
-                    
-                    // Limpiar flags después de un momento
-                    setTimeout(() => {
-                        localStorage.removeItem('insssep_viene_de_consulta_medica');
-                        localStorage.removeItem('insssep_viene_de_ticket');
-                    }, 500);
-                } else {
-                    console.log('[AutoFill Overlay] Botón Siguiente no encontrado, intentando con funcion...');
-                    // Fallback: intentar con la función si existe
-                    if (typeof siguientePaciente === 'function') {
-                        siguientePaciente();
-                        localStorage.removeItem('insssep_viene_de_consulta_medica');
-                        localStorage.removeItem('insssep_viene_de_ticket');
-                    } else {
-                        console.error('[AutoFill Overlay] No se pudo avanzar - botón ni función disponibles');
-                        mostrarStatus('Error al avanzar', 'error');
-                        localStorage.removeItem('insssep_viene_de_consulta_medica');
-                        localStorage.removeItem('insssep_viene_de_ticket');
-                    }
-                }
-            }, 1500);
-        }
-    }
+
     
 
 
@@ -1347,6 +1311,44 @@ Uno por linea..."></textarea>
             }
         }
     }, 1000);
+    
+    // Detectar si acabamos de volver al formulario (init.do) y debemos avanzar al siguiente paciente
+    // ESTO VA AL FINAL para asegurar que el overlay ya está creado
+    if (window.location.href.includes('init.do') && window.location.href.includes('INSSSEP')) {
+        const vieneDeConsultaMedica = localStorage.getItem('insssep_viene_de_consulta_medica');
+        if (vieneDeConsultaMedica === 'true') {
+            console.log('[AutoFill Overlay] Volvimos al formulario, preparando avance...');
+            mostrarStatus('Avanzando al siguiente paciente...');
+            
+            // Doble verificación: esperar a que el overlay exista y luego hacer click
+            function intentarClickSiguiente(intentos = 0) {
+                const btnSiguiente = document.getElementById('af-siguiente');
+                
+                if (btnSiguiente) {
+                    console.log(`[AutoFill Overlay] Botón Siguiente encontrado (intento ${intentos + 1}), haciendo click...`);
+                    btnSiguiente.click();
+                    mostrarStatus('Avanzado al siguiente paciente');
+                    
+                    // Limpiar flags después
+                    setTimeout(() => {
+                        localStorage.removeItem('insssep_viene_de_consulta_medica');
+                        localStorage.removeItem('insssep_viene_de_ticket');
+                    }, 500);
+                } else if (intentos < 10) {
+                    console.log(`[AutoFill Overlay] Botón no encontrado, reintentando... (${intentos + 1}/10)`);
+                    setTimeout(() => intentarClickSiguiente(intentos + 1), 500);
+                } else {
+                    console.error('[AutoFill Overlay] No se pudo encontrar el botón después de 10 intentos');
+                    mostrarStatus('Error: Botón no encontrado', 'error');
+                    localStorage.removeItem('insssep_viene_de_consulta_medica');
+                    localStorage.removeItem('insssep_viene_de_ticket');
+                }
+            }
+            
+            // Iniciar búsqueda del botón
+            setTimeout(() => intentarClickSiguiente(0), 500);
+        }
+    }
     
     setInterval(() => { if (pacientes.length > 0) guardarDatos(); }, 30000);
 })();

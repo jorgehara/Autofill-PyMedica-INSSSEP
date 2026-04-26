@@ -1282,48 +1282,36 @@ Uno por linea..."></textarea>
         const vieneDeConsultaMedica = localStorage.getItem('insssep_viene_de_consulta_medica');
         if (vieneDeConsultaMedica === 'true') {
             console.log('[AutoFill Overlay] Volvimos al formulario, preparando avance al siguiente paciente...');
-            mostrarStatus('Cargando datos y avanzando...');
+            mostrarStatus('Avanzando al siguiente paciente...');
             
-            // Función para intentar avanzar con reintentos
-            function intentarAvanzarSiguiente(retryCount = 0) {
-                // Verificar si hay pacientes cargados
-                if (pacientes.length === 0) {
-                    if (retryCount < 5) {
-                        console.log(`[AutoFill Overlay] Pacientes no cargados aún, reintentando... (${retryCount + 1}/5)`);
-                        setTimeout(() => intentarAvanzarSiguiente(retryCount + 1), 500);
-                        return;
-                    } else {
-                        console.log('[AutoFill Overlay] No hay pacientes cargados después de 5 intentos');
-                        mostrarStatus('No hay pacientes para avanzar', 'error');
+            // Esperar a que el overlay esté listo y hacer click directo en el botón
+            setTimeout(() => {
+                const btnSiguiente = document.getElementById('af-siguiente');
+                if (btnSiguiente) {
+                    console.log('[AutoFill Overlay] Botón Siguiente encontrado, haciendo click...');
+                    btnSiguiente.click();
+                    mostrarStatus('Avanzado al siguiente paciente');
+                    
+                    // Limpiar flags después de un momento
+                    setTimeout(() => {
                         localStorage.removeItem('insssep_viene_de_consulta_medica');
                         localStorage.removeItem('insssep_viene_de_ticket');
-                        return;
+                    }, 500);
+                } else {
+                    console.log('[AutoFill Overlay] Botón Siguiente no encontrado, intentando con funcion...');
+                    // Fallback: intentar con la función si existe
+                    if (typeof siguientePaciente === 'function') {
+                        siguientePaciente();
+                        localStorage.removeItem('insssep_viene_de_consulta_medica');
+                        localStorage.removeItem('insssep_viene_de_ticket');
+                    } else {
+                        console.error('[AutoFill Overlay] No se pudo avanzar - botón ni función disponibles');
+                        mostrarStatus('Error al avanzar', 'error');
+                        localStorage.removeItem('insssep_viene_de_consulta_medica');
+                        localStorage.removeItem('insssep_viene_de_ticket');
                     }
                 }
-                
-                // Verificar que no estemos en el último paciente
-                if (pacienteIndex >= pacientes.length - 1) {
-                    console.log('[AutoFill Overlay] Ya estamos en el último paciente');
-                    mostrarStatus('Último paciente alcanzado');
-                    localStorage.removeItem('insssep_viene_de_consulta_medica');
-                    localStorage.removeItem('insssep_viene_de_ticket');
-                    return;
-                }
-                
-                // Avanzar al siguiente paciente
-                console.log(`[AutoFill Overlay] Avanzando de paciente ${pacienteIndex + 1} a ${pacienteIndex + 2}`);
-                siguientePaciente();
-                
-                // Limpiar flags
-                localStorage.removeItem('insssep_viene_de_consulta_medica');
-                localStorage.removeItem('insssep_viene_de_ticket');
-                
-                mostrarStatus(`Paciente ${pacienteIndex + 1} de ${pacientes.length} - Listo`);
-                console.log('[AutoFill Overlay] Avance completado exitosamente');
-            }
-            
-            // Iniciar después de que los datos se hayan restaurado
-            setTimeout(intentarAvanzarSiguiente, 800);
+            }, 1500);
         }
     }
     

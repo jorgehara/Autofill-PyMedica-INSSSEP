@@ -475,10 +475,10 @@ if (window.location.href.includes('ticket.do')) {
             }
         }
         
-        // Intentar rápidamente con delays cortos
+        // Intentar rápidamente - último delay de 0.5 segundos
+        setTimeout(buscarYClickConsultaMedica, 300);
         setTimeout(buscarYClickConsultaMedica, 500);
-        setTimeout(buscarYClickConsultaMedica, 800);
-        setTimeout(buscarYClickConsultaMedica, 1200);
+        setTimeout(buscarYClickConsultaMedica, 500);
     }
 }
 

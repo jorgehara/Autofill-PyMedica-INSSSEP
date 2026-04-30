@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQLite Admin - INSSSEP</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            min-height: 100vh;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            padding: 20px 30px;
+            border-bottom: 1px solid #475569;
+        }
+        
+        .header h1 {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .header .db-path {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            margin-top: 5px;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            height: calc(100vh - 80px);
+        }
+        
+        .sidebar {
+            background: #1e293b;
+            border-right: 1px solid #334155;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .stat-card {
+            background: #334155;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .stat-card .number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #60a5fa;
+        }
+        
+        .stat-card .label {
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background: #3b82f6;
+            color: white;
+        }
+        
+        .btn-danger {
+            background: #ef4444;
+            color: white;
+        }
+        
+        .btn-success {
+            background: #10b981;
+            color: white;
+        }
+        
+        .main-content {
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .toolbar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .search-box {
+            flex: 1;
+            min-width: 200px;
+            padding: 10px 15px;
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 6px;
+            color: #e2e8f0;
+            font-size: 0.95rem;
+        }
+        
+        .listado-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .listado-card:hover {
+            border-color: #3b82f6;
+            background: #252f47;
+        }
+        
+        .listado-card.active {
+            border-color: #3b82f6;
+            background: #1e3a5f;
+        }
+        
+        .listado-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 10px;
+        }
+        
+        .listado-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #f1f5f9;
+        }
+        
+        .listado-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+        
+        .badge {
+            background: #3b82f6;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+        }
+        
+        .detail-panel {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .detail-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #334155;
+        }
+        
+        .detail-content {
+            background: #0f172a;
+            border-radius: 6px;
+            padding: 15px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9rem;
+            max-height: 400px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+        
+        .line-item {
+            padding: 5px 0;
+            border-bottom: 1px solid #1e293b;
+        }
+        
+        .line-item:last-child {
+            border-bottom: none;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #64748b;
+        }
+        
+        .empty-state .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #10b981;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            display: none;
+            animation: slideIn 0.3s ease;
+        }
+        
+        .toast.error {
+            background: #ef4444;
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .delete-btn {
+            background: transparent;
+            border: 1px solid #ef4444;
+            color: #ef4444;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+        
+        .delete-btn:hover {
+            background: #ef4444;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🗄️ SQLite Admin - INSSSEP</h1>
+        <div class="db-path">📁 Backend/app/listados.db</div>
+    </div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <div class="stat-card">
+                <div class="number" id="totalCount">0</div>
+                <div class="label">Listados guardados</div>
+            </div>
+            
+            <button class="btn btn-primary" onclick="refreshData()">
+                🔄 Actualizar
+            </button>
+            
+            <button class="btn btn-success" onclick="exportData()">
+                📥 Exportar todo
+            </button>
+            
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #334155;">
+                <div style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 10px;">
+                    ℹ️ Tips:
+                </div>
+                <ul style="font-size: 0.8rem; color: #64748b; padding-left: 20px;">
+                    <li>Click en un listado para ver detalles</li>
+                    <li>Se actualiza automáticamente</li>
+                    <li>La BD es SQLite (archivo local)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="toolbar">
+                <input type="text" class="search-box" id="searchInput" 
+                       placeholder="🔍 Buscar listados..." oninput="filterListados()">
+            </div>
+            
+            <div id="listadosContainer">
+                <div class="empty-state">
+                    <div class="icon">📂</div>
+                    <p>Cargando listados...</p>
+                </div>
+            </div>
+            
+            <div id="detailPanel" class="detail-panel" style="display: none;">
+                <div class="detail-header">
+                    <h3 id="detailTitle">Detalle</h3>
+                    <button class="btn btn-danger" onclick="deleteCurrent()" style="width: auto;">
+                        🗑️ Eliminar
+                    </button>
+                </div>
+                <div class="detail-content" id="detailContent"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="toast" class="toast"></div>
+    
+    <script>
+        let allListados = [];
+        let currentListado = null;
+        
+        async function loadListados() {
+            try {
+                const response = await fetch('/api/listados?limit=100');
+                const data = await response.json();
+                
+                if (data.success) {
+                    allListados = data.listados;
+                    renderListados(allListados);
+                    document.getElementById('totalCount').textContent = data.total;
+                } else {
+                    showToast('Error cargando datos', true);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showToast('Error de conexión con el servidor', true);
+            }
+        }
+        
+        function renderListados(listados) {
+            const container = document.getElementById('listadosContainer');
+            
+            if (listados.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="icon">📭</div>
+                        <p>No hay listados guardados</p>
+                        <p style="font-size: 0.9rem; margin-top: 10px;">
+                            Usa el botón "Guardar en BD" desde el overlay
+                        </p>
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = listados.map(l => `
+                <div class="listado-card ${currentListado?.id === l.id ? 'active' : ''}" 
+                     onclick="showDetail(${l.id})">
+                    <div class="listado-header">
+                        <div class="listado-title">${escapeHtml(l.nombre)}</div>
+                        <span class="badge">${l.afiliados_count} afiliados</span>
+                    </div>
+                    <div class="listado-meta">
+                        <span>🕐 ${new Date(l.creado_en).toLocaleString('es-AR')}</span>
+                        <span>🆔 ID: ${l.id}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        async function showDetail(id) {
+            try {
+                const response = await fetch(`/api/listados/${id}`);
+                const data = await response.json();
+                
+                if (data.success) {
+                    currentListado = data.listado;
+                    document.getElementById('detailTitle').textContent = data.listado.nombre;
+                    
+                    const lineas = data.listado.contenido.split('\n').filter(l => l.trim());
+                    const contentHtml = lineas.map((linea, i) => 
+                        `<div class="line-item">${i + 1}. ${escapeHtml(linea)}</div>`
+                    ).join('');
+                    
+                    document.getElementById('detailContent').innerHTML = contentHtml;
+                    document.getElementById('detailPanel').style.display = 'block';
+                    
+                    // Actualizar clase active
+                    document.querySelectorAll('.listado-card').forEach(card => {
+                        card.classList.remove('active');
+                    });
+                    event.currentTarget.classList.add('active');
+                }
+            } catch (error) {
+                showToast('Error cargando detalle', true);
+            }
+        }
+        
+        async function deleteCurrent() {
+            if (!currentListado) return;
+            
+            if (!confirm(`¿Eliminar "${currentListado.nombre}"?`)) return;
+            
+            try {
+                const response = await fetch(`/api/listados/${currentListado.id}`, {
+                    method: 'DELETE'
+                });
+                const data = await response.json();
+                
+                if (data.success) {
+                    showToast('Listado eliminado');
+                    document.getElementById('detailPanel').style.display = 'none';
+                    currentListado = null;
+                    loadListados();
+                } else {
+                    showToast('Error al eliminar', true);
+                }
+            } catch (error) {
+                showToast('Error de conexión', true);
+            }
+        }
+        
+        function filterListados() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = allListados.filter(l => 
+                l.nombre.toLowerCase().includes(query)
+            );
+            renderListados(filtered);
+        }
+        
+        function refreshData() {
+            loadListados();
+            showToast('Datos actualizados');
+        }
+        
+        function exportData() {
+            const dataStr = JSON.stringify(allListados, null, 2);
+            const blob = new Blob([dataStr], {type: 'application/json'});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `listados_backup_${new Date().toISOString().slice(0,10)}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+            showToast('Exportación completada');
+        }
+        
+        function showToast(message, isError = false) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.className = 'toast' + (isError ? ' error' : '');
+            toast.style.display = 'block';
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 3000);
+        }
+        
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        // Cargar al iniciar y refrescar cada 5 segundos
+        loadListados();
+        setInterval(loadListados, 5000);
+    </script>
+</body>
+</html>

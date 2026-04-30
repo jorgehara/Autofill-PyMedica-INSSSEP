@@ -598,6 +598,198 @@ function obtenerTextoEstado(estado) {
     return textos[estado] || estado;
 }
 
+// ==================== FUNCIONES PARA GUARDAR/CARGAR LISTADOS ====================
+
+// Estado para listados guardados
+let listadosGuardados = [];
+
+// Cargar listados al iniciar
+document.addEventListener('DOMContentLoaded', () => {
+    cargarListadosGuardados();
+    crearModalListados();
+});
+
+// Crear el modal de listados
+function crearModalListados() {
+    const modalHTML = `
+        <div id="modalListados" class="modal-listados">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>📁 Listados Guardados</h3>
+                    <button class="btn-cerrar-modal" onclick="cerrarModalListados()">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="buscador-listados">
+                        <input type="text" id="buscarListado" placeholder="Buscar listado..." oninput="filtrarListados(this.value)">
+                    </div>
+                    <div id="listaListados" class="lista-listados">
+                        <p class="sin-listados">Cargando...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+}
+
+// Mostrar modal de listados
+function mostrarModalListados() {
+    document.getElementById('modalListados').classList.add('active');
+    cargarListadosGuardados();
+}
+
+// Cerrar modal
+function cerrarModalListados() {
+    document.getElementById('modalListados').classList.remove('active');
+}
+
+// Cargar listados desde el servidor
+async function cargarListadosGuardados() {
+    try {
+        const response = await fetch(`${API_BASE}/api/listados?limit=50`);
+        const data = await response.json();
+        
+        if (data.success) {
+            listadosGuardados = data.listados;
+            renderizarListados(listadosGuardados);
+        }
+    } catch (error) {
+        console.error('Error cargando listados:', error);
+        document.getElementById('listaListados').innerHTML = '<p class="sin-listados">Error al cargar listados</p>';
+    }
+}
+
+// Renderizar lista de listados
+function renderizarListados(listados) {
+    const container = document.getElementById('listaListados');
+    
+    if (!listados || listados.length === 0) {
+        container.innerHTML = '<p class="sin-listados">No hay listados guardados</p>';
+        return;
+    }
+    
+    container.innerHTML = listados.map(listado => {
+        const fecha = new Date(listado.actualizado_en).toLocaleString('es-AR');
+        return `
+            <div class="item-listado">
+                <div class="info-listado">
+                    <div class="nombre-listado">${escaparHTML(listado.nombre)}</div>
+                    <div class="meta-listado">
+                        ${listado.afiliados_count} afiliados • ${fecha}
+                    </div>
+                </div>
+                <div class="acciones-listado">
+                    <button class="btn-cargar-listado" onclick="cargarListado(${listado.id})" title="Cargar">
+                        📋 Cargar
+                    </button>
+                    <button class="btn-eliminar-listado" onclick="eliminarListado(${listado.id})" title="Eliminar">
+                        🗑️
+                    </button>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+// Filtrar listados
+function filtrarListados(query) {
+    const filtrados = listadosGuardados.filter(l => 
+        l.nombre.toLowerCase().includes(query.toLowerCase())
+    );
+    renderizarListados(filtrados);
+}
+
+// Guardar el listado actual
+async function guardarListadoActual() {
+    const textarea = document.getElementById('textoInput');
+    const contenido = textarea ? textarea.value.trim() : '';
+    
+    if (!contenido) {
+        mostrarMensaje('No hay contenido para guardar', 'error');
+        return;
+    }
+    
+    const nombre = prompt('Nombre para este listado:', `Listado ${new Date().toLocaleDateString('es-AR')}`);
+    if (!nombre) return;
+    
+    const lineas = contenido.split('\n').filter(l => l.trim());
+    
+    try {
+        const response = await fetch(`${API_BASE}/api/listados`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                nombre: nombre,
+                contenido: contenido,
+                afiliados_count: lineas.length
+            })
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+            mostrarMensaje('✓ Listado guardado correctamente', 'success');
+        } else {
+            mostrarMensaje(data.error || 'Error al guardar', 'error');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        mostrarMensaje('Error al guardar listado', 'error');
+    }
+}
+
+// Cargar un listado guardado
+async function cargarListado(id) {
+    try {
+        const response = await fetch(`${API_BASE}/api/listados/${id}`);
+        const data = await response.json();
+        
+        if (data.success) {
+            const textarea = document.getElementById('textoInput');
+            if (textarea) {
+                textarea.value = data.listado.contenido;
+                mostrarMensaje(`✓ Listado "${data.listado.nombre}" cargado`, 'success');
+                cerrarModalListados();
+            }
+        } else {
+            mostrarMensaje(data.error || 'Error al cargar', 'error');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        mostrarMensaje('Error al cargar listado', 'error');
+    }
+}
+
+// Eliminar un listado
+async function eliminarListado(id) {
+    if (!confirm('¿Eliminar este listado?')) return;
+    
+    try {
+        const response = await fetch(`${API_BASE}/api/listados/${id}`, {
+            method: 'DELETE'
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+            mostrarMensaje('✓ Listado eliminado', 'success');
+            cargarListadosGuardados();
+        } else {
+            mostrarMensaje(data.error || 'Error al eliminar', 'error');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        mostrarMensaje('Error al eliminar listado', 'error');
+    }
+}
+
+// Helper para escapar HTML
+function escaparHTML(texto) {
+    const div = document.createElement('div');
+    div.textContent = texto;
+    return div.innerHTML;
+}
+
 // Inicializar cuando el DOM esté listo
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', inicializar);

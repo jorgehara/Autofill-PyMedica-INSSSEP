@@ -21,6 +21,15 @@ from processors.data_processor import (
     FormatoEntrada,
     EstadoValidacion
 )
+from storage import (
+    init_db,
+    guardar_listado,
+    obtener_listado,
+    listar_listados,
+    actualizar_listado,
+    eliminar_listado,
+    buscar_listados
+)
 
 # Configuración
 app = Flask(__name__)
@@ -68,6 +77,12 @@ ALLOWED_EXTENSIONS = {'txt', 'csv'}
 # Procesador global (se mantiene en sesión)
 procesador_actual = None
 
+# Inicializar base de datos al arrancar
+try:
+    init_db()
+except Exception as e:
+    logger.error(f"No se pudo inicializar la base de datos: {e}")
+
 
 def archivo_permitido(filename):
     """Verifica si la extensión del archivo está permitida."""
@@ -79,6 +94,12 @@ def archivo_permitido(filename):
 def index():
     """Página principal."""
     return render_template('index.html')
+
+
+@app.route('/admin/db')
+def admin_db():
+    """Panel de administración de la base de datos."""
+    return render_template('admin_db.html')
 
 
 @app.route('/api/procesar', methods=['POST'])
@@ -490,6 +511,214 @@ def obtener_estadisticas():
         'success': True,
         'estadisticas': procesador_actual._generar_estadisticas()
     })
+
+
+# ==================== ENDPOINTS PARA LISTADOS GUARDADOS ====================
+
+@app.route('/api/listados', methods=['GET'])
+def obtener_listados():
+    """
+    Obtiene todos los listados guardados.
+    
+    Query params:
+        limit: Máximo de resultados (default: 100)
+        offset: Offset para paginación (default: 0)
+        buscar: Texto para buscar por nombre (opcional)
+    
+    Returns:
+        JSON con lista de listados
+    """
+    try:
+        limit = request.args.get('limit', 100, type=int)
+        offset = request.args.get('offset', 0, type=int)
+        buscar = request.args.get('buscar', None)
+        
+        if buscar:
+            listados = buscar_listados(buscar, limit)
+        else:
+            listados = listar_listados(limit, offset)
+        
+        return jsonify({
+            'success': True,
+            'total': len(listados),
+            'listados': listados
+        })
+    except Exception as e:
+        logger.error(f"Error obteniendo listados: {e}", exc_info=True)
+        return jsonify({
+            'success': False,
+            'error': f'Error al obtener listados: {str(e)}'
+        }), 500
+
+
+@app.route('/api/listados', methods=['POST'])
+def crear_listado():
+    """
+    Guarda un nuevo listado.
+    
+    Body JSON:
+        nombre: Nombre descriptivo (requerido)
+        contenido: El contenido del listado (requerido)
+        afiliados_count: Cantidad de afiliados (opcional)
+        metadata: Info adicional en JSON (opcional)
+    
+    Returns:
+        JSON con el ID del listado creado
+    """
+    try:
+        data = request.get_json()
+        
+        if not data:
+            return jsonify({
+                'success': False,
+                'error': 'No se enviaron datos'
+            }), 400
+        
+        nombre = data.get('nombre')
+        contenido = data.get('contenido')
+        
+        if not nombre or not contenido:
+            return jsonify({
+                'success': False,
+                'error': 'Nombre y contenido son requeridos'
+            }), 400
+        
+        # Contar afiliados si no se proporcionó
+        afiliados_count = data.get('afiliados_count')
+        if afiliados_count is None:
+            afiliados_count = len([l for l in contenido.strip().split('\n') if l.strip()])
+        
+        listado_id = guardar_listado(
+            nombre=nombre,
+            contenido=contenido,
+            afiliados_count=afiliados_count,
+            metadata=data.get('metadata')
+        )
+        
+        return jsonify({
+            'success': True,
+            'message': 'Listado guardado exitosamente',
+            'id': listado_id
+        })
+    except Exception as e:
+        logger.error(f"Error guardando listado: {e}", exc_info=True)
+        return jsonify({
+            'success': False,
+            'error': f'Error al guardar listado: {str(e)}'
+        }), 500
+
+
+@app.route('/api/listados/<int:listado_id>', methods=['GET'])
+def ver_listado(listado_id):
+    """
+    Obtiene un listado específico por ID.
+    
+    Returns:
+        JSON con los datos completos del listado
+    """
+    try:
+        listado = obtener_listado(listado_id)
+        
+        if not listado:
+            return jsonify({
+                'success': False,
+                'error': 'Listado no encontrado'
+            }), 404
+        
+        return jsonify({
+            'success': True,
+            'listado': listado
+        })
+    except Exception as e:
+        logger.error(f"Error obteniendo listado {listado_id}: {e}", exc_info=True)
+        return jsonify({
+            'success': False,
+            'error': f'Error al obtener listado: {str(e)}'
+        }), 500
+
+
+@app.route('/api/listados/<int:listado_id>', methods=['PUT'])
+def actualizar_listado_endpoint(listado_id):
+    """
+    Actualiza un listado existente.
+    
+    Body JSON (campos opcionales):
+        nombre: Nuevo nombre
+        contenido: Nuevo contenido
+        afiliados_count: Nueva cantidad de afiliados
+    
+    Returns:
+        JSON confirmando la actualización
+    """
+    try:
+        data = request.get_json()
+        
+        if not data:
+            return jsonify({
+                'success': False,
+                'error': 'No se enviaron datos'
+            }), 400
+        
+        # Verificar que existe
+        existente = obtener_listado(listado_id)
+        if not existente:
+            return jsonify({
+                'success': False,
+                'error': 'Listado no encontrado'
+            }), 404
+        
+        actualizado = actualizar_listado(
+            listado_id=listado_id,
+            nombre=data.get('nombre'),
+            contenido=data.get('contenido'),
+            afiliados_count=data.get('afiliados_count')
+        )
+        
+        if actualizado:
+            return jsonify({
+                'success': True,
+                'message': 'Listado actualizado exitosamente'
+            })
+        else:
+            return jsonify({
+                'success': False,
+                'error': 'No se realizaron cambios'
+            }), 400
+    except Exception as e:
+        logger.error(f"Error actualizando listado {listado_id}: {e}", exc_info=True)
+        return jsonify({
+            'success': False,
+            'error': f'Error al actualizar listado: {str(e)}'
+        }), 500
+
+
+@app.route('/api/listados/<int:listado_id>', methods=['DELETE'])
+def borrar_listado(listado_id):
+    """
+    Elimina un listado.
+    
+    Returns:
+        JSON confirmando la eliminación
+    """
+    try:
+        eliminado = eliminar_listado(listado_id)
+        
+        if eliminado:
+            return jsonify({
+                'success': True,
+                'message': 'Listado eliminado exitosamente'
+            })
+        else:
+            return jsonify({
+                'success': False,
+                'error': 'Listado no encontrado'
+            }), 404
+    except Exception as e:
+        logger.error(f"Error eliminando listado {listado_id}: {e}", exc_info=True)
+        return jsonify({
+            'success': False,
+            'error': f'Error al eliminar listado: {str(e)}'
+        }), 500
 
 
 @app.errorhandler(413)

@@ -89,6 +89,14 @@
 
                     <!-- Modo: Un texto -->
                     <div id="singleTextArea" class="text-section">
+                        <div class="text-actions-bar">
+                            <button onclick="guardarListadoActual()" class="btn btn-sm btn-secondary" title="Guardar en base de datos local">
+                                💾 Guardar
+                            </button>
+                            <button onclick="mostrarModalListados()" class="btn btn-sm btn-secondary" title="Cargar listado guardado">
+                                📂 Cargar
+                            </button>
+                        </div>
                         <textarea id="textoInput"
                                   placeholder="Pega aquí el contenido de las recetas INSSSEP o la lista formateada..."
                                   rows="10"></textarea>

@@ -29,6 +29,7 @@
         download: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>',
         trash: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>',
         search: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>',
+        database: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>',
         arrowUp: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>',
         arrowDown: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>',
         arrowLeft: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>',
@@ -41,7 +42,8 @@
         all: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>',
         chevronDown: '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>',
         chevronRight: '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>',
-        resize: '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3l-6.5 18a.55.55 0 0 1-1 0L10 14l-6.5-7a.55.55 0 0 1 0-1L21 3"/></svg>'
+        resize: '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3l-6.5 18a.55.55 0 0 1-1 0L10 14l-6.5-7a.55.55 0 0 1 0-1L21 3"/></svg>',
+        externalLink: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>'
     };
 
     // Estado
@@ -91,6 +93,68 @@
         } catch (e) {
             console.error('[AutoFill] Error guardando:', e);
         }
+    }
+    
+    // ===== SINCRONIZACION CON BACKEND =====
+    
+    // Variable para evitar guardados duplicados
+    let lastSyncContent = '';
+    let lastSyncTime = 0;
+    
+    function sincronizarConBackend(nombrePersonalizado = null, mostrarFeedback = false) {
+        const contenido = listadoInput ? listadoInput.value.trim() : '';
+        if (!contenido) {
+            if (mostrarFeedback) mostrarStatus('No hay contenido para guardar', 'error');
+            return Promise.reject('Sin contenido');
+        }
+        
+        // Evitar guardar lo mismo muy seguido (mínimo 5 segundos entre guardados del mismo contenido)
+        const now = Date.now();
+        if (contenido === lastSyncContent && (now - lastSyncTime) < 5000 && !nombrePersonalizado) {
+            return Promise.resolve({skipped: true});
+        }
+        
+        const lineas = contenido.split('\n').filter(l => l.trim());
+        const nombre = nombrePersonalizado || `Listado ${new Date().toLocaleDateString('es-AR')} ${new Date().toLocaleTimeString('es-AR', {hour: '2-digit', minute:'2-digit'})}`;
+        
+        // Enviar al backend Flask
+        return fetch('http://localhost:5000/api/listados', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                nombre: nombre,
+                contenido: contenido,
+                afiliados_count: lineas.length,
+                metadata: {
+                    pacienteIndex: pacienteIndex,
+                    totalPacientes: pacientes.length,
+                    source: 'overlay_autosave'
+                }
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                console.log('[AutoFill] Listado sincronizado con backend, ID:', data.id);
+                lastSyncContent = contenido;
+                lastSyncTime = now;
+                if (mostrarFeedback) {
+                    mostrarStatus(`Guardado en BD (ID: ${data.id})`);
+                }
+                return data;
+            } else {
+                throw new Error(data.error || 'Error al guardar');
+            }
+        })
+        .catch(error => {
+            console.log('[AutoFill] Error sincronizando:', error);
+            if (mostrarFeedback) {
+                mostrarStatus('❌ Error: ¿Backend corriendo en localhost:5000?', 'error');
+            }
+            throw error;
+        });
     }
     
     function cargarDatos() {
@@ -712,6 +776,7 @@ Uno por linea..."></textarea>
                     <div class="af-actions">
                         <button class="af-btn" id="af-formatear">${ICONS.tools} Formatear</button>
                         <button class="af-btn af-btn-success" id="af-cargar">${ICONS.download} Cargar</button>
+                        <button class="af-btn" id="af-guardar-bd" title="Guardar en base de datos local" style="background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white; border-color: #6366f1;">${ICONS.database} Guardar en BD</button>
                         <button class="af-btn af-btn-danger" id="af-limpiar">${ICONS.trash} Limpiar</button>
                     </div>
                 </div>
@@ -808,7 +873,33 @@ Uno por linea..."></textarea>
                     </div>
                 </div>
             </div>
-            
+
+            <!-- Base de Datos -->
+            <div class="af-section collapsed" id="section-database">
+                <div class="af-section-header" data-target="content-database">
+                    <div class="af-section-title">${ICONS.database} Base de Datos Local</div>
+                    <button class="af-toggle-btn">${ICONS.chevronRight}</button>
+                </div>
+                <div class="af-section-content" id="content-database" style="display:none;">
+                    <div style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1)); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+                        <div style="font-size: 11px; color: var(--text-secondary); margin-bottom: 8px;">
+                            <strong style="color: var(--accent-primary);">Para guardar listados:</strong> El backend debe estar corriendo.
+                        </div>
+                        <div style="background: #0f172a; border-radius: 6px; padding: 10px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #94a3b8;">
+                            <div style="color: #64748b; margin-bottom: 4px;"># Terminal / CMD:</div>
+                            <div style="color: #60a5fa;">cd Backend/app</div>
+                            <div style="color: #60a5fa;">python app.py</div>
+                        </div>
+                    </div>
+                    <button class="af-btn" id="af-abrir-admin" style="width: 100%; background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: white; border: none;">
+                        ${ICONS.externalLink} Abrir Panel de Admin
+                    </button>
+                    <div style="font-size: 10px; color: var(--text-secondary); margin-top: 8px; text-align: center;">
+                        http://localhost:5000/admin/db
+                    </div>
+                </div>
+            </div>
+
             <!-- Shortcuts -->
             <div class="af-shortcuts">
                 <kbd>Ctrl</kbd> + <kbd>Flecha Izq</kbd> Ant | 
@@ -836,7 +927,9 @@ Uno por linea..."></textarea>
     const listadoInput = document.getElementById('af-listado');
     const formatearBtn = document.getElementById('af-formatear');
     const cargarBtn = document.getElementById('af-cargar');
+    const guardarBdBtn = document.getElementById('af-guardar-bd');
     const limpiarBtn = document.getElementById('af-limpiar');
+    const abrirAdminBtn = document.getElementById('af-abrir-admin');
     const buscarInput = document.getElementById('af-buscar-texto');
     const buscarAntBtn = document.getElementById('af-buscar-ant');
     const buscarSigBtn = document.getElementById('af-buscar-sig');
@@ -889,6 +982,9 @@ Uno por linea..."></textarea>
         mostrarPacienteActual();
         guardarDatos();
         mostrarStatus(`${pacientes.length} pacientes cargados`);
+        
+        // Sincronizar con backend automáticamente
+        sincronizarConBackend();
     }
 
     function mostrarPacienteActual() {
@@ -1084,6 +1180,9 @@ Uno por linea..."></textarea>
         nombreDisplay.textContent = pacientes[pacienteIndex].nombre;
         guardarDatos();
         mostrarStatus('Paciente editado');
+        
+        // Sincronizar con backend después de editar
+        sincronizarConBackend();
     }
 
     // ===== EVENT LISTENERS =====
@@ -1160,6 +1259,13 @@ Uno por linea..."></textarea>
 
     // Botones principales
     cargarBtn.addEventListener('click', cargarPacientes);
+    guardarBdBtn.addEventListener('click', () => {
+        const nombre = prompt('Nombre para este listado:', `Listado ${new Date().toLocaleDateString('es-AR')} ${new Date().toLocaleTimeString('es-AR', {hour: '2-digit', minute:'2-digit'})}`);
+        if (nombre) {
+            mostrarStatus('Guardando en base de datos...');
+            sincronizarConBackend(nombre, true);
+        }
+    });
     limpiarBtn.addEventListener('click', () => {
         listadoInput.value = '';
         pacientes = [];
@@ -1169,6 +1275,13 @@ Uno por linea..."></textarea>
         mostrarStatus('Listado limpiado');
     });
     formatearBtn.addEventListener('click', formatearLista);
+
+    // Botón abrir panel admin
+    if (abrirAdminBtn) {
+        abrirAdminBtn.addEventListener('click', () => {
+            window.open('http://localhost:5000/admin/db', '_blank');
+        });
+    }
 
     // Navegacion
     anteriorBtn.addEventListener('click', anteriorPaciente);
